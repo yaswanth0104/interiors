@@ -19,9 +19,9 @@ const Navbar = () => {
             position: 'sticky',
             top: 0,
             zIndex: 100,
-            background: 'rgba(10, 10, 12, 0.8)',
+            background: 'rgba(252, 252, 252, 0.8)',
             backdropFilter: 'blur(10px)',
-            borderBottom: '1px solid var(--glass-border)',
+            borderBottom: '1px solid rgba(14, 50, 126, 0.1)',
             padding: '1rem 2rem',
             display: 'flex',
             justifyContent: 'space-between',
@@ -39,10 +39,10 @@ const Navbar = () => {
                 }}
             >
                 <div style={{
-                    background: 'rgba(212, 175, 55, 0.1)',
+                    background: 'rgba(14, 50, 126, 0.05)',
                     padding: '0.4rem',
                     borderRadius: '12px',
-                    border: '1px solid rgba(212, 175, 55, 0.2)',
+                    border: '1px solid rgba(14, 50, 126, 0.1)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center'
@@ -61,8 +61,8 @@ const Navbar = () => {
                     flexDirection: 'column',
                     lineHeight: '1.1'
                 }}>
-                    <span className="gold-text">SREE ANNAPOORNA</span>
-                    <span style={{ color: 'var(--text-primary)', fontSize: '0.9rem', letterSpacing: '0.2em', fontWeight: '400' }}>INTERIORS</span>
+                    <span style={{ color: 'var(--accent-primary)' }}>SREE ANNAPOORNA</span>
+                    <span style={{ color: 'var(--accent-gold)', fontSize: '0.9rem', letterSpacing: '0.2em', fontWeight: '400' }}>INTERIORS</span>
                 </span>
             </motion.div>
 
@@ -74,13 +74,14 @@ const Navbar = () => {
                         to={item.path}
                         style={({ isActive }) => ({
                             color: isActive ? 'var(--accent-primary)' : 'var(--text-secondary)',
-                            fontWeight: isActive ? '600' : '400',
+                            fontWeight: isActive ? '700' : '400',
                             display: 'flex',
                             alignItems: 'center',
-                            gap: '0.5rem'
+                            gap: '0.5rem',
+                            fontSize: '0.95rem'
                         })}
                     >
-                        <item.icon size={18} />
+                        <item.icon size={18} color={isActive ? 'var(--accent-primary)' : 'var(--text-secondary)'} />
                         {item.name}
                     </NavLink>
                 ))}

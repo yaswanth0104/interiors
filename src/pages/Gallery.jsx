@@ -29,18 +29,19 @@ const Gallery = () => {
                             height: '350px',
                             position: 'relative',
                             overflow: 'hidden',
-                            cursor: 'pointer'
+                            cursor: 'pointer',
+                            border: '1px solid rgba(14, 50, 126, 0.1)'
                         }}
                     >
                         <div style={{
                             width: '100%',
                             height: '100%',
-                            background: `linear-gradient(45deg, var(--bg-secondary), var(--bg-primary))`,
+                            background: `linear-gradient(45deg, #f0f2f5, white)`,
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center'
                         }}>
-                            <span style={{ color: 'var(--accent-primary)', fontSize: '0.8rem', fontWeight: 'bold' }}>IMAGE PLACEHOLDER</span>
+                            <span style={{ color: 'var(--accent-primary)', fontSize: '0.8rem', fontWeight: '800', letterSpacing: '0.1em' }}>ANNAPOORNA DESIGN</span>
                         </div>
 
                         <div style={{
@@ -49,12 +50,12 @@ const Gallery = () => {
                             left: 0,
                             right: 0,
                             padding: '1.5rem',
-                            background: 'linear-gradient(transparent, rgba(0,0,0,0.8))',
+                            background: 'linear-gradient(transparent, rgba(14, 50, 126, 0.9))',
                             transform: 'translateY(100%)',
-                            transition: 'transform 0.3s ease'
+                            transition: 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
                         }} className="overlay">
-                            <h4 style={{ color: 'white' }}>{img.title}</h4>
-                            <p style={{ color: 'var(--accent-secondary)', fontSize: '0.8rem' }}>{img.category}</p>
+                            <h4 style={{ color: 'white', fontWeight: '700' }}>{img.title}</h4>
+                            <p style={{ color: 'var(--accent-gold)', fontSize: '0.8rem', fontWeight: '600' }}>{img.category}</p>
                         </div>
 
                         <style>{`

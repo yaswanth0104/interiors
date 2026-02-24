@@ -19,39 +19,39 @@ const Contact = () => {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                 >
-                    <h2 style={{ fontSize: '2rem', marginBottom: '1.5rem' }}>Contact Information</h2>
-                    <p style={{ color: 'var(--text-secondary)', marginBottom: '2.5rem' }}>
+                    <h2 style={{ fontSize: '2rem', marginBottom: '1.5rem', color: 'var(--accent-primary)', fontWeight: '800' }}>Contact Information</h2>
+                    <p style={{ color: 'var(--text-secondary)', marginBottom: '2.5rem', lineHeight: '1.7' }}>
                         Ready to transform your space? Contact us today for a free consultation.
                     </p>
 
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                            <div style={{ padding: '0.8rem', background: 'var(--glass)', borderRadius: '12px', color: 'var(--accent-primary)' }}>
+                            <div style={{ padding: '0.8rem', background: 'rgba(14, 50, 126, 0.05)', borderRadius: '12px', color: 'var(--accent-primary)' }}>
                                 <Mail size={24} />
                             </div>
                             <div>
                                 <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Email</p>
-                                <p style={{ fontWeight: '600' }}>contact@annapoornainteriors.com</p>
+                                <p style={{ fontWeight: '600', color: 'var(--accent-primary)' }}>contact@annapoornainteriors.com</p>
                             </div>
                         </div>
 
                         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                            <div style={{ padding: '0.8rem', background: 'var(--glass)', borderRadius: '12px', color: 'var(--accent-secondary)' }}>
+                            <div style={{ padding: '0.8rem', background: 'rgba(212, 175, 55, 0.1)', borderRadius: '12px', color: 'var(--accent-gold)' }}>
                                 <Phone size={24} />
                             </div>
                             <div>
                                 <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Phone</p>
-                                <p style={{ fontWeight: '600' }}>+91 98765 43210</p>
+                                <p style={{ fontWeight: '600', color: 'var(--accent-primary)' }}>+91 98765 43210</p>
                             </div>
                         </div>
 
                         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                            <div style={{ padding: '0.8rem', background: 'var(--glass)', borderRadius: '12px', color: 'var(--accent-primary)' }}>
+                            <div style={{ padding: '0.8rem', background: 'rgba(14, 50, 126, 0.05)', borderRadius: '12px', color: 'var(--accent-primary)' }}>
                                 <MapPin size={24} />
                             </div>
                             <div>
                                 <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Office</p>
-                                <p style={{ fontWeight: '600' }}>Your City, State, India</p>
+                                <p style={{ fontWeight: '600', color: 'var(--accent-primary)' }}>Your City, State, India</p>
                             </div>
                         </div>
                     </div>
@@ -61,35 +61,37 @@ const Contact = () => {
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     className="glass-card"
-                    style={{ padding: '2.5rem' }}
+                    style={{ padding: '2.5rem', border: '1px solid rgba(14, 50, 126, 0.1)' }}
                 >
                     <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-                        <h3 style={{ marginBottom: '0.5rem' }}>Send an Inquiry</h3>
+                        <h3 style={{ marginBottom: '0.5rem', color: 'var(--accent-primary)', fontWeight: '700' }}>Send an Inquiry</h3>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                            <label style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Name</label>
+                            <label style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', fontWeight: '600' }}>NAME</label>
                             <input
                                 type="text"
                                 required
                                 style={{
-                                    background: 'rgba(255,255,255,0.05)',
-                                    border: '1px solid var(--glass-border)',
+                                    background: '#f8f9fa',
+                                    border: '1px solid #e0e0e0',
                                     padding: '0.8rem 1rem',
                                     borderRadius: '8px',
-                                    color: 'white',
-                                    outline: 'none'
+                                    color: 'var(--text-primary)',
+                                    outline: 'none',
+                                    fontSize: '1rem'
                                 }}
                             />
                         </div>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                            <label style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Subject</label>
+                            <label style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', fontWeight: '600' }}>SUBJECT</label>
                             <select
                                 style={{
-                                    background: 'rgba(255,255,255,0.05)',
-                                    border: '1px solid var(--glass-border)',
+                                    background: '#f8f9fa',
+                                    border: '1px solid #e0e0e0',
                                     padding: '0.8rem 1rem',
                                     borderRadius: '8px',
-                                    color: 'white',
-                                    outline: 'none'
+                                    color: 'var(--text-primary)',
+                                    outline: 'none',
+                                    fontSize: '1rem'
                                 }}
                             >
                                 <option value="general">General Inquiry</option>
@@ -100,18 +102,19 @@ const Contact = () => {
                             </select>
                         </div>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                            <label style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Message</label>
+                            <label style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', fontWeight: '600' }}>MESSAGE</label>
                             <textarea
                                 rows="4"
                                 required
                                 style={{
-                                    background: 'rgba(255,255,255,0.05)',
-                                    border: '1px solid var(--glass-border)',
+                                    background: '#f8f9fa',
+                                    border: '1px solid #e0e0e0',
                                     padding: '0.8rem 1rem',
                                     borderRadius: '8px',
-                                    color: 'white',
+                                    color: 'var(--text-primary)',
                                     outline: 'none',
-                                    resize: 'none'
+                                    resize: 'none',
+                                    fontSize: '1rem'
                                 }}
                             ></textarea>
                         </div>
@@ -119,16 +122,18 @@ const Contact = () => {
                         <button
                             type="submit"
                             style={{
-                                background: 'var(--accent-primary)',
+                                background: 'var(--royal-gradient)',
                                 color: 'white',
-                                padding: '1rem',
+                                padding: '1.2rem',
                                 borderRadius: '8px',
-                                fontWeight: 'bold',
+                                fontWeight: '700',
+                                fontSize: '1rem',
                                 display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'center',
                                 gap: '0.5rem',
-                                marginTop: '1rem'
+                                marginTop: '1rem',
+                                boxShadow: '0 10px 20px rgba(14, 50, 126, 0.2)'
                             }}
                         >
                             {status || <>Send Message <Send size={18} /></>}

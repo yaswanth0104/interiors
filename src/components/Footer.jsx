@@ -4,8 +4,9 @@ const Footer = () => {
     return (
         <footer className="footer" style={{
             padding: '4rem 2rem',
-            background: 'var(--bg-secondary)',
-            borderTop: '1px solid var(--glass-border)',
+            background: 'var(--accent-primary)',
+            color: 'white',
+            borderTop: '1px solid var(--accent-gold)',
             marginTop: '4rem'
         }}>
             <div style={{
@@ -16,14 +17,14 @@ const Footer = () => {
                 gap: '2rem'
             }}>
                 <div>
-                    <h3 style={{ color: 'var(--accent-primary)', marginBottom: '1rem' }}>Sree Annapoorna Interiors</h3>
-                    <p style={{ color: 'var(--text-secondary)', maxWidth: '300px' }}>
-                        Transforming spaces into stunning realities. Quality craftsmanship and modern design for your dream home.
+                    <h3 style={{ color: 'var(--accent-gold)', marginBottom: '1rem', fontSize: '1.5rem' }}>SREE ANNAPOORNA INTERIORS</h3>
+                    <p style={{ color: 'rgba(255, 255, 255, 0.8)', maxWidth: '300px' }}>
+                        Transforming spaces into stunning realities with royal craftsmanship and professional design.
                     </p>
                 </div>
                 <div>
-                    <h4 style={{ marginBottom: '1rem' }}>Services</h4>
-                    <ul style={{ listStyle: 'none', color: 'var(--text-secondary)' }}>
+                    <h4 style={{ marginBottom: '1rem', color: 'var(--accent-gold)' }}>Services</h4>
+                    <ul style={{ listStyle: 'none', color: 'rgba(255, 255, 255, 0.7)' }}>
                         <li style={{ marginBottom: '0.5rem' }}>Modular Kitchens</li>
                         <li style={{ marginBottom: '0.5rem' }}>Wardrobe Design</li>
                         <li style={{ marginBottom: '0.5rem' }}>TV Unit Designs</li>
@@ -31,8 +32,8 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div>
-                    <h4 style={{ marginBottom: '1rem' }}>Contact</h4>
-                    <p style={{ color: 'var(--text-secondary)' }}>
+                    <h4 style={{ marginBottom: '1rem', color: 'var(--accent-gold)' }}>Contact</h4>
+                    <p style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
                         Email: contact@annapoornainteriors.com<br />
                         Phone: +91 98765 43210<br />
                         Address: Your City, State
@@ -43,8 +44,8 @@ const Footer = () => {
                 textAlign: 'center',
                 marginTop: '3rem',
                 paddingTop: '1rem',
-                borderTop: '1px solid var(--glass-border)',
-                color: 'var(--text-secondary)',
+                borderTop: '1px solid rgba(255, 255, 255, 0.1)',
+                color: 'rgba(255, 255, 255, 0.5)',
                 fontSize: '0.9rem'
             }}>
                 © {new Date().getFullYear()} Sree Annapoorna Interiors. All rights reserved.

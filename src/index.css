@@ -1,16 +1,20 @@
 :root {
-  --bg-primary: #0f0f12;
-  --bg-secondary: #1a1a1f;
-  --accent-primary: #d4af37;
+  --bg-primary: #fcfcfc;
+  /* Alabaster White */
+  --bg-secondary: #f0f2f5;
+  --accent-primary: #0e327e;
+  /* Deep Sapphire (Navy) */
+  --accent-secondary: #223e9a;
+  /* Jacksons Purple */
+  --accent-gold: #d4af37;
   /* Luxury Gold */
-  --accent-secondary: #c5a059;
-  /* Soft Gold */
-  --text-primary: #fdfbf7;
-  /* Off White / Marble */
-  --text-secondary: #a0a0a5;
-  --glass: rgba(255, 255, 255, 0.03);
-  --glass-border: rgba(255, 255, 255, 0.08);
+  --text-primary: #1a1a1c;
+  /* Charcoal */
+  --text-secondary: #5a5a60;
+  --glass: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(14, 50, 126, 0.1);
   --gold-gradient: linear-gradient(135deg, #d4af37 0%, #f7ef8a 50%, #c5a059 100%);
+  --royal-gradient: linear-gradient(135deg, #0e327e 0%, #223e9a 100%);
 }
 
 * {
@@ -28,23 +32,24 @@ body {
 }
 
 .aurora-gradient {
-  background: radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(197, 160, 89, 0.08) 0%, transparent 40%);
+  background: radial-gradient(circle at 10% 20%, rgba(14, 50, 126, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 40%);
   min-height: 100vh;
 }
 
 .glass-card {
-  background: var(--glass);
-  backdrop-filter: blur(16px);
+  background: white;
+  backdrop-filter: blur(10px);
   border: 1px solid var(--glass-border);
   border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(14, 50, 126, 0.05);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .glass-card:hover {
-  border-color: var(--accent-primary);
+  border-color: var(--accent-gold);
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 40px rgba(14, 50, 126, 0.12);
 }
 
 .gold-text {
@@ -53,6 +58,10 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 700;
+}
+
+.navy-text {
+  color: var(--accent-primary);
 }
 
 a {
@@ -78,7 +87,7 @@ button {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2a2a2f;
+  background: #e0e0e0;
   border-radius: 5px;
   border: 2px solid var(--bg-primary);
 }

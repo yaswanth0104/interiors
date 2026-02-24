@@ -8,25 +8,25 @@ const categories = [
         title: 'TV Units',
         desc: 'Custom-designed entertainment hubs that blend aesthetics with functionality. Hidden wiring, premium finishes, and integrated lighting.',
         icon: Tv,
-        color: '#8b5cf6'
+        color: 'var(--accent-primary)'
     },
     {
         title: 'Wardrobes',
         desc: 'Bespoke storage solutions ranging from walk-in closets to sleek sliding wardrobes. Maximize your space with intelligent design.',
         icon: Home,
-        color: '#06b6d4'
+        color: 'var(--accent-gold)'
     },
     {
         title: 'Modular Kitchen',
         desc: 'The heart of your home, reimagined. Ergonomic layouts, high-quality materials, and state-of-the-art kitchen accessories.',
         icon: ChefHat,
-        color: '#f43f5e'
+        color: 'var(--accent-primary)'
     },
     {
         title: 'Paintings & Finishes',
         desc: 'Elevate your walls with custom wood paintings, textures, and artistic finishes that add a personal touch to your home.',
         icon: Palette,
-        color: '#10b981'
+        color: 'var(--accent-gold)'
     }
 ];
 
@@ -42,7 +42,7 @@ const Categories = () => {
                         viewport={{ once: true }}
                         transition={{ delay: i * 0.1 }}
                         className="glass-card"
-                        style={{ padding: '3rem', position: 'relative', overflow: 'hidden' }}
+                        style={{ padding: '3rem', position: 'relative', overflow: 'hidden', border: '1px solid rgba(14, 50, 126, 0.1)' }}
                     >
                         {/* Background Glow */}
                         <div style={{
@@ -52,14 +52,14 @@ const Categories = () => {
                             width: '150px',
                             height: '150px',
                             background: cat.color,
-                            opacity: 0.1,
+                            opacity: 0.05,
                             filter: 'blur(50px)',
                             zIndex: 0
                         }} />
 
                         <cat.icon size={48} color={cat.color} style={{ marginBottom: '1.5rem', position: 'relative', zIndex: 1 }} />
-                        <h3 style={{ fontSize: '1.8rem', marginBottom: '1rem', position: 'relative', zIndex: 1 }}>{cat.title}</h3>
-                        <p style={{ color: 'var(--text-secondary)', position: 'relative', zIndex: 1 }}>{cat.desc}</p>
+                        <h3 style={{ fontSize: '1.8rem', marginBottom: '1rem', position: 'relative', zIndex: 1, color: 'var(--accent-primary)', fontWeight: '700' }}>{cat.title}</h3>
+                        <p style={{ color: 'var(--text-secondary)', position: 'relative', zIndex: 1, lineHeight: '1.6' }}>{cat.desc}</p>
                     </motion.div>
                 ))}
             </div>
