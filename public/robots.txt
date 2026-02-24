@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yaswanth0104.github.io/interiors/sitemap.xml
