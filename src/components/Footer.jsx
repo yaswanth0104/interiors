@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <footer className="footer" style={{
             padding: '4rem 2rem',
-            background: 'var(--accent-primary)',
+            background: 'linear-gradient(to bottom, #3c3d37, #1e201e)',
             color: 'white',
             borderTop: '1px solid var(--accent-gold)',
             marginTop: '4rem'

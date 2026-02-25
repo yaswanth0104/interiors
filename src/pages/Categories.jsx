@@ -42,7 +42,7 @@ const Categories = () => {
                         viewport={{ once: true }}
                         transition={{ delay: i * 0.1 }}
                         className="glass-card"
-                        style={{ padding: '3rem', position: 'relative', overflow: 'hidden', border: '1px solid rgba(14, 50, 126, 0.1)' }}
+                        style={{ padding: '3rem', position: 'relative', overflow: 'hidden', border: '1px solid rgba(60, 61, 55, 0.08)' }}
                     >
                         {/* Background Glow */}
                         <div style={{

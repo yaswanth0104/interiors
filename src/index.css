@@ -1,20 +1,20 @@
 :root {
-  --bg-primary: #fcfcfc;
-  /* Alabaster White */
-  --bg-secondary: #f0f2f5;
-  --accent-primary: #0e327e;
-  /* Deep Sapphire (Navy) */
-  --accent-secondary: #223e9a;
-  /* Jacksons Purple */
-  --accent-gold: #d4af37;
-  /* Luxury Gold */
-  --text-primary: #1a1a1c;
-  /* Charcoal */
-  --text-secondary: #5a5a60;
-  --glass: rgba(255, 255, 255, 0.7);
-  --glass-border: rgba(14, 50, 126, 0.1);
-  --gold-gradient: linear-gradient(135deg, #d4af37 0%, #f7ef8a 50%, #c5a059 100%);
-  --royal-gradient: linear-gradient(135deg, #0e327e 0%, #223e9a 100%);
+  --bg-primary: #fbf9f6;
+  /* Soft Parchment */
+  --bg-secondary: #f4f1ec;
+  --accent-primary: #3c3d37;
+  /* Shadow Slate (Architectural Dark) */
+  --accent-secondary: #697565;
+  /* Olive Sage (Organic Accent) */
+  --accent-gold: #a28b55;
+  /* Antique Bronze (Refined Metallic) */
+  --text-primary: #1e201e;
+  /* Dark Charcoal */
+  --text-secondary: #5a5d5a;
+  --glass: rgba(251, 249, 246, 0.8);
+  --glass-border: rgba(60, 61, 55, 0.1);
+  --gold-gradient: linear-gradient(135deg, #a28b55 0%, #c4b693 50%, #8e7a4a 100%);
+  --royal-gradient: linear-gradient(135deg, #3c3d37 0%, #697565 100%);
 }
 
 * {

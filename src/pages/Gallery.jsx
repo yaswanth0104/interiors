@@ -3,12 +3,40 @@ import PageWrapper from '../components/PageWrapper';
 import { motion } from 'framer-motion';
 
 const Gallery = () => {
-    // Using placeholders for demonstration, real images would be here
-    const images = Array.from({ length: 8 }, (_, i) => ({
-        id: i,
-        title: `Project ${i + 1}`,
-        category: i % 2 === 0 ? 'Living Room' : 'Kitchen'
-    }));
+    const images = [
+        { id: 1, src: '/photos/WhatsApp Image 2026-02-24 at 15.31.16 (1).jpeg', title: 'Modern Living', category: 'Living Room' },
+        { id: 2, src: '/photos/WhatsApp Image 2026-02-24 at 15.31.16.jpeg', title: 'Royal Bedroom', category: 'Bedroom' },
+        { id: 3, src: '/photos/WhatsApp Image 2026-02-24 at 15.31.17 (1).jpeg', title: 'Modular Kitchen', category: 'Kitchen' },
+        { id: 4, src: '/photos/WhatsApp Image 2026-02-24 at 15.31.17.jpeg', title: 'Sleek TV Unit', category: 'TV Unit' },
+        { id: 5, src: '/photos/WhatsApp Image 2026-02-24 at 15.31.18 (1).jpeg', title: 'Luxury Interior', category: 'Living Room' },
+        { id: 6, src: '/photos/WhatsApp Image 2026-02-24 at 15.31.18 (2).jpeg', title: 'Custom Wardrobe', category: 'Bedroom' },
+        { id: 7, src: '/photos/WhatsApp Image 2026-02-24 at 15.31.18.jpeg', title: 'Artistic Wall', category: 'Painting' },
+        { id: 8, src: '/photos/WhatsApp Image 2026-02-24 at 15.31.19 (1).jpeg', title: 'Premium Decor', category: 'Living Room' },
+        { id: 9, src: '/photos/WhatsApp Image 2026-02-24 at 15.31.19 (2).jpeg', title: 'Designer Kitchen', category: 'Kitchen' },
+        { id: 10, src: '/photos/WhatsApp Image 2026-02-24 at 15.31.19.jpeg', title: 'Classic Finish', category: 'Living Room' },
+        { id: 11, src: '/photos/WhatsApp Image 2026-02-24 at 15.31.20 (1).jpeg', title: 'Elegant Ceiling', category: 'Living Room' },
+        { id: 12, src: '/photos/WhatsApp Image 2026-02-24 at 15.31.20.jpeg', title: 'Modern Bath', category: 'Bathroom' },
+        { id: 13, src: '/photos/WhatsApp Image 2026-02-24 at 15.31.21 (1).jpeg', title: 'Bespoke Bed', category: 'Bedroom' },
+        { id: 14, src: '/photos/WhatsApp Image 2026-02-24 at 15.31.21 (2).jpeg', title: 'Crafted Unit', category: 'TV Unit' },
+        { id: 15, src: '/photos/WhatsApp Image 2026-02-24 at 15.31.21 (3).jpeg', title: 'Styling Detail', category: 'Decor' },
+        { id: 16, src: '/photos/WhatsApp Image 2026-02-24 at 15.31.21.jpeg', title: 'Full Interior', category: 'Living Room' },
+        { id: 17, src: '/photos/WhatsApp Image 2026-02-24 at 15.31.22.jpeg', title: 'Texture Wall', category: 'Painting' },
+        { id: 18, src: '/photos/WhatsApp Image 2026-02-24 at 15.31.26.jpeg', title: 'Lounge Area', category: 'Living Room' },
+        { id: 19, src: '/photos/WhatsApp Image 2026-02-24 at 15.32.22.jpeg', title: 'Workspace', category: 'Office' },
+        { id: 20, src: '/photos/WhatsApp Image 2026-02-24 at 15.32.23 (1).jpeg', title: 'Dining Space', category: 'Dining' },
+        { id: 21, src: '/photos/WhatsApp Image 2026-02-24 at 15.32.23 (2).jpeg', title: 'Corner Styling', category: 'Decor' },
+        { id: 22, src: '/photos/WhatsApp Image 2026-02-24 at 15.32.23 (3).jpeg', title: 'Luxury Suite', category: 'Bedroom' },
+        { id: 23, src: '/photos/WhatsApp Image 2026-02-24 at 15.32.23.jpeg', title: 'Open Plan', category: 'Living Room' },
+        { id: 24, src: '/photos/WhatsApp Image 2026-02-24 at 15.32.24.jpeg', title: 'Signature Kitchen', category: 'Kitchen' },
+        { id: 25, src: '/photos/WhatsApp Image 2026-02-24 at 15.32.25 (1).jpeg', title: 'Master Bedroom', category: 'Bedroom' },
+        { id: 26, src: '/photos/WhatsApp Image 2026-02-24 at 15.32.25 (2).jpeg', title: 'Grand Entry', category: 'Hall' },
+        { id: 27, src: '/photos/WhatsApp Image 2026-02-24 at 15.32.25 (3).jpeg', title: 'Storage Solution', category: 'Wardrobe' },
+        { id: 28, src: '/photos/WhatsApp Image 2026-02-24 at 15.32.25.jpeg', title: 'Fine Finishing', category: 'Decor' },
+        { id: 29, src: '/photos/WhatsApp Image 2026-02-24 at 15.35.40.jpeg', title: 'Royal Touch', category: 'Living Room' },
+        { id: 30, src: '/photos/WhatsApp Image 2026-02-24 at 15.35.41 (2).jpeg', title: 'Modern Classic', category: 'Living Room' },
+        { id: 31, src: '/photos/WhatsApp Image 2026-02-24 at 15.35.42 (1).jpeg', title: 'Chic Interior', category: 'Living Room' },
+        { id: 32, src: '/photos/WhatsApp Image 2026-02-24 at 15.35.42.jpeg', title: 'Elegant Space', category: 'Living Room' },
+    ];
 
     return (
         <PageWrapper title="Design Showcase">
@@ -36,12 +64,14 @@ const Gallery = () => {
                         <div style={{
                             width: '100%',
                             height: '100%',
-                            background: `linear-gradient(45deg, #f0f2f5, white)`,
+                            backgroundImage: `url(${img.src})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
                             display: 'flex',
                             alignItems: 'center',
-                            justifyContent: 'center'
-                        }}>
-                            <span style={{ color: 'var(--accent-primary)', fontSize: '0.8rem', fontWeight: '800', letterSpacing: '0.1em' }}>ANNAPOORNA DESIGN</span>
+                            justifyContent: 'center',
+                            transition: 'transform 0.5s ease'
+                        }} className="image-container">
                         </div>
 
                         <div style={{
@@ -50,7 +80,7 @@ const Gallery = () => {
                             left: 0,
                             right: 0,
                             padding: '1.5rem',
-                            background: 'linear-gradient(transparent, rgba(14, 50, 126, 0.9))',
+                            background: 'linear-gradient(transparent, rgba(60, 61, 55, 0.9))',
                             transform: 'translateY(100%)',
                             transition: 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
                         }} className="overlay">

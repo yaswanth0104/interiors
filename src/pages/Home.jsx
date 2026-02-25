@@ -29,7 +29,7 @@ const Home = () => {
                         right: 0,
                         bottom: 0,
                         zIndex: -1,
-                        backgroundImage: 'linear-gradient(rgba(14, 50, 126, 0.4), rgba(14, 50, 126, 0.6)), url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=2000")',
+                        backgroundImage: 'linear-gradient(rgba(60, 61, 55, 0.4), rgba(60, 61, 55, 0.7)), url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=2000")',
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                     }}

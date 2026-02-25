@@ -42,8 +42,8 @@ const About = () => {
                         alignItems: 'center',
                         justifyContent: 'center',
                         overflow: 'hidden',
-                        border: '1px solid rgba(14, 50, 126, 0.1)',
-                        background: 'linear-gradient(135deg, white, #f0f2f5)'
+                        border: '1px solid rgba(60, 61, 55, 0.1)',
+                        background: 'linear-gradient(135deg, white, #f4f1ec)'
                     }}
                 >
                     {/* Placeholder for real brand image */}

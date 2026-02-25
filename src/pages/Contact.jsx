@@ -61,7 +61,7 @@ const Contact = () => {
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     className="glass-card"
-                    style={{ padding: '2.5rem', border: '1px solid rgba(14, 50, 126, 0.1)' }}
+                    style={{ padding: '2.5rem', border: '1px solid rgba(60, 61, 55, 0.1)' }}
                 >
                     <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                         <h3 style={{ marginBottom: '0.5rem', color: 'var(--accent-primary)', fontWeight: '700' }}>Send an Inquiry</h3>
