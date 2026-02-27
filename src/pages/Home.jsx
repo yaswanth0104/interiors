@@ -60,7 +60,7 @@ const Home = () => {
                     transition={{ delay: 0.6 }}
                     style={{ display: 'flex', gap: '1.5rem' }}
                 >
-                    <Link to="/categories" style={{
+                    <Link to="/services" style={{
                         background: 'var(--accent-gold)',
                         color: 'var(--accent-primary)',
                         padding: '1.2rem 2.5rem',

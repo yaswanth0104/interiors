@@ -6,7 +6,7 @@ import { Menu, X, Home, Info, Grid, Image, Mail } from 'lucide-react';
 const navItems = [
     { name: 'Home', path: '/', icon: Home },
     { name: 'About', path: '/about', icon: Info },
-    { name: 'Categories', path: '/categories', icon: Grid },
+    { name: 'Services', path: '/services', icon: Grid },
     { name: 'Gallery', path: '/gallery', icon: Image },
     { name: 'Contact Us', path: '/contact', icon: Mail },
 ];

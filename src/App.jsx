@@ -9,7 +9,7 @@ import Footer from './components/Footer';
 // pages
 import Home from './pages/Home';
 import About from './pages/About';
-import Categories from './pages/Categories';
+import Services from './pages/Services';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 
@@ -22,7 +22,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/categories" element={<Categories />} />
+            <Route path="/services" element={<Services />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

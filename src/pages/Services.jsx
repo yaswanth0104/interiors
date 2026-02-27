@@ -48,9 +48,9 @@ const categories = [
     }
 ];
 
-const Categories = () => {
+const Services = () => {
     return (
-        <PageWrapper title="Our Specialties" heroImage="https://images.unsplash.com/photo-1510137600163-2729bc6959a6?auto=format&fit=crop&q=80&w=2000">
+        <PageWrapper title="Detailed Services" heroImage="https://images.unsplash.com/photo-1510137600163-2729bc6959a6?auto=format&fit=crop&q=80&w=2000">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2rem' }}>
                 {categories.map((cat, i) => (
                     <motion.div
@@ -85,4 +85,4 @@ const Categories = () => {
     );
 };
 
-export default Categories;
+export default Services;
