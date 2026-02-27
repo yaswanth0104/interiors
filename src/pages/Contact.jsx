@@ -13,7 +13,7 @@ const Contact = () => {
     };
 
     return (
-        <PageWrapper title="Get in Touch">
+        <PageWrapper title="Get in Touch" heroImage="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=2000">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem' }}>
                 <motion.div
                     initial={{ opacity: 0, x: -20 }}

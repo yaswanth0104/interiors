@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const About = () => {
     return (
-        <PageWrapper title="About Us">
+        <PageWrapper title="About Us" heroImage="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '4rem', alignItems: 'center' }}>
                 <motion.div
                     initial={{ opacity: 0, x: -30 }}
@@ -35,20 +35,28 @@ const About = () => {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.5 }}
-                    className="glass-card"
                     style={{
                         height: '500px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
+                        borderRadius: '24px',
                         overflow: 'hidden',
-                        border: '1px solid rgba(60, 61, 55, 0.1)',
-                        background: 'linear-gradient(135deg, white, #f4f1ec)'
+                        boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
+                        backgroundImage: 'url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1000")',
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        position: 'relative'
                     }}
                 >
-                    {/* Placeholder for real brand image */}
-                    <div style={{ textAlign: 'center', padding: '2rem' }}>
-                        <p style={{ color: 'var(--accent-primary)', fontStyle: 'italic', fontSize: '1.2rem', fontWeight: '500' }}>"Transforming Visions into Values"</p>
+                    <div style={{
+                        position: 'absolute',
+                        inset: 0,
+                        background: 'linear-gradient(to top, rgba(14, 50, 126, 0.4), transparent)',
+                        display: 'flex',
+                        alignItems: 'flex-end',
+                        padding: '2rem'
+                    }}>
+                        <p style={{ color: 'white', fontStyle: 'italic', fontSize: '1.2rem', fontWeight: '500', textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
+                            "Transforming Visions into Values"
+                        </p>
                     </div>
                 </motion.div>
             </div>

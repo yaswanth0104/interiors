@@ -39,7 +39,7 @@ const Gallery = () => {
     ];
 
     return (
-        <PageWrapper title="Design Showcase">
+        <PageWrapper title="Design Showcase" heroImage="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=2000">
             <div style={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
