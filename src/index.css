@@ -1,29 +1,29 @@
 :root {
-  --bg-primary: #EBDED4;
-  /* Warm Neutral Background */
-  --bg-secondary: #F2E9E1;
-  /* Lighter Sand Tint */
-  --accent-primary: #02000D;
-  /* Architectural Black-Blue */
-  --accent-primary-rgb: 2, 0, 13;
-  --accent-secondary: #07203F;
-  /* Deep Navy */
-  --accent-secondary-rgb: 7, 32, 63;
-  --accent-gold: #A65E46;
-  /* Terracotta / Earth Accent (Replacing Gold) */
-  --accent-gold-rgb: 166, 94, 70;
-  --accent-soft: #D9AA90;
-  /* Muted Rose / Sand */
-  --accent-soft-rgb: 217, 170, 144;
-  --text-primary: #02000D;
-  /* Architectural Black-Blue */
-  --text-secondary: #4F5459;
-  /* Slate Gray */
-  --glass: rgba(235, 222, 212, 0.85);
-  /* Based on Warm Neutral */
-  --glass-border: rgba(2, 0, 13, 0.1);
-  --gold-gradient: linear-gradient(135deg, #A65E46 0%, #D9AA90 50%, #8E4D38 100%);
-  --royal-gradient: linear-gradient(135deg, #02000D 0%, #07203F 100%);
+  --bg-primary: #E0D0B6;
+  /* Dun (Neutral Base) */
+  --bg-secondary: #E9DDCB;
+  /* Lighter Dun tint */
+  --accent-primary: #6B2717;
+  /* Seal Brown */
+  --accent-primary-rgb: 107, 39, 23;
+  --accent-secondary: #442C1B;
+  /* Bistre (Deep Dark Earth) */
+  --accent-secondary-rgb: 68, 44, 27;
+  --accent-gold: #CC9E4C;
+  /* Satin Sheen Gold */
+  --accent-gold-rgb: 204, 158, 76;
+  --accent-soft: #8B9EA5;
+  /* Cadet Gray */
+  --accent-soft-rgb: 139, 158, 165;
+  --text-primary: #442C1B;
+  /* Bistre */
+  --text-secondary: #6B2717;
+  /* Seal Brown */
+  --glass: rgba(224, 208, 182, 0.85);
+  /* Based on Dun */
+  --glass-border: rgba(68, 44, 27, 0.1);
+  --gold-gradient: linear-gradient(135deg, #CC9E4C 0%, #E0D0B6 50%, #A67C37 100%);
+  --royal-gradient: linear-gradient(135deg, #6B2717 0%, #442C1B 100%);
 }
 
 * {
