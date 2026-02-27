@@ -37,31 +37,25 @@ const Navbar = () => {
                     style={{
                         display: 'flex',
                         alignItems: 'center',
-                        gap: '1rem',
+                        gap: '0',
                         textDecoration: 'none'
                     }}
                 >
-                    <div style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center'
-                    }}>
-                        <img
-                            src="/WhatsApp Image 2026-02-11 at 11.31.12 - Edited.png"
-                            alt="Sree Annapoorna Interiors Logo"
-                            style={{ height: '4.5rem', width: 'auto' }}
-                        />
-                    </div>
+                    <img
+                        src="/WhatsApp Image 2026-02-11 at 11.31.12 - Edited.png"
+                        alt="Sree Annapoorna Interiors Logo"
+                        style={{ height: '3.8rem', width: 'auto', marginRight: '0.5rem' }}
+                    />
                     <span style={{
-                        fontWeight: '700',
-                        fontSize: 'clamp(1.2rem, 4vw, 1.5rem)',
+                        fontWeight: '800',
+                        fontSize: 'clamp(1.5rem, 5vw, 2rem)',
                         letterSpacing: '-0.02em',
                         display: 'flex',
                         flexDirection: 'column',
-                        lineHeight: '1.1'
+                        lineHeight: '1.0'
                     }}>
                         <span style={{ color: 'var(--accent-primary)' }}>SREE ANNAPOORNA</span>
-                        <span style={{ color: 'var(--accent-gold)', fontSize: '0.7em', letterSpacing: '0.2em', fontWeight: '400' }}>INTERIORS</span>
+                        <span style={{ color: 'var(--accent-gold)', fontSize: '0.75em', letterSpacing: '0.25em', fontWeight: '400' }}>INTERIORS</span>
                     </span>
                 </NavLink>
 
