@@ -44,7 +44,7 @@ const Navbar = () => {
                     <img
                         src="/WhatsApp Image 2026-02-11 at 11.31.12 - Edited.png"
                         alt="Sree Annapoorna Interiors Logo"
-                        style={{ height: '3.8rem', width: 'auto', marginRight: '0.5rem' }}
+                        style={{ height: '4rem', width: 'auto', marginRight: '0.2rem' }}
                     />
                     <span style={{
                         fontWeight: '800',
