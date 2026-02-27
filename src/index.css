@@ -1,25 +1,29 @@
 :root {
-  --bg-primary: #FAF9F6;
-  /* Soft Parchment */
-  --bg-secondary: #F2F0E9;
-  /* Sand */
-  --accent-primary: #1A1C1E;
-  /* Midnight (Architectural Dark) */
-  --accent-primary-rgb: 26, 28, 30;
-  --accent-secondary: #4A5D4E;
-  /* Eucalyptus Green (Organic Accent) */
-  --accent-secondary-rgb: 74, 93, 78;
-  --accent-gold: #C5A059;
-  /* Champagne Gold (Refined Metallic) */
-  --accent-gold-rgb: 197, 160, 89;
-  --text-primary: #1A1C1E;
-  /* Midnight */
+  --bg-primary: #EBDED4;
+  /* Warm Neutral Background */
+  --bg-secondary: #F2E9E1;
+  /* Lighter Sand Tint */
+  --accent-primary: #02000D;
+  /* Architectural Black-Blue */
+  --accent-primary-rgb: 2, 0, 13;
+  --accent-secondary: #07203F;
+  /* Deep Navy */
+  --accent-secondary-rgb: 7, 32, 63;
+  --accent-gold: #A65E46;
+  /* Terracotta / Earth Accent (Replacing Gold) */
+  --accent-gold-rgb: 166, 94, 70;
+  --accent-soft: #D9AA90;
+  /* Muted Rose / Sand */
+  --accent-soft-rgb: 217, 170, 144;
+  --text-primary: #02000D;
+  /* Architectural Black-Blue */
   --text-secondary: #4F5459;
   /* Slate Gray */
-  --glass: rgba(250, 249, 246, 0.85);
-  --glass-border: rgba(26, 28, 30, 0.1);
-  --gold-gradient: linear-gradient(135deg, #C5A059 0%, #E2C58F 50%, #A8823E 100%);
-  --royal-gradient: linear-gradient(135deg, #1A1C1E 0%, #4A5D4E 100%);
+  --glass: rgba(235, 222, 212, 0.85);
+  /* Based on Warm Neutral */
+  --glass-border: rgba(2, 0, 13, 0.1);
+  --gold-gradient: linear-gradient(135deg, #A65E46 0%, #D9AA90 50%, #8E4D38 100%);
+  --royal-gradient: linear-gradient(135deg, #02000D 0%, #07203F 100%);
 }
 
 * {
