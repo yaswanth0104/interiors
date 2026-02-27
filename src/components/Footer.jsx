@@ -24,11 +24,14 @@ const Footer = () => {
                 </div>
                 <div>
                     <h4 style={{ marginBottom: '1rem', color: 'var(--accent-gold)' }}>Services</h4>
-                    <ul style={{ listStyle: 'none', color: 'rgba(255, 255, 255, 0.7)' }}>
-                        <li style={{ marginBottom: '0.5rem' }}>Modular Kitchens</li>
-                        <li style={{ marginBottom: '0.5rem' }}>Wardrobe Design</li>
-                        <li style={{ marginBottom: '0.5rem' }}>TV Unit Designs</li>
-                        <li>Custom Paintings</li>
+                    <ul style={{ listStyle: 'none', color: 'rgba(255, 255, 255, 0.7)', lineHeight: '1.8' }}>
+                        <li>Modular Kitchens</li>
+                        <li>Bespoke Wardrobes</li>
+                        <li>T.V. Unit Designs</li>
+                        <li>Wood Partitions</li>
+                        <li>Dressing Tables</li>
+                        <li>Premium Wall Paper</li>
+                        <li>Arts & Paintings</li>
                     </ul>
                 </div>
                 <div>

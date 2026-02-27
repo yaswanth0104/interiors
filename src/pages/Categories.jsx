@@ -1,13 +1,13 @@
 import React from 'react';
 import PageWrapper from '../components/PageWrapper';
 import { motion } from 'framer-motion';
-import { Tv, Home, ChefHat, Palette } from 'lucide-react';
+import { Tv, Home, ChefHat, Palette, Layout, User, FileText } from 'lucide-react';
 
 const categories = [
     {
-        title: 'TV Units',
-        desc: 'Custom-designed entertainment hubs that blend aesthetics with functionality. Hidden wiring, premium finishes, and integrated lighting.',
-        icon: Tv,
+        title: 'Modular Kitchen',
+        desc: 'The heart of your home, reimagined. Ergonomic layouts, high-quality materials, and state-of-the-art kitchen accessories.',
+        icon: ChefHat,
         color: 'var(--accent-primary)'
     },
     {
@@ -17,16 +17,34 @@ const categories = [
         color: 'var(--accent-gold)'
     },
     {
-        title: 'Modular Kitchen',
-        desc: 'The heart of your home, reimagined. Ergonomic layouts, high-quality materials, and state-of-the-art kitchen accessories.',
-        icon: ChefHat,
+        title: 'T.V. Units',
+        desc: 'Custom-designed entertainment hubs that blend aesthetics with functionality. Hidden wiring, premium finishes, and integrated lighting.',
+        icon: Tv,
         color: 'var(--accent-primary)'
     },
     {
-        title: 'Paintings & Finishes',
-        desc: 'Elevate your walls with custom wood paintings, textures, and artistic finishes that add a personal touch to your home.',
-        icon: Palette,
+        title: 'Wood Partitions',
+        desc: 'Artistic and functional wood partitions to divide your space elegantly while maintaining an open feel.',
+        icon: Layout,
         color: 'var(--accent-gold)'
+    },
+    {
+        title: 'Dressing Table',
+        desc: 'Elegant dressing units with smart storage for your essentials, featuring premium mirrors and lighting.',
+        icon: User,
+        color: 'var(--accent-primary)'
+    },
+    {
+        title: 'Wall Paper',
+        desc: 'Transform your walls with a vast collection of premium wallpapers, ranging from modern patterns to classic textures.',
+        icon: FileText,
+        color: 'var(--accent-gold)'
+    },
+    {
+        title: 'Arts & Paintings',
+        desc: 'Handcrafted wood paintings, decorative art frames, and artistic finishes to add character and soul to your home.',
+        icon: Palette,
+        color: 'var(--accent-primary)'
     }
 ];
 
