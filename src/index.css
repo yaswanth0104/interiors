@@ -1,20 +1,25 @@
 :root {
-  --bg-primary: #fbf9f6;
+  --bg-primary: #FAF9F6;
   /* Soft Parchment */
-  --bg-secondary: #f4f1ec;
-  --accent-primary: #3c3d37;
-  /* Shadow Slate (Architectural Dark) */
-  --accent-secondary: #697565;
-  /* Olive Sage (Organic Accent) */
-  --accent-gold: #a28b55;
-  /* Antique Bronze (Refined Metallic) */
-  --text-primary: #1e201e;
-  /* Dark Charcoal */
-  --text-secondary: #5a5d5a;
-  --glass: rgba(251, 249, 246, 0.8);
-  --glass-border: rgba(60, 61, 55, 0.1);
-  --gold-gradient: linear-gradient(135deg, #a28b55 0%, #c4b693 50%, #8e7a4a 100%);
-  --royal-gradient: linear-gradient(135deg, #3c3d37 0%, #697565 100%);
+  --bg-secondary: #F2F0E9;
+  /* Sand */
+  --accent-primary: #1A1C1E;
+  /* Midnight (Architectural Dark) */
+  --accent-primary-rgb: 26, 28, 30;
+  --accent-secondary: #4A5D4E;
+  /* Eucalyptus Green (Organic Accent) */
+  --accent-secondary-rgb: 74, 93, 78;
+  --accent-gold: #C5A059;
+  /* Champagne Gold (Refined Metallic) */
+  --accent-gold-rgb: 197, 160, 89;
+  --text-primary: #1A1C1E;
+  /* Midnight */
+  --text-secondary: #4F5459;
+  /* Slate Gray */
+  --glass: rgba(250, 249, 246, 0.85);
+  --glass-border: rgba(26, 28, 30, 0.1);
+  --gold-gradient: linear-gradient(135deg, #C5A059 0%, #E2C58F 50%, #A8823E 100%);
+  --royal-gradient: linear-gradient(135deg, #1A1C1E 0%, #4A5D4E 100%);
 }
 
 * {
@@ -32,8 +37,8 @@ body {
 }
 
 .aurora-gradient {
-  background: radial-gradient(circle at 10% 20%, rgba(14, 50, 126, 0.03) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 40%);
+  background: radial-gradient(circle at 10% 20%, rgba(var(--accent-primary-rgb), 0.02) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(var(--accent-gold-rgb), 0.04) 0%, transparent 40%);
   min-height: 100vh;
 }
 
@@ -42,14 +47,14 @@ body {
   backdrop-filter: blur(10px);
   border: 1px solid var(--glass-border);
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(14, 50, 126, 0.05);
+  box-shadow: 0 10px 30px rgba(var(--accent-primary-rgb), 0.06);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .glass-card:hover {
   border-color: var(--accent-gold);
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(14, 50, 126, 0.12);
+  box-shadow: 0 20px 40px rgba(var(--accent-primary-rgb), 0.12);
 }
 
 .gold-text {

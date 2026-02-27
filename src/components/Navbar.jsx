@@ -19,9 +19,9 @@ const Navbar = () => {
             position: 'sticky',
             top: 0,
             zIndex: 100,
-            background: 'rgba(251, 249, 246, 0.9)',
+            background: 'var(--glass)',
             backdropFilter: 'blur(10px)',
-            borderBottom: '1px solid rgba(60, 61, 55, 0.08)',
+            borderBottom: '1px solid var(--glass-border)',
             padding: '1rem 2rem',
             display: 'flex',
             justifyContent: 'space-between',
@@ -39,10 +39,10 @@ const Navbar = () => {
                 }}
             >
                 <div style={{
-                    background: 'rgba(105, 117, 101, 0.05)',
+                    background: 'rgba(var(--accent-secondary-rgb), 0.05)',
                     padding: '0.4rem',
                     borderRadius: '12px',
-                    border: '1px solid rgba(105, 117, 101, 0.1)',
+                    border: '1px solid var(--glass-border)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center'

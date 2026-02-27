@@ -69,7 +69,7 @@ const Home = () => {
                         alignItems: 'center',
                         gap: '0.5rem',
                         fontWeight: '700',
-                        boxShadow: '0 10px 30px rgba(212, 175, 55, 0.3)'
+                        boxShadow: '0 10px 30px rgba(var(--accent-gold-rgb), 0.3)'
                     }}>
                         Explore Services <ChevronRight size={20} />
                     </Link>
@@ -116,7 +116,7 @@ const Home = () => {
                         viewport={{ once: true }}
                         transition={{ delay: i * 0.2 }}
                         className="glass-card"
-                        style={{ overflow: 'hidden', border: '1px solid rgba(14, 50, 126, 0.1)' }}
+                        style={{ overflow: 'hidden', border: '1px solid var(--glass-border)' }}
                     >
                         <div style={{
                             height: '240px',
@@ -125,7 +125,7 @@ const Home = () => {
                             backgroundPosition: 'center',
                             position: 'relative'
                         }}>
-                            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(14, 50, 126, 0.3), transparent)' }} />
+                            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(var(--accent-primary-rgb), 0.3), transparent)' }} />
                         </div>
                         <div style={{ padding: '2.5rem' }}>
                             <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--accent-primary)', fontWeight: '700' }}>{feature.title}</h3>

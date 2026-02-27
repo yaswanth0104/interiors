@@ -49,7 +49,7 @@ const About = () => {
                     <div style={{
                         position: 'absolute',
                         inset: 0,
-                        background: 'linear-gradient(to top, rgba(14, 50, 126, 0.4), transparent)',
+                        background: 'linear-gradient(to top, rgba(var(--accent-primary-rgb), 0.4), transparent)',
                         display: 'flex',
                         alignItems: 'flex-end',
                         padding: '2rem'

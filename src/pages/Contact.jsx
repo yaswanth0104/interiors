@@ -26,7 +26,7 @@ const Contact = () => {
 
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                            <div style={{ padding: '0.8rem', background: 'rgba(14, 50, 126, 0.05)', borderRadius: '12px', color: 'var(--accent-primary)' }}>
+                            <div style={{ padding: '0.8rem', background: 'rgba(var(--accent-primary-rgb), 0.05)', borderRadius: '12px', color: 'var(--accent-primary)' }}>
                                 <Mail size={24} />
                             </div>
                             <div>
@@ -36,7 +36,7 @@ const Contact = () => {
                         </div>
 
                         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                            <div style={{ padding: '0.8rem', background: 'rgba(212, 175, 55, 0.1)', borderRadius: '12px', color: 'var(--accent-gold)' }}>
+                            <div style={{ padding: '0.8rem', background: 'rgba(var(--accent-gold-rgb), 0.1)', borderRadius: '12px', color: 'var(--accent-gold)' }}>
                                 <Phone size={24} />
                             </div>
                             <div>
@@ -46,7 +46,7 @@ const Contact = () => {
                         </div>
 
                         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                            <div style={{ padding: '0.8rem', background: 'rgba(14, 50, 126, 0.05)', borderRadius: '12px', color: 'var(--accent-primary)' }}>
+                            <div style={{ padding: '0.8rem', background: 'rgba(var(--accent-primary-rgb), 0.05)', borderRadius: '12px', color: 'var(--accent-primary)' }}>
                                 <MapPin size={24} />
                             </div>
                             <div>
@@ -65,7 +65,7 @@ const Contact = () => {
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     className="glass-card"
-                    style={{ padding: '2.5rem', border: '1px solid rgba(60, 61, 55, 0.1)' }}
+                    style={{ padding: '2.5rem', border: '1px solid var(--glass-border)' }}
                 >
                     <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                         <h3 style={{ marginBottom: '0.5rem', color: 'var(--accent-primary)', fontWeight: '700' }}>Send an Inquiry</h3>
@@ -75,8 +75,8 @@ const Contact = () => {
                                 type="text"
                                 required
                                 style={{
-                                    background: '#f8f9fa',
-                                    border: '1px solid #e0e0e0',
+                                    background: 'var(--bg-secondary)',
+                                    border: '1px solid var(--glass-border)',
                                     padding: '0.8rem 1rem',
                                     borderRadius: '8px',
                                     color: 'var(--text-primary)',
@@ -89,8 +89,8 @@ const Contact = () => {
                             <label style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', fontWeight: '600' }}>SUBJECT</label>
                             <select
                                 style={{
-                                    background: '#f8f9fa',
-                                    border: '1px solid #e0e0e0',
+                                    background: 'var(--bg-secondary)',
+                                    border: '1px solid var(--glass-border)',
                                     padding: '0.8rem 1rem',
                                     borderRadius: '8px',
                                     color: 'var(--text-primary)',
@@ -111,8 +111,8 @@ const Contact = () => {
                                 rows="4"
                                 required
                                 style={{
-                                    background: '#f8f9fa',
-                                    border: '1px solid #e0e0e0',
+                                    background: 'var(--bg-secondary)',
+                                    border: '1px solid var(--glass-border)',
                                     padding: '0.8rem 1rem',
                                     borderRadius: '8px',
                                     color: 'var(--text-primary)',
@@ -137,7 +137,7 @@ const Contact = () => {
                                 justifyContent: 'center',
                                 gap: '0.5rem',
                                 marginTop: '1rem',
-                                boxShadow: '0 10px 20px rgba(14, 50, 126, 0.2)'
+                                boxShadow: '0 10px 20px rgba(var(--accent-primary-rgb), 0.2)'
                             }}
                         >
                             {status || <>Send Message <Send size={18} /></>}
@@ -151,7 +151,7 @@ const Contact = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                style={{ marginTop: '5rem', width: '100%', height: '450px', borderRadius: '16px', overflow: 'hidden', border: '1px solid rgba(60, 61, 55, 0.1)' }}
+                style={{ marginTop: '5rem', width: '100%', height: '450px', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--glass-border)' }}
             >
                 <iframe
                     title="Google Maps Location"
