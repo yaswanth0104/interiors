@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <footer className="footer" style={{
-            padding: '4rem 2rem',
+            padding: 'clamp(2rem, 6vw, 4rem) 2rem',
             background: 'var(--royal-gradient)',
             color: 'white',
             borderTop: '1px solid var(--accent-gold)',
@@ -13,7 +13,7 @@ const Footer = () => {
                 maxWidth: '1200px',
                 margin: '0 auto',
                 display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))',
                 gap: '2rem'
             }}>
                 <div>

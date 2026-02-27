@@ -39,7 +39,14 @@ const Home = () => {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
-                    style={{ fontSize: '4.5rem', fontWeight: '800', marginBottom: '1.5rem', lineHeight: '1.1', color: 'white' }}
+                    style={{
+                        fontSize: 'clamp(2.5rem, 8vw, 4.5rem)',
+                        fontWeight: '800',
+                        marginBottom: '1.5rem',
+                        lineHeight: '1.1',
+                        color: 'white',
+                        padding: '0 1rem'
+                    }}
                 >
                     Elevate Your <br />
                     <span className="gold-text">Living Spaces.</span>
@@ -58,7 +65,13 @@ const Home = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.6 }}
-                    style={{ display: 'flex', gap: '1.5rem' }}
+                    style={{
+                        display: 'flex',
+                        gap: '1.5rem',
+                        flexDirection: 'row',
+                        flexWrap: 'wrap',
+                        justifyContent: 'center'
+                    }}
                 >
                     <Link to="/services" style={{
                         background: 'var(--accent-gold)',
@@ -91,7 +104,14 @@ const Home = () => {
             </section>
 
             {/* Feature Section with Images */}
-            <section style={{ maxWidth: '1200px', margin: '8rem auto 0', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2.5rem', padding: '0 2rem' }}>
+            <section style={{
+                maxWidth: '1200px',
+                margin: 'clamp(4rem, 10vw, 8rem) auto 0',
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))',
+                gap: '2.5rem',
+                padding: '0 2rem'
+            }}>
                 {[
                     {
                         title: 'Modular Kitchens',

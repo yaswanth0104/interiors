@@ -14,7 +14,11 @@ const Contact = () => {
 
     return (
         <PageWrapper title="Get in Touch" heroImage="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=2000">
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem' }}>
+            <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))',
+                gap: 'clamp(2rem, 6vw, 4rem)'
+            }}>
                 <motion.div
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -31,7 +35,7 @@ const Contact = () => {
                             </div>
                             <div>
                                 <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Email</p>
-                                <p style={{ fontWeight: '600', color: 'var(--accent-primary)' }}>sreeannapoornainteriors@gmail.com</p>
+                                <p style={{ fontWeight: '600', color: 'var(--accent-primary)', wordBreak: 'break-all' }}>sreeannapoornainteriors@gmail.com</p>
                             </div>
                         </div>
 
@@ -65,7 +69,7 @@ const Contact = () => {
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     className="glass-card"
-                    style={{ padding: '2.5rem', border: '1px solid var(--glass-border)' }}
+                    style={{ padding: 'clamp(1.5rem, 4vw, 2.5rem)', border: '1px solid var(--glass-border)' }}
                 >
                     <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                         <h3 style={{ marginBottom: '0.5rem', color: 'var(--accent-primary)', fontWeight: '700' }}>Send an Inquiry</h3>
@@ -151,7 +155,14 @@ const Contact = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                style={{ marginTop: '5rem', width: '100%', height: '450px', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--glass-border)' }}
+                style={{
+                    marginTop: 'clamp(3rem, 8vw, 5rem)',
+                    width: '100%',
+                    height: 'clamp(300px, 40vh, 450px)',
+                    borderRadius: '16px',
+                    overflow: 'hidden',
+                    border: '1px solid var(--glass-border)'
+                }}
             >
                 <iframe
                     title="Google Maps Location"

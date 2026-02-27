@@ -5,7 +5,12 @@ import { motion } from 'framer-motion';
 const About = () => {
     return (
         <PageWrapper title="About Us" heroImage="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000">
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '4rem', alignItems: 'center' }}>
+            <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))',
+                gap: 'clamp(2rem, 8vw, 4rem)',
+                alignItems: 'center'
+            }}>
                 <motion.div
                     initial={{ opacity: 0, x: -30 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -36,7 +41,7 @@ const About = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.5 }}
                     style={{
-                        height: '500px',
+                        height: 'clamp(300px, 50vh, 500px)',
                         borderRadius: '24px',
                         overflow: 'hidden',
                         boxShadow: '0 20px 40px rgba(0,0,0,0.1)',

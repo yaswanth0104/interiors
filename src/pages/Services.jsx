@@ -51,7 +51,11 @@ const categories = [
 const Services = () => {
     return (
         <PageWrapper title="Detailed Services" heroImage="https://images.unsplash.com/photo-1510137600163-2729bc6959a6?auto=format&fit=crop&q=80&w=2000">
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2rem' }}>
+            <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))',
+                gap: 'clamp(1.5rem, 4vw, 2.5rem)'
+            }}>
                 {categories.map((cat, i) => (
                     <motion.div
                         key={i}

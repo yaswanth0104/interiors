@@ -42,8 +42,8 @@ const Gallery = () => {
         <PageWrapper title="Design Showcase" heroImage="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=2000">
             <div style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
-                gap: '1.5rem',
+                gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 300px), 1fr))',
+                gap: 'clamp(1rem, 4vw, 2rem)',
             }}>
                 {images.map((img, i) => (
                     <motion.div
