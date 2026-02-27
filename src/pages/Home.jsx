@@ -130,7 +130,7 @@ const Home = () => {
                         <div style={{ padding: '2.5rem' }}>
                             <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--accent-primary)', fontWeight: '700' }}>{feature.title}</h3>
                             <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', lineHeight: '1.7' }}>{feature.desc}</p>
-                            <Link to="/categories" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9rem', color: 'var(--accent-gold)', fontWeight: '800', letterSpacing: '0.1em' }}>
+                            <Link to="/services" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9rem', color: 'var(--accent-gold)', fontWeight: '800', letterSpacing: '0.1em' }}>
                                 LEARN MORE <ArrowRight size={14} />
                             </Link>
                         </div>
