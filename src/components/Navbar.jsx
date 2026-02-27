@@ -42,19 +42,14 @@ const Navbar = () => {
                     }}
                 >
                     <div style={{
-                        background: 'white',
-                        padding: '0.6rem',
-                        borderRadius: '12px',
-                        border: '1px solid var(--accent-gold)',
                         display: 'flex',
                         alignItems: 'center',
-                        justifyContent: 'center',
-                        boxShadow: '0 4px 12px rgba(0,0,0,0.08)'
+                        justifyContent: 'center'
                     }}>
                         <img
                             src="/WhatsApp Image 2026-02-11 at 11.31.12 - Edited.png"
                             alt="Sree Annapoorna Interiors Logo"
-                            style={{ height: '3.5rem', width: 'auto', borderRadius: '4px' }}
+                            style={{ height: '4.5rem', width: 'auto' }}
                         />
                     </div>
                     <span style={{
