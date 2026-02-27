@@ -51,7 +51,7 @@ const Navbar = () => {
                         justifyContent: 'center'
                     }}>
                         <img
-                            src="/WhatsApp Image 2026-02-11 at 11.31.12.jpeg"
+                            src="/WhatsApp Image 2026-02-11 at 11.31.12 - Edited.png"
                             alt="Sree Annapoorna Interiors Logo"
                             style={{ height: '2.5rem', width: 'auto', borderRadius: '4px' }}
                         />
