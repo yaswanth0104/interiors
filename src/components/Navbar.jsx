@@ -81,8 +81,12 @@ const Navbar = () => {
                             fontSize: '0.95rem'
                         })}
                     >
-                        <item.icon size={18} color={isActive ? 'var(--accent-primary)' : 'var(--text-secondary)'} />
-                        {item.name}
+                        {({ isActive }) => (
+                            <>
+                                <item.icon size={18} color={isActive ? 'var(--accent-primary)' : 'var(--text-secondary)'} />
+                                {item.name}
+                            </>
+                        )}
                     </NavLink>
                 ))}
             </div>

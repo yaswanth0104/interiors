@@ -31,7 +31,7 @@ const Contact = () => {
                             </div>
                             <div>
                                 <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Email</p>
-                                <p style={{ fontWeight: '600', color: 'var(--accent-primary)' }}>contact@annapoornainteriors.com</p>
+                                <p style={{ fontWeight: '600', color: 'var(--accent-primary)' }}>sreeannapoornainteriors@gmail.com</p>
                             </div>
                         </div>
 
@@ -41,7 +41,7 @@ const Contact = () => {
                             </div>
                             <div>
                                 <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Phone</p>
-                                <p style={{ fontWeight: '600', color: 'var(--accent-primary)' }}>+91 98765 43210</p>
+                                <p style={{ fontWeight: '600', color: 'var(--accent-primary)' }}>+91 70130 06137</p>
                             </div>
                         </div>
 
@@ -51,7 +51,11 @@ const Contact = () => {
                             </div>
                             <div>
                                 <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Office</p>
-                                <p style={{ fontWeight: '600', color: 'var(--accent-primary)' }}>Your City, State, India</p>
+                                <p style={{ fontWeight: '600', color: 'var(--accent-primary)', lineHeight: '1.4' }}>
+                                    North Bypass Road, Mangamuru Junction,<br />
+                                    near Big Hanuman Statue, Ongole,<br />
+                                    Andhra Pradesh 523002
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -141,6 +145,25 @@ const Contact = () => {
                     </form>
                 </motion.div>
             </div>
+
+            {/* Google Maps Section */}
+            <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                style={{ marginTop: '5rem', width: '100%', height: '450px', borderRadius: '16px', overflow: 'hidden', border: '1px solid rgba(60, 61, 55, 0.1)' }}
+            >
+                <iframe
+                    title="Google Maps Location"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15444.020359781878!2d80.0336!3d15.5057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4b01e3e7f7e7e7%3A0x7e7e7e7e7e7e7e7e!2sNorth+Bypass+Road%2C+Ongole%2C+Andhra+Pradesh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+            </motion.div>
         </PageWrapper>
     );
 };

@@ -33,10 +33,10 @@ const Footer = () => {
                 </div>
                 <div>
                     <h4 style={{ marginBottom: '1rem', color: 'var(--accent-gold)' }}>Contact</h4>
-                    <p style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
-                        Email: contact@annapoornainteriors.com<br />
-                        Phone: +91 98765 43210<br />
-                        Address: Your City, State
+                    <p style={{ color: 'rgba(255, 255, 255, 0.7)', lineHeight: '1.6' }}>
+                        Email: sreeannapoornainteriors@gmail.com<br />
+                        Phone: +91 70130 06137<br />
+                        Address: North Bypass Road, Ongole
                     </p>
                 </div>
             </div>

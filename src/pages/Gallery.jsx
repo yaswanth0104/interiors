@@ -64,7 +64,7 @@ const Gallery = () => {
                         <div style={{
                             width: '100%',
                             height: '100%',
-                            backgroundImage: `url(${img.src})`,
+                            backgroundImage: `url("${img.src}")`,
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
                             display: 'flex',
