@@ -148,7 +148,7 @@ const Home = () => {
                             <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(var(--accent-primary-rgb), 0.3), transparent)' }} />
                         </div>
                         <div style={{ padding: '2.5rem' }}>
-                            <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--accent-primary)', fontWeight: '700' }}>{feature.title}</h3>
+                            <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--accent-secondary)', fontWeight: '700' }}>{feature.title}</h3>
                             <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', lineHeight: '1.7' }}>{feature.desc}</p>
                             <Link to="/services" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9rem', color: 'var(--accent-gold)', fontWeight: '800', letterSpacing: '0.1em' }}>
                                 LEARN MORE <ArrowRight size={14} />

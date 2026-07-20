@@ -1,52 +1,9 @@
 import React from 'react';
-import PageWrapper from '../components/PageWrapper';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Tv, Home, ChefHat, Palette, Layout, User, FileText } from 'lucide-react';
-
-const categories = [
-    {
-        title: 'Modular Kitchen',
-        desc: 'The heart of your home, reimagined. Ergonomic layouts, high-quality materials, and state-of-the-art kitchen accessories.',
-        icon: ChefHat,
-        color: 'var(--accent-primary)'
-    },
-    {
-        title: 'Wardrobes',
-        desc: 'Bespoke storage solutions ranging from walk-in closets to sleek sliding wardrobes. Maximize your space with intelligent design.',
-        icon: Home,
-        color: 'var(--accent-gold)'
-    },
-    {
-        title: 'T.V. Units',
-        desc: 'Custom-designed entertainment hubs that blend aesthetics with functionality. Hidden wiring, premium finishes, and integrated lighting.',
-        icon: Tv,
-        color: 'var(--accent-primary)'
-    },
-    {
-        title: 'Wood Partitions',
-        desc: 'Artistic and functional wood partitions to divide your space elegantly while maintaining an open feel.',
-        icon: Layout,
-        color: 'var(--accent-gold)'
-    },
-    {
-        title: 'Dressing Table',
-        desc: 'Elegant dressing units with smart storage for your essentials, featuring premium mirrors and lighting.',
-        icon: User,
-        color: 'var(--accent-primary)'
-    },
-    {
-        title: 'Wall Paper',
-        desc: 'Transform your walls with a vast collection of premium wallpapers, ranging from modern patterns to classic textures.',
-        icon: FileText,
-        color: 'var(--accent-gold)'
-    },
-    {
-        title: 'Arts & Paintings',
-        desc: 'Handcrafted wood paintings, decorative art frames, and artistic finishes to add character and soul to your home.',
-        icon: Palette,
-        color: 'var(--accent-primary)'
-    }
-];
+import PageWrapper from '../components/PageWrapper';
+import { servicesData } from '../data/servicesData';
+import { ArrowRight } from 'lucide-react';
 
 const Services = () => {
     return (
@@ -56,32 +13,88 @@ const Services = () => {
                 gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))',
                 gap: 'clamp(1.5rem, 4vw, 2.5rem)'
             }}>
-                {categories.map((cat, i) => (
+                {servicesData.map((cat, i) => (
                     <motion.div
                         key={i}
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ delay: i * 0.1 }}
-                        className="glass-card"
-                        style={{ padding: '3rem', position: 'relative', overflow: 'hidden', border: '1px solid rgba(60, 61, 55, 0.08)' }}
                     >
-                        {/* Background Glow */}
-                        <div style={{
-                            position: 'absolute',
-                            top: '-50px',
-                            right: '-50px',
-                            width: '150px',
-                            height: '150px',
-                            background: cat.color,
-                            opacity: 0.05,
-                            filter: 'blur(50px)',
-                            zIndex: 0
-                        }} />
+                        <Link
+                            to={`/services/${cat.id}`}
+                            className="service-tile"
+                            style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                padding: '3rem',
+                                position: 'relative',
+                                overflow: 'hidden',
+                                border: '1px solid rgba(255, 255, 255, 0.1)',
+                                textDecoration: 'none',
+                                height: '100%',
+                                borderRadius: '24px',
+                                transition: 'all 0.4s ease'
+                            }}
+                        >
+                            {/* Background Image with Overlay */}
+                            <div style={{
+                                position: 'absolute',
+                                inset: 0,
+                                backgroundImage: `url("${cat.tileImage}")`,
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center',
+                                transition: 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
+                                zIndex: 0
+                            }} className="tile-bg" />
 
-                        <cat.icon size={48} color={cat.color} style={{ marginBottom: '1.5rem', position: 'relative', zIndex: 1 }} />
-                        <h3 style={{ fontSize: '1.8rem', marginBottom: '1rem', position: 'relative', zIndex: 1, color: 'var(--accent-primary)', fontWeight: '700' }}>{cat.title}</h3>
-                        <p style={{ color: 'var(--text-secondary)', position: 'relative', zIndex: 1, lineHeight: '1.6' }}>{cat.desc}</p>
+                            <div style={{
+                                position: 'absolute',
+                                inset: 0,
+                                background: 'linear-gradient(to bottom, rgba(5, 31, 32, 0.4) 0%, rgba(5, 31, 32, 0.85) 100%)',
+                                zIndex: 1
+                            }} />
+
+                            <div style={{ position: 'relative', zIndex: 2, height: '100%', display: 'flex', flexDirection: 'column' }}>
+                                <cat.icon size={48} color="#DAF1DE" style={{ marginBottom: '1.5rem' }} />
+                                <h3 style={{
+                                    fontSize: '1.8rem',
+                                    marginBottom: '1rem',
+                                    color: 'white',
+                                    fontWeight: '700',
+                                    fontFamily: "'Playfair Display', serif"
+                                }}>{cat.title}</h3>
+                                <p style={{
+                                    color: '#DAF1DE',
+                                    lineHeight: '1.6',
+                                    marginBottom: '2rem',
+                                    opacity: 0.9
+                                }}>{cat.shortDesc}</p>
+
+                                <div style={{
+                                    marginTop: 'auto',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '0.5rem',
+                                    color: 'white',
+                                    fontWeight: '700',
+                                    fontSize: '0.9rem',
+                                    letterSpacing: '0.1em'
+                                }}>
+                                    EXPLORE MORE <ArrowRight size={16} />
+                                </div>
+                            </div>
+                        </Link>
+                        <style>{`
+                            .service-tile:hover .tile-bg {
+                                transform: scale(1.1);
+                            }
+                            .service-tile:hover {
+                                transform: translateY(-10px);
+                                border-color: rgba(255, 255, 255, 0.3);
+                                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+                            }
+                        `}</style>
                     </motion.div>
                 ))}
             </div>

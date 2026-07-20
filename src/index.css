@@ -1,29 +1,29 @@
 :root {
-  --bg-primary: #E0D0B6;
-  /* Dun (Neutral Base) */
-  --bg-secondary: #E9DDCB;
-  /* Lighter Dun tint */
-  --accent-primary: #6B2717;
-  /* Seal Brown */
-  --accent-primary-rgb: 107, 39, 23;
-  --accent-secondary: #442C1B;
-  /* Bistre (Deep Dark Earth) */
-  --accent-secondary-rgb: 68, 44, 27;
-  --accent-gold: #CC9E4C;
-  /* Satin Sheen Gold */
-  --accent-gold-rgb: 204, 158, 76;
-  --accent-soft: #8B9EA5;
-  /* Cadet Gray */
-  --accent-soft-rgb: 139, 158, 165;
-  --text-primary: #442C1B;
-  /* Bistre */
-  --text-secondary: #6B2717;
-  /* Seal Brown */
-  --glass: rgba(224, 208, 182, 0.85);
-  /* Based on Dun */
-  --glass-border: rgba(68, 44, 27, 0.1);
-  --gold-gradient: linear-gradient(135deg, #CC9E4C 0%, #E0D0B6 50%, #A67C37 100%);
-  --royal-gradient: linear-gradient(135deg, #6B2717 0%, #442C1B 100%);
+  --bg-primary: #DAF1DE;
+  /* Light Mint (Clean Base) */
+  --bg-secondary: #8EB69B;
+  /* Sage Green (Section Backgrounds) */
+  --accent-primary: #163832;
+  /* Forest Green (Primary Buttons/Links) */
+  --accent-primary-rgb: 22, 56, 50;
+  --accent-secondary: #051F20;
+  /* Midnight Green (Deep Accents/Footers) */
+  --accent-secondary-rgb: 5, 31, 32;
+  --accent-gold: #235347;
+  /* Deep Teal Green (High-end highlights) */
+  --accent-gold-rgb: 35, 83, 71;
+  --accent-soft: #8EB69B;
+  /* Muted Sage (Subtle utility) */
+  --accent-soft-rgb: 142, 182, 155;
+  --text-primary: #051F20;
+  /* Rich Midnight Green (High Contrast Readability) */
+  --text-secondary: #163832;
+  /* Deep Forest Green (Subheadings/Details) */
+  --glass: rgba(218, 241, 222, 0.85);
+  /* Based on Light Mint */
+  --glass-border: rgba(5, 31, 32, 0.15);
+  --gold-gradient: linear-gradient(135deg, #235347 0%, #DAF1DE 50%, #163832 100%);
+  --royal-gradient: linear-gradient(135deg, #163832 0%, #051F20 100%);
 }
 
 * {
@@ -62,15 +62,17 @@ body {
 }
 
 .gold-text {
-  background: var(--gold-gradient);
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(135deg, #163832 0%, #235347 50%, #8EB69B 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: 700;
+  font-weight: 900;
+  letter-spacing: -0.02em;
 }
 
 .navy-text {
-  color: var(--accent-primary);
+  color: var(--accent-secondary);
 }
 
 a {
@@ -96,7 +98,7 @@ button {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #e0e0e0;
+  background: var(--bg-secondary);
   border-radius: 5px;
   border: 2px solid var(--bg-primary);
 }

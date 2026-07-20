@@ -44,18 +44,32 @@ const Navbar = () => {
                     <img
                         src="/WhatsApp Image 2026-02-11 at 11.31.12 - Edited.png"
                         alt="Sree Annapoorna Interiors Logo"
-                        style={{ height: '4rem', width: 'auto', marginRight: '0.2rem' }}
+                        style={{ height: '5.2rem', width: 'auto' }}
                     />
                     <span style={{
-                        fontWeight: '800',
-                        fontSize: 'clamp(1.5rem, 5vw, 2rem)',
-                        letterSpacing: '-0.02em',
                         display: 'flex',
                         flexDirection: 'column',
-                        lineHeight: '1.0'
+                        lineHeight: '1.0',
+                        textAlign: 'left'
                     }}>
-                        <span style={{ color: 'var(--accent-primary)' }}>SREE ANNAPOORNA</span>
-                        <span style={{ color: 'var(--accent-gold)', fontSize: '0.75em', letterSpacing: '0.25em', fontWeight: '400' }}>INTERIORS</span>
+                        <span style={{
+                            fontFamily: "'Playfair Display', serif",
+                            fontWeight: '900',
+                            fontSize: 'clamp(1.8rem, 6vw, 2.6rem)',
+                            letterSpacing: '-0.01em',
+                            background: 'linear-gradient(135deg, var(--accent-secondary) 0%, var(--accent-gold) 50%, var(--accent-primary) 100%)',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
+                            marginBottom: '0.1rem'
+                        }}>SREE ANNAPOORNA</span>
+                        <span style={{
+                            fontFamily: "'Outfit', sans-serif",
+                            color: 'var(--accent-secondary)',
+                            fontSize: '0.7em',
+                            letterSpacing: '0.4em',
+                            fontWeight: '500',
+                            opacity: 0.8
+                        }}>INTERIORS</span>
                     </span>
                 </NavLink>
 

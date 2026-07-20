@@ -16,7 +16,7 @@ const About = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.3 }}
                 >
-                    <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem', color: 'var(--accent-primary)', fontWeight: '800' }}>Our Story</h2>
+                    <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem', color: 'var(--accent-secondary)', fontWeight: '800' }}>Our Story</h2>
                     <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '1.5rem', lineHeight: '1.8' }}>
                         At Sree Annapoorna Interiors, we believe that every home has a story to tell. Our mission is to translate your vision into a stunning reality through thoughtful design and exquisite craftsmanship.
                     </p>
