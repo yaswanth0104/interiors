@@ -20,9 +20,32 @@ const ServiceDetail = () => {
         );
     }
 
+    const bgImage = service.mainImage || service.tileImage;
+
     return (
-        <PageWrapper title={service.title} heroImage={service.mainImage}>
-            <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 1rem' }}>
+        <div style={{ position: 'relative', minHeight: '100vh', overflow: 'hidden' }}>
+            {/* Full Page Service Background Image with Dark Royal Overlay */}
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1.2 }}
+                style={{
+                    position: 'fixed',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    zIndex: 0,
+                    backgroundImage: `radial-gradient(circle at center, rgba(13, 14, 18, 0.72) 0%, rgba(13, 14, 18, 0.94) 100%), linear-gradient(to bottom, rgba(13, 14, 18, 0.8), rgba(13, 14, 18, 0.97)), url("${bgImage}")`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundAttachment: 'fixed',
+                    filter: 'brightness(0.9)'
+                }}
+            />
+
+            {/* Page Content Overlay */}
+            <div style={{ position: 'relative', zIndex: 1, padding: '3rem 1.5rem 5rem', maxWidth: '1100px', margin: '0 auto' }}>
                 <Link
                     to="/services"
                     style={{
@@ -34,112 +57,102 @@ const ServiceDetail = () => {
                         marginBottom: '2.5rem',
                         textDecoration: 'none',
                         fontSize: '0.95rem',
-                        letterSpacing: '0.05em'
+                        letterSpacing: '0.05em',
+                        background: 'rgba(18, 20, 26, 0.7)',
+                        padding: '0.6rem 1.4rem',
+                        borderRadius: '50px',
+                        border: '1px solid rgba(212, 175, 55, 0.3)',
+                        backdropFilter: 'blur(10px)'
                     }}
                 >
                     <ChevronLeft size={20} /> BACK TO ALL SERVICES
                 </Link>
 
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
+                    style={{
+                        background: 'rgba(18, 20, 26, 0.82)',
+                        border: '1px solid var(--glass-border)',
+                        borderRadius: '28px',
+                        padding: 'clamp(2rem, 5vw, 4rem)',
+                        backdropFilter: 'blur(20px)',
+                        boxShadow: '0 20px 60px rgba(0, 0, 0, 0.6)'
+                    }}
                 >
-                    {/* Header Badge */}
+                    {/* Header Service Badge */}
                     <div style={{
                         display: 'inline-flex',
                         alignItems: 'center',
                         gap: '0.5rem',
-                        padding: '0.4rem 1.2rem',
+                        padding: '0.5rem 1.4rem',
                         borderRadius: '50px',
                         background: 'rgba(212, 175, 55, 0.12)',
-                        border: '1px solid rgba(212, 175, 55, 0.3)',
+                        border: '1px solid rgba(212, 175, 55, 0.35)',
                         color: 'var(--accent-gold)',
-                        fontSize: '0.85rem',
+                        fontSize: '0.88rem',
                         fontWeight: '700',
                         letterSpacing: '0.1em',
-                        marginBottom: '1.2rem'
+                        marginBottom: '1.5rem'
                     }}>
-                        <service.icon size={16} /> ROYAL CRAFTSMANSHIP SERVICE
+                        <service.icon size={18} /> ROYAL CRAFTSMANSHIP SERVICE
                     </div>
 
+                    {/* Service Title */}
                     <h1 style={{
-                        fontSize: 'clamp(2.2rem, 5vw, 3.4rem)',
+                        fontSize: 'clamp(2.4rem, 6vw, 3.8rem)',
                         color: '#F8F5EE',
-                        marginBottom: '1.5rem',
+                        marginBottom: '1.8rem',
                         fontFamily: "'Playfair Display', serif",
                         fontWeight: '900',
-                        lineHeight: '1.15'
+                        lineHeight: '1.15',
+                        letterSpacing: '-0.02em'
                     }}>
                         {service.title}
                     </h1>
 
-                    <p style={{
-                        fontSize: '1.18rem',
-                        lineHeight: '1.85',
-                        color: 'var(--text-secondary)',
-                        marginBottom: '3.5rem',
-                        maxWidth: '920px'
-                    }}>
-                        {service.description}
-                    </p>
-
-                    {/* Featured System Display Showcase Image Card */}
-                    <div style={{
-                        position: 'relative',
-                        borderRadius: '24px',
-                        overflow: 'hidden',
-                        marginBottom: '4.5rem',
-                        border: '1px solid rgba(212, 175, 55, 0.35)',
-                        boxShadow: '0 20px 50px rgba(0, 0, 0, 0.5)'
-                    }}>
-                        <img
-                            src={service.mainImage || service.tileImage}
-                            alt={`${service.title} Showcase`}
-                            style={{
-                                width: '100%',
-                                height: 'clamp(320px, 50vh, 520px)',
-                                objectFit: 'cover',
-                                display: 'block'
-                            }}
-                        />
-                        <div style={{
-                            position: 'absolute',
-                            inset: 0,
-                            background: 'linear-gradient(to top, rgba(13, 14, 18, 0.95) 0%, rgba(13, 14, 18, 0.2) 60%, transparent 100%)',
-                            display: 'flex',
-                            alignItems: 'flex-end',
-                            padding: '2.5rem'
+                    {/* Detailed Overview */}
+                    <div style={{ marginBottom: '3.5rem' }}>
+                        <h3 style={{
+                            fontSize: '1.35rem',
+                            color: '#E2C9A1',
+                            marginBottom: '1rem',
+                            fontFamily: "'Playfair Display', serif",
+                            fontWeight: '800'
                         }}>
-                            <div>
-                                <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'var(--accent-gold)', fontWeight: '700', fontSize: '0.9rem', marginBottom: '0.5rem' }}>
-                                    <Sparkles size={16} /> SYSTEM FEATURED ARCHITECTURE
-                                </div>
-                                <h3 style={{ color: '#F8F5EE', fontSize: '1.6rem', fontFamily: "'Playfair Display', serif", fontWeight: '800' }}>
-                                    Bespoke {service.title} Design Excellence
-                                </h3>
-                            </div>
-                        </div>
+                            Service Overview & Craftsmanship
+                        </h3>
+                        <p style={{
+                            fontSize: '1.18rem',
+                            lineHeight: '1.85',
+                            color: 'var(--text-secondary)'
+                        }}>
+                            {service.description}
+                        </p>
                     </div>
 
                     {/* Service Key Features & Specifications Grid */}
                     {service.features && service.features.length > 0 && (
                         <div style={{
-                            marginBottom: '4.5rem',
-                            padding: '2.8rem 2.5rem',
+                            marginBottom: '3.5rem',
+                            padding: '2.5rem',
                             borderRadius: '24px',
-                            background: 'rgba(22, 24, 32, 0.75)',
-                            border: '1px solid var(--glass-border)',
-                            backdropFilter: 'blur(16px)'
+                            background: 'rgba(13, 14, 18, 0.65)',
+                            border: '1px solid rgba(212, 175, 55, 0.3)',
+                            backdropFilter: 'blur(12px)'
                         }}>
                             <h3 style={{
-                                fontSize: '1.5rem',
+                                fontSize: '1.45rem',
                                 color: '#E2C9A1',
-                                marginBottom: '2rem',
+                                marginBottom: '1.8rem',
                                 fontFamily: "'Playfair Display', serif",
-                                fontWeight: '800'
+                                fontWeight: '800',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '0.5rem'
                             }}>
-                                Key Highlights & Specifications
+                                <Sparkles size={20} color="var(--accent-gold)" /> Key Highlights & Technical Specifications
                             </h3>
                             <div style={{
                                 display: 'grid',
@@ -156,24 +169,23 @@ const ServiceDetail = () => {
                         </div>
                     )}
 
-                    {/* Free Consultation CTA Banner */}
+                    {/* Free Consultation CTA Card */}
                     <div style={{
-                        padding: '3.5rem 2.5rem',
+                        padding: '3rem 2rem',
                         borderRadius: '24px',
                         background: 'linear-gradient(135deg, rgba(22, 24, 32, 0.95) 0%, rgba(13, 14, 18, 0.98) 100%)',
-                        border: '1px solid rgba(212, 175, 55, 0.4)',
+                        border: '1px solid rgba(212, 175, 55, 0.45)',
                         textAlign: 'center',
-                        marginBottom: '4rem',
-                        boxShadow: '0 15px 40px rgba(0, 0, 0, 0.4)'
+                        boxShadow: '0 15px 40px rgba(0, 0, 0, 0.5)'
                     }}>
                         <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', color: 'var(--accent-gold)', fontSize: '0.9rem', fontWeight: '700', marginBottom: '0.8rem', letterSpacing: '0.08em' }}>
-                            <ShieldCheck size={18} /> GUARANTEED ROYAL CRAFTSMANSHIP
+                            <ShieldCheck size={18} /> GUARANTEED ROYAL QUALITY
                         </div>
-                        <h3 style={{ fontSize: '1.9rem', color: '#F8F5EE', fontFamily: "'Playfair Display', serif", fontWeight: '800', marginBottom: '1rem' }}>
-                            Ready to Transform Your Home with {service.title}?
+                        <h3 style={{ fontSize: '1.85rem', color: '#F8F5EE', fontFamily: "'Playfair Display', serif", fontWeight: '800', marginBottom: '1rem' }}>
+                            Transform Your Home with {service.title}
                         </h3>
                         <p style={{ color: 'var(--text-secondary)', maxWidth: '620px', margin: '0 auto 2.2rem', lineHeight: '1.7', fontSize: '1rem' }}>
-                            Get in touch with our design specialists for a complimentary site visit, 3D visualization consultation, and custom cost estimate.
+                            Get in touch with our master interior architects for a personalized consultation, material sample demonstration, and custom estimate.
                         </p>
                         <Link to="/contact" style={{
                             display: 'inline-flex',
@@ -192,7 +204,7 @@ const ServiceDetail = () => {
                     </div>
                 </motion.div>
             </div>
-        </PageWrapper>
+        </div>
     );
 };
 
