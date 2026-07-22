@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const Home = () => {
     return (
         <PageWrapper>
-            {/* Hero Section with Fully Transparent Background Overlay */}
+            {/* Hero Section with Vibrant, 100% Crisp Background Image */}
             <section style={{
                 minHeight: '92vh',
                 display: 'flex',
@@ -30,14 +30,14 @@ const Home = () => {
                         right: 0,
                         bottom: 0,
                         zIndex: -1,
-                        backgroundImage: 'linear-gradient(to bottom, rgba(13, 14, 18, 0.25) 0%, rgba(13, 14, 18, 0.65) 100%), url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000")',
+                        backgroundImage: 'linear-gradient(to bottom, rgba(31, 26, 23, 0.3) 0%, rgba(31, 26, 23, 0.72) 100%), url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000")',
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
-                        filter: 'brightness(1.05) contrast(1.05)'
+                        filter: 'brightness(1.04) contrast(1.06)'
                     }}
                 />
 
-                {/* Pure Transparent Hero Content Container - Zero Blocking Box */}
+                {/* Pure Transparent Hero Content Container */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -50,7 +50,7 @@ const Home = () => {
                         zIndex: 1
                     }}
                 >
-                    {/* Badge */}
+                    {/* Royal Badge */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
@@ -61,9 +61,9 @@ const Home = () => {
                             gap: '0.6rem',
                             padding: '0.55rem 1.6rem',
                             borderRadius: '50px',
-                            background: 'rgba(13, 14, 18, 0.65)',
-                            border: '1px solid rgba(212, 175, 55, 0.55)',
-                            color: 'var(--accent-gold)',
+                            background: 'rgba(31, 26, 23, 0.75)',
+                            border: '1px solid rgba(185, 155, 107, 0.6)',
+                            color: '#E8DCC4',
                             fontSize: '0.9rem',
                             fontWeight: '800',
                             letterSpacing: '0.12em',
@@ -72,10 +72,10 @@ const Home = () => {
                             boxShadow: '0 8px 25px rgba(0, 0, 0, 0.4)'
                         }}
                     >
-                        <Sparkles size={16} /> BESPOKE ROYAL INTERIORS
+                        <Sparkles size={16} color="var(--accent-gold)" /> BESPOKE ROYAL INTERIORS
                     </motion.div>
 
-                    {/* Headline - High Contrast Readability over Crisp Image */}
+                    {/* Headline */}
                     <h1 style={{
                         fontSize: 'clamp(2.6rem, 7.5vw, 4.8rem)',
                         fontWeight: '900',
@@ -112,8 +112,8 @@ const Home = () => {
                         justifyContent: 'center'
                     }}>
                         <Link to="/services" style={{
-                            background: 'linear-gradient(135deg, #FFF0C2 0%, #D4AF37 55%, #AA7C11 100%)',
-                            color: '#0D0E12',
+                            background: 'linear-gradient(135deg, #B99B6B 0%, #E8DCC4 50%, #8E7345 100%)',
+                            color: '#1F1A17',
                             padding: '1.2rem 2.8rem',
                             borderRadius: '50px',
                             display: 'flex',
@@ -121,14 +121,14 @@ const Home = () => {
                             gap: '0.6rem',
                             fontWeight: '800',
                             fontSize: '1.02rem',
-                            boxShadow: '0 12px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(212, 175, 55, 0.4)',
+                            boxShadow: '0 12px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(185, 155, 107, 0.4)',
                             transition: 'all 0.3s ease'
                         }}>
                             Explore Services <ChevronRight size={20} />
                         </Link>
                         <Link to="/contact" style={{
-                            border: '1.5px solid rgba(212, 175, 55, 0.65)',
-                            background: 'rgba(13, 14, 18, 0.75)',
+                            border: '1.5px solid rgba(185, 155, 107, 0.65)',
+                            background: 'rgba(31, 26, 23, 0.75)',
                             backdropFilter: 'blur(14px)',
                             color: '#F8F5EE',
                             padding: '1.2rem 2.8rem',
@@ -138,7 +138,7 @@ const Home = () => {
                             gap: '0.6rem',
                             fontWeight: '700',
                             fontSize: '1.02rem',
-                            boxShadow: '0 12px 35px rgba(0, 0, 0, 0.6)'
+                            boxShadow: '0 12px 35px rgba(0, 0, 0, 0.5)'
                         }}>
                             Book Consultation
                         </Link>
@@ -158,12 +158,11 @@ const Home = () => {
                     display: 'grid',
                     gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))',
                     gap: '1.5rem',
-                    background: 'rgba(22, 24, 32, 0.88)',
+                    background: '#FFFFFF',
                     border: '1px solid var(--glass-border)',
                     borderRadius: '24px',
                     padding: '2rem 2.5rem',
-                    backdropFilter: 'blur(20px)',
-                    boxShadow: '0 20px 40px rgba(0, 0, 0, 0.5)'
+                    boxShadow: '0 15px 35px rgba(31, 26, 23, 0.08)'
                 }}>
                     {[
                         { icon: Award, number: '500+', label: 'Luxury Projects Delivered' },
@@ -176,8 +175,8 @@ const Home = () => {
                                 width: '48px',
                                 height: '48px',
                                 borderRadius: '14px',
-                                background: 'rgba(212, 175, 55, 0.15)',
-                                border: '1px solid rgba(212, 175, 55, 0.35)',
+                                background: 'rgba(185, 155, 107, 0.12)',
+                                border: '1px solid rgba(185, 155, 107, 0.35)',
                                 display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'center',
@@ -187,7 +186,7 @@ const Home = () => {
                                 <stat.icon size={22} />
                             </div>
                             <div>
-                                <div style={{ fontSize: '1.4rem', fontWeight: '900', color: '#F8F5EE', fontFamily: "'Playfair Display', serif" }}>{stat.number}</div>
+                                <div style={{ fontSize: '1.4rem', fontWeight: '900', color: 'var(--accent-primary)', fontFamily: "'Playfair Display', serif" }}>{stat.number}</div>
                                 <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>{stat.label}</div>
                             </div>
                         </div>
@@ -204,7 +203,7 @@ const Home = () => {
                 <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
                     <h2 style={{
                         fontSize: 'clamp(2rem, 5vw, 3.2rem)',
-                        color: '#F8F5EE',
+                        color: 'var(--accent-primary)',
                         fontFamily: "'Playfair Display', serif",
                         fontWeight: '900',
                         marginBottom: '1rem'
@@ -263,10 +262,10 @@ const Home = () => {
                                     }}
                                     className="feature-img"
                                 />
-                                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(22, 24, 32, 0.95), transparent 60%)' }} />
+                                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(31, 26, 23, 0.85), transparent 60%)' }} />
                             </div>
                             <div style={{ padding: '2.2rem 2.5rem' }}>
-                                <h3 style={{ fontSize: '1.5rem', marginBottom: '0.8rem', color: '#E2C9A1', fontWeight: '800', fontFamily: "'Playfair Display', serif" }}>{feature.title}</h3>
+                                <h3 style={{ fontSize: '1.5rem', marginBottom: '0.8rem', color: 'var(--accent-primary)', fontWeight: '800', fontFamily: "'Playfair Display', serif" }}>{feature.title}</h3>
                                 <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', lineHeight: '1.7', fontSize: '0.98rem' }}>{feature.desc}</p>
                                 <Link to="/services" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9rem', color: 'var(--accent-gold)', fontWeight: '800', letterSpacing: '0.1em' }}>
                                     EXPLORE DETAILS <ArrowRight size={16} />

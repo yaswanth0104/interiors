@@ -38,12 +38,11 @@ const ServiceDetail = () => {
                         textDecoration: 'none',
                         fontSize: '0.95rem',
                         letterSpacing: '0.06em',
-                        background: 'rgba(22, 24, 32, 0.75)',
+                        background: '#FFFFFF',
                         padding: '0.6rem 1.4rem',
                         borderRadius: '50px',
-                        border: '1px solid rgba(212, 175, 55, 0.35)',
-                        backdropFilter: 'blur(12px)',
-                        boxShadow: '0 8px 24px rgba(0, 0, 0, 0.3)'
+                        border: '1px solid rgba(185, 155, 107, 0.35)',
+                        boxShadow: '0 6px 20px rgba(31, 26, 23, 0.06)'
                     }}
                 >
                     <ChevronLeft size={20} /> BACK TO ALL SERVICES
@@ -60,8 +59,8 @@ const ServiceDetail = () => {
                         borderRadius: '28px',
                         overflow: 'hidden',
                         marginBottom: '3.5rem',
-                        border: '1px solid rgba(212, 175, 55, 0.45)',
-                        boxShadow: '0 25px 60px rgba(0, 0, 0, 0.6)',
+                        border: '1px solid rgba(185, 155, 107, 0.4)',
+                        boxShadow: '0 20px 50px rgba(31, 26, 23, 0.12)',
                         height: 'clamp(360px, 55vh, 520px)'
                     }}>
                         <img
@@ -72,7 +71,7 @@ const ServiceDetail = () => {
                                 height: '100%',
                                 objectFit: 'cover',
                                 display: 'block',
-                                filter: 'brightness(0.95) contrast(1.05)'
+                                filter: 'brightness(0.98) contrast(1.04)'
                             }}
                         />
 
@@ -80,7 +79,7 @@ const ServiceDetail = () => {
                         <div style={{
                             position: 'absolute',
                             inset: 0,
-                            background: 'linear-gradient(to top, rgba(13, 14, 18, 0.95) 0%, rgba(13, 14, 18, 0.3) 55%, transparent 100%)',
+                            background: 'linear-gradient(to top, rgba(31, 26, 23, 0.9) 0%, rgba(31, 26, 23, 0.25) 55%, transparent 100%)',
                             display: 'flex',
                             flexDirection: 'column',
                             justifyContent: 'flex-end',
@@ -92,9 +91,9 @@ const ServiceDetail = () => {
                                 gap: '0.6rem',
                                 padding: '0.45rem 1.3rem',
                                 borderRadius: '50px',
-                                background: 'rgba(13, 14, 18, 0.85)',
-                                border: '1px solid rgba(212, 175, 55, 0.45)',
-                                color: 'var(--accent-gold)',
+                                background: 'rgba(31, 26, 23, 0.85)',
+                                border: '1px solid rgba(185, 155, 107, 0.45)',
+                                color: '#E8DCC4',
                                 fontSize: '0.85rem',
                                 fontWeight: '800',
                                 letterSpacing: '0.12em',
@@ -102,12 +101,12 @@ const ServiceDetail = () => {
                                 width: 'fit-content',
                                 backdropFilter: 'blur(12px)'
                             }}>
-                                <service.icon size={18} /> ROYAL ARCHITECTURAL SERVICE
+                                <service.icon size={18} color="var(--accent-gold)" /> ROYAL ARCHITECTURAL SERVICE
                             </div>
 
                             <h1 style={{
                                 fontSize: 'clamp(2.4rem, 6vw, 4rem)',
-                                color: '#F8F5EE',
+                                color: '#FFFFFF',
                                 fontFamily: "'Playfair Display', serif",
                                 fontWeight: '900',
                                 lineHeight: '1.15',
@@ -120,12 +119,11 @@ const ServiceDetail = () => {
 
                     {/* Detailed Service Information Card */}
                     <div style={{
-                        background: 'rgba(22, 24, 32, 0.85)',
+                        background: '#FFFFFF',
                         border: '1px solid var(--glass-border)',
                         borderRadius: '28px',
                         padding: 'clamp(2rem, 5vw, 3.5rem)',
-                        backdropFilter: 'blur(20px)',
-                        boxShadow: '0 20px 50px rgba(0, 0, 0, 0.4)',
+                        boxShadow: '0 15px 40px rgba(31, 26, 23, 0.06)',
                         marginBottom: '3.5rem'
                     }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: 'var(--accent-gold)', fontWeight: '700', fontSize: '0.9rem', marginBottom: '1rem', letterSpacing: '0.1em' }}>
@@ -134,7 +132,7 @@ const ServiceDetail = () => {
 
                         <h2 style={{
                             fontSize: 'clamp(1.6rem, 4vw, 2.2rem)',
-                            color: '#E2C9A1',
+                            color: 'var(--accent-primary)',
                             marginBottom: '1.5rem',
                             fontFamily: "'Playfair Display', serif",
                             fontWeight: '800'
@@ -156,13 +154,12 @@ const ServiceDetail = () => {
                             <div style={{
                                 padding: '2.2rem 2rem',
                                 borderRadius: '20px',
-                                background: 'rgba(13, 14, 18, 0.65)',
-                                border: '1px solid rgba(212, 175, 55, 0.3)',
-                                backdropFilter: 'blur(12px)'
+                                background: 'var(--bg-secondary)',
+                                border: '1px solid rgba(185, 155, 107, 0.3)'
                             }}>
                                 <h3 style={{
                                     fontSize: '1.35rem',
-                                    color: '#E2C9A1',
+                                    color: 'var(--accent-primary)',
                                     marginBottom: '1.6rem',
                                     fontFamily: "'Playfair Display', serif",
                                     fontWeight: '800',
@@ -180,7 +177,7 @@ const ServiceDetail = () => {
                                     {service.features.map((feat, idx) => (
                                         <div key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
                                             <CheckCircle2 size={20} color="var(--accent-gold)" style={{ flexShrink: 0, marginTop: '2px' }} />
-                                            <span style={{ color: '#F3EFE9', fontSize: '1rem', lineHeight: '1.55' }}>{feat}</span>
+                                            <span style={{ color: 'var(--text-primary)', fontSize: '1rem', lineHeight: '1.55' }}>{feat}</span>
                                         </div>
                                     ))}
                                 </div>
@@ -192,10 +189,10 @@ const ServiceDetail = () => {
                     <div style={{
                         padding: '3.5rem 2.5rem',
                         borderRadius: '28px',
-                        background: 'linear-gradient(135deg, rgba(22, 24, 32, 0.95) 0%, rgba(13, 14, 18, 0.98) 100%)',
-                        border: '1px solid rgba(212, 175, 55, 0.45)',
+                        background: 'linear-gradient(135deg, #1F1A17 0%, #3A302A 100%)',
+                        border: '1px solid rgba(185, 155, 107, 0.45)',
                         textAlign: 'center',
-                        boxShadow: '0 15px 45px rgba(0, 0, 0, 0.5)'
+                        boxShadow: '0 20px 50px rgba(31, 26, 23, 0.15)'
                     }}>
                         <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', color: 'var(--accent-gold)', fontSize: '0.9rem', fontWeight: '700', marginBottom: '0.8rem', letterSpacing: '0.08em' }}>
                             <ShieldCheck size={18} /> GUARANTEED ROYAL QUALITY
@@ -203,20 +200,20 @@ const ServiceDetail = () => {
                         <h3 style={{ fontSize: 'clamp(1.6rem, 4vw, 2.2rem)', color: '#F8F5EE', fontFamily: "'Playfair Display', serif", fontWeight: '800', marginBottom: '1rem' }}>
                             Ready to Transform Your Space with {service.title}?
                         </h3>
-                        <p style={{ color: 'var(--text-secondary)', maxWidth: '640px', margin: '0 auto 2.2rem', lineHeight: '1.7', fontSize: '1rem' }}>
+                        <p style={{ color: 'rgba(248, 245, 238, 0.8)', maxWidth: '640px', margin: '0 auto 2.2rem', lineHeight: '1.7', fontSize: '1rem' }}>
                             Get in touch with our master interior architects for a complimentary site visit, 3D visualization consultation, and custom estimate.
                         </p>
                         <Link to="/contact" style={{
                             display: 'inline-flex',
                             alignItems: 'center',
                             gap: '0.6rem',
-                            background: 'linear-gradient(135deg, #FFF0C2 0%, #D4AF37 55%, #AA7C11 100%)',
-                            color: '#0D0E12',
+                            background: 'linear-gradient(135deg, #B99B6B 0%, #E8DCC4 50%, #8E7345 100%)',
+                            color: '#1F1A17',
                             padding: '1.1rem 2.6rem',
                             borderRadius: '50px',
                             fontWeight: '800',
                             fontSize: '1rem',
-                            boxShadow: '0 10px 30px rgba(212, 175, 55, 0.35)'
+                            boxShadow: '0 10px 30px rgba(185, 155, 107, 0.35)'
                         }}>
                             Book Free Consultation <ArrowRight size={18} />
                         </Link>

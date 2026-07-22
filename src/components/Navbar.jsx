@@ -63,7 +63,7 @@ const Navbar = () => {
                             fontWeight: '900',
                             fontSize: 'clamp(1.3rem, 2.9vw, 1.8rem)',
                             letterSpacing: '-0.01em',
-                            background: 'linear-gradient(135deg, #FFF0C2 0%, #D4AF37 55%, #AA7C11 100%)',
+                            background: 'linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-gold) 60%, var(--accent-primary) 100%)',
                             WebkitBackgroundClip: 'text',
                             WebkitTextFillColor: 'transparent',
                             lineHeight: '1'
@@ -73,7 +73,7 @@ const Navbar = () => {
                             fontWeight: '900',
                             fontSize: 'clamp(1.3rem, 2.9vw, 1.8rem)',
                             letterSpacing: '0.04em',
-                            color: '#F8F5EE',
+                            color: 'var(--accent-primary)',
                             lineHeight: '1'
                         }}>INTERIORS</span>
                     </div>
@@ -87,12 +87,11 @@ const Navbar = () => {
                             to={item.path}
                             style={({ isActive }) => ({
                                 color: isActive ? 'var(--accent-gold)' : 'var(--text-secondary)',
-                                fontWeight: isActive ? '700' : '400',
+                                fontWeight: isActive ? '700' : '500',
                                 display: 'flex',
                                 alignItems: 'center',
                                 gap: '0.5rem',
-                                fontSize: '0.95rem',
-                                textShadow: isActive ? '0 0 12px rgba(212, 175, 55, 0.4)' : 'none'
+                                fontSize: '0.95rem'
                             })}
                         >
                             {({ isActive }) => (

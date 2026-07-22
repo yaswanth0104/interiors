@@ -1,30 +1,30 @@
 :root {
-  --bg-primary: #0D0E12;
-  /* Deep Royal Obsidian (Ultra-Luxury Dark Base) */
-  --bg-secondary: #161820;
-  /* Rich Dark Graphite (Section Backgrounds) */
-  --accent-primary: #F8F5EE;
-  /* Cream White (Primary Text & Highlights) */
-  --accent-primary-rgb: 248, 245, 238;
-  --accent-secondary: #E2C9A1;
-  /* Soft Warm Champagne Gold */
-  --accent-secondary-rgb: 226, 201, 161;
-  --accent-gold: #D4AF37;
-  /* Royal Metallic Gold */
-  --accent-gold-rgb: 212, 175, 55;
-  --accent-soft: #8A795D;
-  /* Muted Brass Accent */
-  --accent-soft-rgb: 138, 121, 93;
-  --text-primary: #F3EFE9;
-  /* High Contrast Luminous Warm White */
-  --text-secondary: #B8B0A2;
-  /* Warm Champagne Taupe */
-  --glass: rgba(18, 20, 26, 0.85);
-  /* Dark Glassmorphism Base */
-  --glass-border: rgba(212, 175, 55, 0.25);
-  /* Glowing Gold Glass Border */
-  --gold-gradient: linear-gradient(135deg, #FFF0C2 0%, #D4AF37 50%, #997312 100%);
-  --royal-gradient: linear-gradient(135deg, #090A0D 0%, #161822 100%);
+  --bg-primary: #FCFAF6;
+  /* Ivory Alabaster (Clean Bright Luxury Base) */
+  --bg-secondary: #F4EFE6;
+  /* Warm Champagne Beige (Section Backgrounds) */
+  --accent-primary: #1F1A17;
+  /* Rich Velvet Ebony (Primary Brand Definition) */
+  --accent-primary-rgb: 31, 26, 23;
+  --accent-secondary: #3A302A;
+  /* Espresso Bronze (Deep Accents) */
+  --accent-secondary-rgb: 58, 48, 42;
+  --accent-gold: #B99B6B;
+  /* Warm Brass Gold (Luxury Highlights) */
+  --accent-gold-rgb: 185, 155, 107;
+  --accent-soft: #D8CBB5;
+  /* Muted Brass */
+  --accent-soft-rgb: 216, 203, 181;
+  --text-primary: #211C18;
+  /* Soft Velvet Black (High Contrast Readability) */
+  --text-secondary: #685F56;
+  /* Warm Taupe (Subheadings & Details) */
+  --glass: rgba(252, 250, 246, 0.88);
+  /* Luminous Glassmorphism Base */
+  --glass-border: rgba(185, 155, 107, 0.28);
+  /* Glowing Brass Gold Border */
+  --gold-gradient: linear-gradient(135deg, #B99B6B 0%, #E8DCC4 50%, #8E7345 100%);
+  --royal-gradient: linear-gradient(135deg, #1F1A17 0%, #3A302A 100%);
 }
 
 * {
@@ -43,31 +43,30 @@ body {
 
 .aurora-gradient {
   background: 
-    radial-gradient(circle at 15% 15%, rgba(212, 175, 55, 0.08) 0%, transparent 45%),
-    radial-gradient(circle at 85% 75%, rgba(212, 175, 55, 0.06) 0%, transparent 50%),
-    radial-gradient(circle at 50% 50%, rgba(248, 245, 238, 0.02) 0%, transparent 60%);
+    radial-gradient(circle at 10% 15%, rgba(185, 155, 107, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 90% 85%, rgba(185, 155, 107, 0.06) 0%, transparent 50%);
   min-height: 100vh;
 }
 
 .glass-card {
-  background: rgba(22, 24, 32, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: #FFFFFF;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--glass-border);
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(31, 26, 23, 0.06);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .glass-card:hover {
-  border-color: rgba(212, 175, 55, 0.6);
+  border-color: var(--accent-gold);
   transform: translateY(-8px);
-  box-shadow: 0 20px 45px rgba(212, 175, 55, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(185, 155, 107, 0.22);
 }
 
 .gold-text {
   font-family: 'Playfair Display', serif;
-  background: linear-gradient(135deg, #FFF0C2 0%, #D4AF37 50%, #997312 100%);
+  background: linear-gradient(135deg, #B99B6B 0%, #D8CBB5 50%, #8E7345 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -102,7 +101,7 @@ button {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #242733;
+  background: var(--accent-soft);
   border-radius: 5px;
   border: 2px solid var(--bg-primary);
 }

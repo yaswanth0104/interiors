@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import PageWrapper from '../components/PageWrapper';
 import { servicesData } from '../data/servicesData';
-import { ArrowRight, Sparkles, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Sparkles } from 'lucide-react';
 
 const Services = () => {
     return (
@@ -21,8 +21,8 @@ const Services = () => {
                             gap: '0.6rem',
                             padding: '0.45rem 1.4rem',
                             borderRadius: '50px',
-                            background: 'rgba(212, 175, 55, 0.12)',
-                            border: '1px solid rgba(212, 175, 55, 0.35)',
+                            background: 'rgba(185, 155, 107, 0.12)',
+                            border: '1px solid rgba(185, 155, 107, 0.35)',
                             color: 'var(--accent-gold)',
                             fontSize: '0.85rem',
                             fontWeight: '700',
@@ -40,7 +40,7 @@ const Services = () => {
                         style={{
                             fontSize: 'clamp(2.4rem, 6vw, 3.8rem)',
                             fontWeight: '900',
-                            color: '#F8F5EE',
+                            color: 'var(--accent-primary)',
                             marginBottom: '1.2rem',
                             fontFamily: "'Playfair Display', serif",
                             letterSpacing: '-0.02em'
@@ -65,7 +65,7 @@ const Services = () => {
                     </motion.p>
                 </div>
 
-                {/* Elegant Service Cards Grid - Single Image Architecture */}
+                {/* Elegant Service Cards Grid */}
                 <div style={{
                     display: 'grid',
                     gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))',
@@ -90,8 +90,7 @@ const Services = () => {
                                     height: '100%',
                                     borderRadius: '24px',
                                     border: '1px solid var(--glass-border)',
-                                    background: 'rgba(22, 24, 32, 0.75)',
-                                    backdropFilter: 'blur(16px)',
+                                    background: '#FFFFFF',
                                     transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
                                 }}
                             >
@@ -115,7 +114,7 @@ const Services = () => {
                                     <div style={{
                                         position: 'absolute',
                                         inset: 0,
-                                        background: 'linear-gradient(to top, rgba(22, 24, 32, 0.95) 0%, transparent 60%)'
+                                        background: 'linear-gradient(to top, rgba(31, 26, 23, 0.85) 0%, transparent 60%)'
                                     }} />
 
                                     {/* Floating Icon Badge */}
@@ -126,13 +125,14 @@ const Services = () => {
                                         width: '46px',
                                         height: '46px',
                                         borderRadius: '14px',
-                                        background: 'rgba(13, 14, 18, 0.85)',
-                                        border: '1px solid rgba(212, 175, 55, 0.4)',
+                                        background: 'rgba(252, 250, 246, 0.92)',
+                                        border: '1px solid rgba(185, 155, 107, 0.4)',
                                         display: 'flex',
                                         alignItems: 'center',
                                         justifyContent: 'center',
                                         color: 'var(--accent-gold)',
-                                        backdropFilter: 'blur(10px)'
+                                        backdropFilter: 'blur(10px)',
+                                        boxShadow: '0 6px 20px rgba(0,0,0,0.15)'
                                     }}>
                                         <cat.icon size={24} />
                                     </div>
@@ -143,7 +143,7 @@ const Services = () => {
                                     <h2 style={{
                                         fontSize: '1.55rem',
                                         marginBottom: '0.8rem',
-                                        color: '#E2C9A1',
+                                        color: 'var(--accent-primary)',
                                         fontWeight: '800',
                                         fontFamily: "'Playfair Display', serif"
                                     }}>
