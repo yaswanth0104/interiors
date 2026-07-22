@@ -30,7 +30,7 @@ const Home = () => {
                         right: 0,
                         bottom: 0,
                         zIndex: -1,
-                        backgroundImage: 'linear-gradient(to bottom, rgba(51, 61, 41, 0.35) 0%, rgba(88, 47, 14, 0.75) 100%), url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000")',
+                        backgroundImage: 'linear-gradient(to bottom, rgba(68, 44, 27, 0.35) 0%, rgba(107, 39, 23, 0.75) 100%), url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000")',
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         filter: 'brightness(1.04) contrast(1.06)'
@@ -50,7 +50,7 @@ const Home = () => {
                         zIndex: 1
                     }}
                 >
-                    {/* Earthy Badge */}
+                    {/* Satin Gold Badge */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
@@ -61,18 +61,18 @@ const Home = () => {
                             gap: '0.6rem',
                             padding: '0.55rem 1.6rem',
                             borderRadius: '50px',
-                            background: 'rgba(51, 61, 41, 0.8)',
-                            border: '1px solid rgba(164, 172, 134, 0.6)',
-                            color: '#C2C5AA',
+                            background: 'rgba(68, 44, 27, 0.8)',
+                            border: '1px solid rgba(204, 158, 76, 0.6)',
+                            color: '#E0D0B6',
                             fontSize: '0.9rem',
                             fontWeight: '800',
                             letterSpacing: '0.12em',
                             marginBottom: '2rem',
                             backdropFilter: 'blur(12px)',
-                            boxShadow: '0 8px 25px rgba(51, 61, 41, 0.4)'
+                            boxShadow: '0 8px 25px rgba(68, 44, 27, 0.4)'
                         }}
                     >
-                        <Sparkles size={16} color="#A4AC86" /> BESPOKE ROYAL INTERIORS
+                        <Sparkles size={16} color="#CC9E4C" /> BESPOKE ROYAL INTERIORS
                     </motion.div>
 
                     {/* Headline */}
@@ -84,27 +84,27 @@ const Home = () => {
                         color: '#FFFFFF',
                         fontFamily: "'Playfair Display', serif",
                         letterSpacing: '-0.02em',
-                        textShadow: '0 4px 30px rgba(51, 61, 41, 0.95), 0 2px 10px rgba(51, 61, 41, 0.9)'
+                        textShadow: '0 4px 30px rgba(68, 44, 27, 0.95), 0 2px 10px rgba(68, 44, 27, 0.9)'
                     }}>
                         Transform Your Space into a <br />
                         <span style={{
                             fontFamily: "'Playfair Display', serif",
-                            background: 'linear-gradient(135deg, #C2C5AA 0%, #A4AC86 50%, #7F4F24 100%)',
+                            background: 'linear-gradient(135deg, #E0D0B6 0%, #CC9E4C 50%, #6B2717 100%)',
                             WebkitBackgroundClip: 'text',
                             WebkitTextFillColor: 'transparent',
-                            textShadow: '0 4px 30px rgba(51, 61, 41, 0.95)'
+                            textShadow: '0 4px 30px rgba(68, 44, 27, 0.95)'
                         }}>Masterpiece of Luxury.</span>
                     </h1>
 
                     {/* Subtitle */}
                     <p style={{
                         fontSize: '1.25rem',
-                        color: '#C2C5AA',
+                        color: '#E0D0B6',
                         maxWidth: '720px',
                         margin: '0 auto 3rem',
                         lineHeight: '1.85',
                         fontWeight: '500',
-                        textShadow: '0 3px 20px rgba(51, 61, 41, 0.95), 0 1px 6px rgba(51, 61, 41, 0.9)'
+                        textShadow: '0 3px 20px rgba(68, 44, 27, 0.95), 0 1px 6px rgba(68, 44, 27, 0.9)'
                     }}>
                         Sree Annapoorna Interiors crafts high-end residential & commercial spaces with royal craftsmanship, modular perfection, and timeless elegance.
                     </p>
@@ -118,8 +118,8 @@ const Home = () => {
                         justifyContent: 'center'
                     }}>
                         <Link to="/services" style={{
-                            background: 'linear-gradient(135deg, #7F4F24 0%, #936639 55%, #656D4A 100%)',
-                            color: '#FFFFFF',
+                            background: 'linear-gradient(135deg, #CC9E4C 0%, #E0D0B6 50%, #6B2717 100%)',
+                            color: '#442C1B',
                             padding: '1.2rem 2.8rem',
                             borderRadius: '50px',
                             display: 'flex',
@@ -127,16 +127,16 @@ const Home = () => {
                             gap: '0.6rem',
                             fontWeight: '800',
                             fontSize: '1.02rem',
-                            boxShadow: '0 12px 35px rgba(127, 79, 36, 0.45)',
+                            boxShadow: '0 12px 35px rgba(204, 158, 76, 0.45)',
                             transition: 'all 0.3s ease'
                         }}>
                             Explore Services <ChevronRight size={20} />
                         </Link>
                         <Link to="/contact" style={{
-                            border: '1.5px solid rgba(164, 172, 134, 0.65)',
-                            background: 'rgba(51, 61, 41, 0.75)',
+                            border: '1.5px solid rgba(204, 158, 76, 0.65)',
+                            background: 'rgba(68, 44, 27, 0.75)',
                             backdropFilter: 'blur(14px)',
-                            color: '#C2C5AA',
+                            color: '#E0D0B6',
                             padding: '1.2rem 2.8rem',
                             borderRadius: '50px',
                             display: 'flex',
@@ -144,7 +144,7 @@ const Home = () => {
                             gap: '0.6rem',
                             fontWeight: '700',
                             fontSize: '1.02rem',
-                            boxShadow: '0 12px 35px rgba(51, 61, 41, 0.5)'
+                            boxShadow: '0 12px 35px rgba(68, 44, 27, 0.5)'
                         }}>
                             Book Consultation
                         </Link>
@@ -168,7 +168,7 @@ const Home = () => {
                     border: '1px solid var(--glass-border)',
                     borderRadius: '24px',
                     padding: '2rem 2.5rem',
-                    boxShadow: '0 15px 35px rgba(51, 61, 41, 0.06)'
+                    boxShadow: '0 15px 35px rgba(68, 44, 27, 0.06)'
                 }}>
                     {[
                         { icon: Award, number: '500+', label: 'Luxury Projects Delivered' },
@@ -181,8 +181,8 @@ const Home = () => {
                                 width: '48px',
                                 height: '48px',
                                 borderRadius: '14px',
-                                background: 'rgba(127, 79, 36, 0.12)',
-                                border: '1px solid rgba(127, 79, 36, 0.35)',
+                                background: 'rgba(204, 158, 76, 0.15)',
+                                border: '1px solid rgba(204, 158, 76, 0.35)',
                                 display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'center',
@@ -268,7 +268,7 @@ const Home = () => {
                                     }}
                                     className="feature-img"
                                 />
-                                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(51, 61, 41, 0.85), transparent 60%)' }} />
+                                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(68, 44, 27, 0.85), transparent 60%)' }} />
                             </div>
                             <div style={{ padding: '2.2rem 2.5rem' }}>
                                 <h3 style={{ fontSize: '1.5rem', marginBottom: '0.8rem', color: 'var(--accent-primary)', fontWeight: '800', fontFamily: "'Playfair Display', serif" }}>{feature.title}</h3>
