@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ChevronLeft, CheckCircle2, ArrowRight, ShieldCheck, Sparkles } from 'lucide-react';
+import { ChevronLeft, CheckCircle2, ArrowRight, ShieldCheck, Sparkles, Award } from 'lucide-react';
 import PageWrapper from '../components/PageWrapper';
 import { servicesData } from '../data/servicesData';
 
@@ -20,32 +20,12 @@ const ServiceDetail = () => {
         );
     }
 
-    const bgImage = service.mainImage || service.tileImage;
+    const serviceImage = service.mainImage || service.tileImage;
 
     return (
-        <div style={{ position: 'relative', minHeight: '100vh', overflow: 'hidden' }}>
-            {/* Full Page Service Background Image with Dark Royal Overlay */}
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1.2 }}
-                style={{
-                    position: 'fixed',
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    zIndex: 0,
-                    backgroundImage: `radial-gradient(circle at center, rgba(13, 14, 18, 0.72) 0%, rgba(13, 14, 18, 0.94) 100%), linear-gradient(to bottom, rgba(13, 14, 18, 0.8), rgba(13, 14, 18, 0.97)), url("${bgImage}")`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundAttachment: 'fixed',
-                    filter: 'brightness(0.9)'
-                }}
-            />
-
-            {/* Page Content Overlay */}
-            <div style={{ position: 'relative', zIndex: 1, padding: '3rem 1.5rem 5rem', maxWidth: '1100px', margin: '0 auto' }}>
+        <PageWrapper>
+            <div style={{ maxWidth: '1150px', margin: '0 auto', padding: '1rem 1rem 5rem' }}>
+                {/* Back to All Services Navigation Link */}
                 <Link
                     to="/services"
                     style={{
@@ -57,135 +37,174 @@ const ServiceDetail = () => {
                         marginBottom: '2.5rem',
                         textDecoration: 'none',
                         fontSize: '0.95rem',
-                        letterSpacing: '0.05em',
-                        background: 'rgba(18, 20, 26, 0.7)',
+                        letterSpacing: '0.06em',
+                        background: 'rgba(22, 24, 32, 0.75)',
                         padding: '0.6rem 1.4rem',
                         borderRadius: '50px',
-                        border: '1px solid rgba(212, 175, 55, 0.3)',
-                        backdropFilter: 'blur(10px)'
+                        border: '1px solid rgba(212, 175, 55, 0.35)',
+                        backdropFilter: 'blur(12px)',
+                        boxShadow: '0 8px 24px rgba(0, 0, 0, 0.3)'
                     }}
                 >
                     <ChevronLeft size={20} /> BACK TO ALL SERVICES
                 </Link>
 
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: 25 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    style={{
-                        background: 'rgba(18, 20, 26, 0.82)',
-                        border: '1px solid var(--glass-border)',
-                        borderRadius: '28px',
-                        padding: 'clamp(2rem, 5vw, 4rem)',
-                        backdropFilter: 'blur(20px)',
-                        boxShadow: '0 20px 60px rgba(0, 0, 0, 0.6)'
-                    }}
                 >
-                    {/* Header Service Badge */}
+                    {/* Breathtaking High-Definition Service Showcase Hero Image */}
                     <div style={{
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: '0.5rem',
-                        padding: '0.5rem 1.4rem',
-                        borderRadius: '50px',
-                        background: 'rgba(212, 175, 55, 0.12)',
-                        border: '1px solid rgba(212, 175, 55, 0.35)',
-                        color: 'var(--accent-gold)',
-                        fontSize: '0.88rem',
-                        fontWeight: '700',
-                        letterSpacing: '0.1em',
-                        marginBottom: '1.5rem'
+                        position: 'relative',
+                        borderRadius: '28px',
+                        overflow: 'hidden',
+                        marginBottom: '3.5rem',
+                        border: '1px solid rgba(212, 175, 55, 0.45)',
+                        boxShadow: '0 25px 60px rgba(0, 0, 0, 0.6)',
+                        height: 'clamp(360px, 55vh, 520px)'
                     }}>
-                        <service.icon size={18} /> ROYAL CRAFTSMANSHIP SERVICE
+                        <img
+                            src={encodeURI(serviceImage)}
+                            alt={service.title}
+                            style={{
+                                width: '100%',
+                                height: '100%',
+                                objectFit: 'cover',
+                                display: 'block',
+                                filter: 'brightness(0.95) contrast(1.05)'
+                            }}
+                        />
+
+                        {/* Soft Gradient Overlay for Text Contrast at Bottom */}
+                        <div style={{
+                            position: 'absolute',
+                            inset: 0,
+                            background: 'linear-gradient(to top, rgba(13, 14, 18, 0.95) 0%, rgba(13, 14, 18, 0.3) 55%, transparent 100%)',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'flex-end',
+                            padding: 'clamp(2rem, 5vw, 3.5rem)'
+                        }}>
+                            <div style={{
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                gap: '0.6rem',
+                                padding: '0.45rem 1.3rem',
+                                borderRadius: '50px',
+                                background: 'rgba(13, 14, 18, 0.85)',
+                                border: '1px solid rgba(212, 175, 55, 0.45)',
+                                color: 'var(--accent-gold)',
+                                fontSize: '0.85rem',
+                                fontWeight: '800',
+                                letterSpacing: '0.12em',
+                                marginBottom: '1.2rem',
+                                width: 'fit-content',
+                                backdropFilter: 'blur(12px)'
+                            }}>
+                                <service.icon size={18} /> ROYAL ARCHITECTURAL SERVICE
+                            </div>
+
+                            <h1 style={{
+                                fontSize: 'clamp(2.4rem, 6vw, 4rem)',
+                                color: '#F8F5EE',
+                                fontFamily: "'Playfair Display', serif",
+                                fontWeight: '900',
+                                lineHeight: '1.15',
+                                textShadow: '0 4px 20px rgba(0, 0, 0, 0.6)'
+                            }}>
+                                {service.title}
+                            </h1>
+                        </div>
                     </div>
 
-                    {/* Service Title */}
-                    <h1 style={{
-                        fontSize: 'clamp(2.4rem, 6vw, 3.8rem)',
-                        color: '#F8F5EE',
-                        marginBottom: '1.8rem',
-                        fontFamily: "'Playfair Display', serif",
-                        fontWeight: '900',
-                        lineHeight: '1.15',
-                        letterSpacing: '-0.02em'
+                    {/* Detailed Service Information Card */}
+                    <div style={{
+                        background: 'rgba(22, 24, 32, 0.85)',
+                        border: '1px solid var(--glass-border)',
+                        borderRadius: '28px',
+                        padding: 'clamp(2rem, 5vw, 3.5rem)',
+                        backdropFilter: 'blur(20px)',
+                        boxShadow: '0 20px 50px rgba(0, 0, 0, 0.4)',
+                        marginBottom: '3.5rem'
                     }}>
-                        {service.title}
-                    </h1>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: 'var(--accent-gold)', fontWeight: '700', fontSize: '0.9rem', marginBottom: '1rem', letterSpacing: '0.1em' }}>
+                            <Sparkles size={18} /> SERVICE OVERVIEW & CRAFTSMANSHIP
+                        </div>
 
-                    {/* Detailed Overview */}
-                    <div style={{ marginBottom: '3.5rem' }}>
-                        <h3 style={{
-                            fontSize: '1.35rem',
+                        <h2 style={{
+                            fontSize: 'clamp(1.6rem, 4vw, 2.2rem)',
                             color: '#E2C9A1',
-                            marginBottom: '1rem',
+                            marginBottom: '1.5rem',
                             fontFamily: "'Playfair Display', serif",
                             fontWeight: '800'
                         }}>
-                            Service Overview & Craftsmanship
-                        </h3>
+                            Bespoke Design & Craftsmanship Excellence
+                        </h2>
+
                         <p style={{
                             fontSize: '1.18rem',
                             lineHeight: '1.85',
-                            color: 'var(--text-secondary)'
+                            color: 'var(--text-secondary)',
+                            marginBottom: '3rem'
                         }}>
                             {service.description}
                         </p>
+
+                        {/* Key Highlights & Technical Specifications Grid */}
+                        {service.features && service.features.length > 0 && (
+                            <div style={{
+                                padding: '2.2rem 2rem',
+                                borderRadius: '20px',
+                                background: 'rgba(13, 14, 18, 0.65)',
+                                border: '1px solid rgba(212, 175, 55, 0.3)',
+                                backdropFilter: 'blur(12px)'
+                            }}>
+                                <h3 style={{
+                                    fontSize: '1.35rem',
+                                    color: '#E2C9A1',
+                                    marginBottom: '1.6rem',
+                                    fontFamily: "'Playfair Display', serif",
+                                    fontWeight: '800',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '0.5rem'
+                                }}>
+                                    <Award size={20} color="var(--accent-gold)" /> Key Highlights & Specifications
+                                </h3>
+                                <div style={{
+                                    display: 'grid',
+                                    gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+                                    gap: '1.3rem'
+                                }}>
+                                    {service.features.map((feat, idx) => (
+                                        <div key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+                                            <CheckCircle2 size={20} color="var(--accent-gold)" style={{ flexShrink: 0, marginTop: '2px' }} />
+                                            <span style={{ color: '#F3EFE9', fontSize: '1rem', lineHeight: '1.55' }}>{feat}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
                     </div>
 
-                    {/* Service Key Features & Specifications Grid */}
-                    {service.features && service.features.length > 0 && (
-                        <div style={{
-                            marginBottom: '3.5rem',
-                            padding: '2.5rem',
-                            borderRadius: '24px',
-                            background: 'rgba(13, 14, 18, 0.65)',
-                            border: '1px solid rgba(212, 175, 55, 0.3)',
-                            backdropFilter: 'blur(12px)'
-                        }}>
-                            <h3 style={{
-                                fontSize: '1.45rem',
-                                color: '#E2C9A1',
-                                marginBottom: '1.8rem',
-                                fontFamily: "'Playfair Display', serif",
-                                fontWeight: '800',
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '0.5rem'
-                            }}>
-                                <Sparkles size={20} color="var(--accent-gold)" /> Key Highlights & Technical Specifications
-                            </h3>
-                            <div style={{
-                                display: 'grid',
-                                gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-                                gap: '1.4rem'
-                            }}>
-                                {service.features.map((feat, idx) => (
-                                    <div key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
-                                        <CheckCircle2 size={20} color="var(--accent-gold)" style={{ flexShrink: 0, marginTop: '2px' }} />
-                                        <span style={{ color: '#F3EFE9', fontSize: '1rem', lineHeight: '1.55' }}>{feat}</span>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    )}
-
-                    {/* Free Consultation CTA Card */}
+                    {/* Free Consultation Call-to-Action Banner */}
                     <div style={{
-                        padding: '3rem 2rem',
-                        borderRadius: '24px',
+                        padding: '3.5rem 2.5rem',
+                        borderRadius: '28px',
                         background: 'linear-gradient(135deg, rgba(22, 24, 32, 0.95) 0%, rgba(13, 14, 18, 0.98) 100%)',
                         border: '1px solid rgba(212, 175, 55, 0.45)',
                         textAlign: 'center',
-                        boxShadow: '0 15px 40px rgba(0, 0, 0, 0.5)'
+                        boxShadow: '0 15px 45px rgba(0, 0, 0, 0.5)'
                     }}>
                         <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', color: 'var(--accent-gold)', fontSize: '0.9rem', fontWeight: '700', marginBottom: '0.8rem', letterSpacing: '0.08em' }}>
                             <ShieldCheck size={18} /> GUARANTEED ROYAL QUALITY
                         </div>
-                        <h3 style={{ fontSize: '1.85rem', color: '#F8F5EE', fontFamily: "'Playfair Display', serif", fontWeight: '800', marginBottom: '1rem' }}>
-                            Transform Your Home with {service.title}
+                        <h3 style={{ fontSize: 'clamp(1.6rem, 4vw, 2.2rem)', color: '#F8F5EE', fontFamily: "'Playfair Display', serif", fontWeight: '800', marginBottom: '1rem' }}>
+                            Ready to Transform Your Space with {service.title}?
                         </h3>
-                        <p style={{ color: 'var(--text-secondary)', maxWidth: '620px', margin: '0 auto 2.2rem', lineHeight: '1.7', fontSize: '1rem' }}>
-                            Get in touch with our master interior architects for a personalized consultation, material sample demonstration, and custom estimate.
+                        <p style={{ color: 'var(--text-secondary)', maxWidth: '640px', margin: '0 auto 2.2rem', lineHeight: '1.7', fontSize: '1rem' }}>
+                            Get in touch with our master interior architects for a complimentary site visit, 3D visualization consultation, and custom estimate.
                         </p>
                         <Link to="/contact" style={{
                             display: 'inline-flex',
@@ -204,7 +223,7 @@ const ServiceDetail = () => {
                     </div>
                 </motion.div>
             </div>
-        </div>
+        </PageWrapper>
     );
 };
 
