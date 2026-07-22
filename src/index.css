@@ -1,30 +1,30 @@
 :root {
-  --bg-primary: #FCFAF6;
-  /* Ivory Alabaster (Clean Bright Luxury Base) */
-  --bg-secondary: #F4EFE6;
-  /* Warm Champagne Beige (Section Backgrounds) */
-  --accent-primary: #1F1A17;
-  /* Rich Velvet Ebony (Primary Brand Definition) */
-  --accent-primary-rgb: 31, 26, 23;
-  --accent-secondary: #3A302A;
-  /* Espresso Bronze (Deep Accents) */
-  --accent-secondary-rgb: 58, 48, 42;
-  --accent-gold: #B99B6B;
-  /* Warm Brass Gold (Luxury Highlights) */
-  --accent-gold-rgb: 185, 155, 107;
-  --accent-soft: #D8CBB5;
-  /* Muted Brass */
-  --accent-soft-rgb: 216, 203, 181;
-  --text-primary: #211C18;
-  /* Soft Velvet Black (High Contrast Readability) */
-  --text-secondary: #685F56;
-  /* Warm Taupe (Subheadings & Details) */
-  --glass: rgba(252, 250, 246, 0.88);
-  /* Luminous Glassmorphism Base */
-  --glass-border: rgba(185, 155, 107, 0.28);
-  /* Glowing Brass Gold Border */
-  --gold-gradient: linear-gradient(135deg, #B99B6B 0%, #E8DCC4 50%, #8E7345 100%);
-  --royal-gradient: linear-gradient(135deg, #1F1A17 0%, #3A302A 100%);
+  --bg-primary: #FCF8F5;
+  /* Ultra-Clean Linen Base */
+  --bg-secondary: #EBDED4;
+  /* Soft Linen Cream Beige (#EBDED4) */
+  --accent-primary: #07203F;
+  /* Royal Deep Navy Blue (#07203F) */
+  --accent-primary-rgb: 7, 32, 63;
+  --accent-secondary: #02000D;
+  /* Midnight Navy Black (#02000D) */
+  --accent-secondary-rgb: 2, 0, 13;
+  --accent-gold: #A65E46;
+  /* Deep Terracotta Rust (#A65E46) */
+  --accent-gold-rgb: 166, 94, 70;
+  --accent-soft: #D9AA90;
+  /* Warm Terracotta Sand (#D9AA90) */
+  --accent-soft-rgb: 217, 170, 144;
+  --text-primary: #02000D;
+  /* Deepest Navy Black Readability */
+  --text-secondary: #07203F;
+  /* Deep Navy Subheadings */
+  --glass: #FFFFFF;
+  /* Luminous White Glass Base */
+  --glass-border: rgba(166, 94, 70, 0.28);
+  /* Glowing Terracotta Glass Border */
+  --gold-gradient: linear-gradient(135deg, #A65E46 0%, #D9AA90 50%, #7D3E2A 100%);
+  --royal-gradient: linear-gradient(135deg, #02000D 0%, #07203F 100%);
 }
 
 * {
@@ -43,8 +43,8 @@ body {
 
 .aurora-gradient {
   background: 
-    radial-gradient(circle at 10% 15%, rgba(185, 155, 107, 0.08) 0%, transparent 45%),
-    radial-gradient(circle at 90% 85%, rgba(185, 155, 107, 0.06) 0%, transparent 50%);
+    radial-gradient(circle at 10% 15%, rgba(166, 94, 70, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 90% 85%, rgba(7, 32, 63, 0.08) 0%, transparent 50%);
   min-height: 100vh;
 }
 
@@ -54,19 +54,19 @@ body {
   -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--glass-border);
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(31, 26, 23, 0.06);
+  box-shadow: 0 10px 30px rgba(2, 0, 13, 0.06);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .glass-card:hover {
   border-color: var(--accent-gold);
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(185, 155, 107, 0.22);
+  box-shadow: 0 20px 40px rgba(166, 94, 70, 0.22);
 }
 
 .gold-text {
   font-family: 'Playfair Display', serif;
-  background: linear-gradient(135deg, #B99B6B 0%, #D8CBB5 50%, #8E7345 100%);
+  background: linear-gradient(135deg, #07203F 0%, #A65E46 50%, #D9AA90 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -75,7 +75,7 @@ body {
 }
 
 .navy-text {
-  color: var(--accent-secondary);
+  color: var(--accent-primary);
 }
 
 a {

@@ -30,7 +30,7 @@ const Home = () => {
                         right: 0,
                         bottom: 0,
                         zIndex: -1,
-                        backgroundImage: 'linear-gradient(to bottom, rgba(31, 26, 23, 0.3) 0%, rgba(31, 26, 23, 0.72) 100%), url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000")',
+                        backgroundImage: 'linear-gradient(to bottom, rgba(2, 0, 13, 0.35) 0%, rgba(7, 32, 63, 0.72) 100%), url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000")',
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         filter: 'brightness(1.04) contrast(1.06)'
@@ -61,18 +61,18 @@ const Home = () => {
                             gap: '0.6rem',
                             padding: '0.55rem 1.6rem',
                             borderRadius: '50px',
-                            background: 'rgba(31, 26, 23, 0.75)',
-                            border: '1px solid rgba(185, 155, 107, 0.6)',
-                            color: '#E8DCC4',
+                            background: 'rgba(2, 0, 13, 0.75)',
+                            border: '1px solid rgba(217, 170, 144, 0.6)',
+                            color: '#EBDED4',
                             fontSize: '0.9rem',
                             fontWeight: '800',
                             letterSpacing: '0.12em',
                             marginBottom: '2rem',
                             backdropFilter: 'blur(12px)',
-                            boxShadow: '0 8px 25px rgba(0, 0, 0, 0.4)'
+                            boxShadow: '0 8px 25px rgba(2, 0, 13, 0.4)'
                         }}
                     >
-                        <Sparkles size={16} color="var(--accent-gold)" /> BESPOKE ROYAL INTERIORS
+                        <Sparkles size={16} color="#D9AA90" /> BESPOKE ROYAL INTERIORS
                     </motion.div>
 
                     {/* Headline */}
@@ -84,21 +84,27 @@ const Home = () => {
                         color: '#FFFFFF',
                         fontFamily: "'Playfair Display', serif",
                         letterSpacing: '-0.02em',
-                        textShadow: '0 4px 30px rgba(0, 0, 0, 0.95), 0 2px 10px rgba(0, 0, 0, 0.9)'
+                        textShadow: '0 4px 30px rgba(2, 0, 13, 0.95), 0 2px 10px rgba(2, 0, 13, 0.9)'
                     }}>
                         Transform Your Space into a <br />
-                        <span className="gold-text" style={{ textShadow: '0 4px 30px rgba(0,0,0,0.95)' }}>Masterpiece of Luxury.</span>
+                        <span style={{
+                            fontFamily: "'Playfair Display', serif",
+                            background: 'linear-gradient(135deg, #EBDED4 0%, #D9AA90 50%, #A65E46 100%)',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
+                            textShadow: '0 4px 30px rgba(2, 0, 13, 0.95)'
+                        }}>Masterpiece of Luxury.</span>
                     </h1>
 
                     {/* Subtitle */}
                     <p style={{
                         fontSize: '1.25rem',
-                        color: '#F8F5EE',
+                        color: '#EBDED4',
                         maxWidth: '720px',
                         margin: '0 auto 3rem',
                         lineHeight: '1.85',
                         fontWeight: '500',
-                        textShadow: '0 3px 20px rgba(0, 0, 0, 0.95), 0 1px 6px rgba(0, 0, 0, 0.9)'
+                        textShadow: '0 3px 20px rgba(2, 0, 13, 0.95), 0 1px 6px rgba(2, 0, 13, 0.9)'
                     }}>
                         Sree Annapoorna Interiors crafts high-end residential & commercial spaces with royal craftsmanship, modular perfection, and timeless elegance.
                     </p>
@@ -112,8 +118,8 @@ const Home = () => {
                         justifyContent: 'center'
                     }}>
                         <Link to="/services" style={{
-                            background: 'linear-gradient(135deg, #B99B6B 0%, #E8DCC4 50%, #8E7345 100%)',
-                            color: '#1F1A17',
+                            background: 'linear-gradient(135deg, #A65E46 0%, #D9AA90 50%, #7D3E2A 100%)',
+                            color: '#FFFFFF',
                             padding: '1.2rem 2.8rem',
                             borderRadius: '50px',
                             display: 'flex',
@@ -121,16 +127,16 @@ const Home = () => {
                             gap: '0.6rem',
                             fontWeight: '800',
                             fontSize: '1.02rem',
-                            boxShadow: '0 12px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(185, 155, 107, 0.4)',
+                            boxShadow: '0 12px 35px rgba(166, 94, 70, 0.45)',
                             transition: 'all 0.3s ease'
                         }}>
                             Explore Services <ChevronRight size={20} />
                         </Link>
                         <Link to="/contact" style={{
-                            border: '1.5px solid rgba(185, 155, 107, 0.65)',
-                            background: 'rgba(31, 26, 23, 0.75)',
+                            border: '1.5px solid rgba(217, 170, 144, 0.65)',
+                            background: 'rgba(7, 32, 63, 0.75)',
                             backdropFilter: 'blur(14px)',
-                            color: '#F8F5EE',
+                            color: '#EBDED4',
                             padding: '1.2rem 2.8rem',
                             borderRadius: '50px',
                             display: 'flex',
@@ -138,7 +144,7 @@ const Home = () => {
                             gap: '0.6rem',
                             fontWeight: '700',
                             fontSize: '1.02rem',
-                            boxShadow: '0 12px 35px rgba(0, 0, 0, 0.5)'
+                            boxShadow: '0 12px 35px rgba(2, 0, 13, 0.5)'
                         }}>
                             Book Consultation
                         </Link>
@@ -162,7 +168,7 @@ const Home = () => {
                     border: '1px solid var(--glass-border)',
                     borderRadius: '24px',
                     padding: '2rem 2.5rem',
-                    boxShadow: '0 15px 35px rgba(31, 26, 23, 0.08)'
+                    boxShadow: '0 15px 35px rgba(2, 0, 13, 0.08)'
                 }}>
                     {[
                         { icon: Award, number: '500+', label: 'Luxury Projects Delivered' },
@@ -175,8 +181,8 @@ const Home = () => {
                                 width: '48px',
                                 height: '48px',
                                 borderRadius: '14px',
-                                background: 'rgba(185, 155, 107, 0.12)',
-                                border: '1px solid rgba(185, 155, 107, 0.35)',
+                                background: 'rgba(7, 32, 63, 0.1)',
+                                border: '1px solid rgba(166, 94, 70, 0.35)',
                                 display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'center',
@@ -262,7 +268,7 @@ const Home = () => {
                                     }}
                                     className="feature-img"
                                 />
-                                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(31, 26, 23, 0.85), transparent 60%)' }} />
+                                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(7, 32, 63, 0.85), transparent 60%)' }} />
                             </div>
                             <div style={{ padding: '2.2rem 2.5rem' }}>
                                 <h3 style={{ fontSize: '1.5rem', marginBottom: '0.8rem', color: 'var(--accent-primary)', fontWeight: '800', fontFamily: "'Playfair Display', serif" }}>{feature.title}</h3>
