@@ -157,7 +157,7 @@ const ServiceDetail = () => {
                                 onClick={() => setActiveImage(img)}
                             >
                                 <img
-                                    src={img}
+                                    src={encodeURI(img)}
                                     alt={`${service.title} project image ${index + 1}`}
                                     style={{
                                         width: '100%',
