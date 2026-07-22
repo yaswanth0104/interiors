@@ -4,9 +4,9 @@ const Footer = () => {
     return (
         <footer className="footer" style={{
             padding: 'clamp(2rem, 6vw, 4rem) 2rem',
-            background: 'linear-gradient(135deg, #051F20 0%, #0B2B26 100%)',
+            background: 'linear-gradient(135deg, #333D29 0%, #582F0E 100%)',
             color: '#FFFFFF',
-            borderTop: '1px solid rgba(35, 83, 71, 0.4)',
+            borderTop: '1px solid rgba(127, 79, 36, 0.4)',
             marginTop: '4rem'
         }}>
             <div style={{
@@ -18,19 +18,19 @@ const Footer = () => {
             }}>
                 <div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.2rem' }}>
-                        <img src="/logo-icon-emerald.png" alt="Sree Annapoorna Interiors" style={{ height: '3.2rem', width: 'auto', filter: 'drop-shadow(0 2px 8px rgba(142, 182, 155, 0.4))' }} />
+                        <img src="/logo-icon-earth.png" alt="Sree Annapoorna Interiors" style={{ height: '3.2rem', width: 'auto', filter: 'drop-shadow(0 2px 8px rgba(164, 172, 134, 0.4))' }} />
                         <div>
-                            <div style={{ fontFamily: "'Playfair Display', serif", fontWeight: '900', color: '#8EB69B', fontSize: '1.25rem', lineHeight: '1.1' }}>SREE ANNAPOORNA</div>
-                            <div style={{ fontFamily: "'Playfair Display', serif", fontWeight: '900', color: '#DAF1DE', fontSize: '0.95rem', letterSpacing: '0.08em' }}>INTERIORS</div>
+                            <div style={{ fontFamily: "'Playfair Display', serif", fontWeight: '900', color: '#A4AC86', fontSize: '1.25rem', lineHeight: '1.1' }}>SREE ANNAPOORNA</div>
+                            <div style={{ fontFamily: "'Playfair Display', serif", fontWeight: '900', color: '#C2C5AA', fontSize: '0.95rem', letterSpacing: '0.08em' }}>INTERIORS</div>
                         </div>
                     </div>
-                    <p style={{ color: '#DAF1DE', opacity: 0.85, maxWidth: '320px', lineHeight: '1.6', fontSize: '0.95rem' }}>
+                    <p style={{ color: '#C2C5AA', opacity: 0.85, maxWidth: '320px', lineHeight: '1.6', fontSize: '0.95rem' }}>
                         Transforming spaces into stunning realities with royal craftsmanship, bespoke interior architecture, and professional design excellence.
                     </p>
                 </div>
                 <div>
-                    <h4 style={{ marginBottom: '1rem', color: '#8EB69B' }}>Services</h4>
-                    <ul style={{ listStyle: 'none', color: '#DAF1DE', opacity: 0.8, lineHeight: '1.8' }}>
+                    <h4 style={{ marginBottom: '1rem', color: '#A4AC86' }}>Services</h4>
+                    <ul style={{ listStyle: 'none', color: '#C2C5AA', opacity: 0.8, lineHeight: '1.8' }}>
                         <li>Modular Kitchens</li>
                         <li>Bespoke Wardrobes</li>
                         <li>T.V. Unit Designs</li>
@@ -41,8 +41,8 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div>
-                    <h4 style={{ marginBottom: '1rem', color: '#8EB69B' }}>Contact</h4>
-                    <p style={{ color: '#DAF1DE', opacity: 0.8, lineHeight: '1.6' }}>
+                    <h4 style={{ marginBottom: '1rem', color: '#A4AC86' }}>Contact</h4>
+                    <p style={{ color: '#C2C5AA', opacity: 0.8, lineHeight: '1.6' }}>
                         Email: sreeannapoornainteriors@gmail.com<br />
                         Phone: +91 70130 06137<br />
                         Address: North Bypass Road, Ongole
@@ -53,8 +53,8 @@ const Footer = () => {
                 textAlign: 'center',
                 marginTop: '3rem',
                 paddingTop: '1rem',
-                borderTop: '1px solid rgba(142, 182, 155, 0.2)',
-                color: '#DAF1DE',
+                borderTop: '1px solid rgba(164, 172, 134, 0.2)',
+                color: '#C2C5AA',
                 opacity: 0.6,
                 fontSize: '0.9rem'
             }}>
