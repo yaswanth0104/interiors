@@ -1,30 +1,30 @@
 :root {
-  --bg-primary: #FCF8F5;
-  /* Ultra-Clean Linen Base */
-  --bg-secondary: #EBDED4;
-  /* Soft Linen Cream Beige (#EBDED4) */
-  --accent-primary: #07203F;
-  /* Royal Deep Navy Blue (#07203F) */
-  --accent-primary-rgb: 7, 32, 63;
-  --accent-secondary: #02000D;
-  /* Midnight Navy Black (#02000D) */
-  --accent-secondary-rgb: 2, 0, 13;
-  --accent-gold: #A65E46;
-  /* Deep Terracotta Rust (#A65E46) */
-  --accent-gold-rgb: 166, 94, 70;
-  --accent-soft: #D9AA90;
-  /* Warm Terracotta Sand (#D9AA90) */
-  --accent-soft-rgb: 217, 170, 144;
-  --text-primary: #02000D;
-  /* Deepest Navy Black Readability */
-  --text-secondary: #07203F;
-  /* Deep Navy Subheadings */
+  --bg-primary: #FCFEFC;
+  /* Ultra-Clean Crisp Mint White Base */
+  --bg-secondary: #DAF1DE;
+  /* Soft Mint Cream (#DAF1DE) */
+  --accent-primary: #051F20;
+  /* Deep Emerald Black (#051F20) */
+  --accent-primary-rgb: 5, 31, 32;
+  --accent-secondary: #0B2B26;
+  /* Rich Emerald Pine (#0B2B26) */
+  --accent-secondary-rgb: 11, 43, 38;
+  --accent-gold: #235347;
+  /* Vibrant Emerald Green (#235347) */
+  --accent-gold-rgb: 35, 83, 71;
+  --accent-soft: #8EB69B;
+  /* Soft Sage Mint (#8EB69B) */
+  --accent-soft-rgb: 142, 182, 155;
+  --text-primary: #051F20;
+  /* Deepest Emerald Readability */
+  --text-secondary: #163832;
+  /* Deep Sage Text (#163832) */
   --glass: #FFFFFF;
-  /* Luminous White Glass Base */
-  --glass-border: rgba(166, 94, 70, 0.28);
-  /* Glowing Terracotta Glass Border */
-  --gold-gradient: linear-gradient(135deg, #A65E46 0%, #D9AA90 50%, #7D3E2A 100%);
-  --royal-gradient: linear-gradient(135deg, #02000D 0%, #07203F 100%);
+  /* Crisp White Glass Base */
+  --glass-border: rgba(35, 83, 71, 0.28);
+  /* Glowing Emerald Border */
+  --gold-gradient: linear-gradient(135deg, #235347 0%, #8EB69B 50%, #0B2B26 100%);
+  --royal-gradient: linear-gradient(135deg, #051F20 0%, #0B2B26 100%);
 }
 
 * {
@@ -43,8 +43,8 @@ body {
 
 .aurora-gradient {
   background: 
-    radial-gradient(circle at 10% 15%, rgba(166, 94, 70, 0.08) 0%, transparent 45%),
-    radial-gradient(circle at 90% 85%, rgba(7, 32, 63, 0.08) 0%, transparent 50%);
+    radial-gradient(circle at 10% 15%, rgba(142, 182, 155, 0.1) 0%, transparent 45%),
+    radial-gradient(circle at 90% 85%, rgba(35, 83, 71, 0.08) 0%, transparent 50%);
   min-height: 100vh;
 }
 
@@ -54,19 +54,19 @@ body {
   -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--glass-border);
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(2, 0, 13, 0.06);
+  box-shadow: 0 10px 30px rgba(5, 31, 32, 0.06);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .glass-card:hover {
   border-color: var(--accent-gold);
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(166, 94, 70, 0.22);
+  box-shadow: 0 20px 40px rgba(35, 83, 71, 0.22);
 }
 
 .gold-text {
   font-family: 'Playfair Display', serif;
-  background: linear-gradient(135deg, #07203F 0%, #A65E46 50%, #D9AA90 100%);
+  background: linear-gradient(135deg, #0B2B26 0%, #235347 50%, #8EB69B 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

@@ -42,14 +42,14 @@ const Navbar = () => {
                     }}
                 >
                     <img
-                        src="/logo-icon-gold.png"
+                        src="/logo-icon-emerald.png"
                         alt="Sree Annapoorna Interiors Logo"
                         style={{
                             height: 'clamp(2.6rem, 5vw, 3.4rem)',
                             width: 'auto',
                             objectFit: 'contain',
                             display: 'block',
-                            filter: 'drop-shadow(0 2px 6px rgba(185, 155, 107, 0.3))'
+                            filter: 'drop-shadow(0 2px 6px rgba(35, 83, 71, 0.35))'
                         }}
                     />
                     <div style={{
