@@ -37,60 +37,67 @@ const Navbar = () => {
                     style={{
                         display: 'flex',
                         alignItems: 'center',
-                        gap: '0',
+                        gap: '0.85rem',
                         textDecoration: 'none'
                     }}
                 >
                     <img
-                        src="/WhatsApp Image 2026-02-11 at 11.31.12 - Edited.png"
+                        src="/logo-icon-gold.png"
                         alt="Sree Annapoorna Interiors Logo"
-                        style={{ height: '5.2rem', width: 'auto' }}
+                        style={{
+                            height: 'clamp(2.6rem, 5vw, 3.4rem)',
+                            width: 'auto',
+                            objectFit: 'contain',
+                            display: 'block',
+                            filter: 'drop-shadow(0 2px 6px rgba(185, 155, 107, 0.3))'
+                        }}
                     />
-                    <span style={{
+                    <div style={{
                         display: 'flex',
-                        flexDirection: 'column',
-                        lineHeight: '1.0',
-                        textAlign: 'left'
+                        alignItems: 'center',
+                        gap: '0.45rem',
+                        flexWrap: 'wrap'
                     }}>
                         <span style={{
                             fontFamily: "'Playfair Display', serif",
                             fontWeight: '900',
-                            fontSize: 'clamp(1.8rem, 6vw, 2.6rem)',
+                            fontSize: 'clamp(1.3rem, 2.9vw, 1.8rem)',
                             letterSpacing: '-0.01em',
-                            background: 'linear-gradient(135deg, var(--accent-secondary) 0%, var(--accent-gold) 50%, var(--accent-primary) 100%)',
+                            background: 'linear-gradient(135deg, #FFF0C2 0%, #D4AF37 55%, #AA7C11 100%)',
                             WebkitBackgroundClip: 'text',
                             WebkitTextFillColor: 'transparent',
-                            marginBottom: '0.1rem'
+                            lineHeight: '1'
                         }}>SREE ANNAPOORNA</span>
                         <span style={{
-                            fontFamily: "'Outfit', sans-serif",
-                            color: 'var(--accent-secondary)',
-                            fontSize: '0.7em',
-                            letterSpacing: '0.4em',
-                            fontWeight: '500',
-                            opacity: 0.8
+                            fontFamily: "'Playfair Display', serif",
+                            fontWeight: '900',
+                            fontSize: 'clamp(1.3rem, 2.9vw, 1.8rem)',
+                            letterSpacing: '0.04em',
+                            color: '#F8F5EE',
+                            lineHeight: '1'
                         }}>INTERIORS</span>
-                    </span>
+                    </div>
                 </NavLink>
 
                 {/* Desktop Menu */}
-                <div className="desktop-only" style={{ display: 'flex', gap: '2rem' }}>
+                <div className="desktop-only" style={{ display: 'flex', gap: '2.2rem' }}>
                     {navItems.map((item) => (
                         <NavLink
                             key={item.name}
                             to={item.path}
                             style={({ isActive }) => ({
-                                color: isActive ? 'var(--accent-primary)' : 'var(--text-secondary)',
+                                color: isActive ? 'var(--accent-gold)' : 'var(--text-secondary)',
                                 fontWeight: isActive ? '700' : '400',
                                 display: 'flex',
                                 alignItems: 'center',
                                 gap: '0.5rem',
-                                fontSize: '0.95rem'
+                                fontSize: '0.95rem',
+                                textShadow: isActive ? '0 0 12px rgba(212, 175, 55, 0.4)' : 'none'
                             })}
                         >
                             {({ isActive }) => (
                                 <>
-                                    <item.icon size={18} color={isActive ? 'var(--accent-primary)' : 'var(--text-secondary)'} />
+                                    <item.icon size={18} color={isActive ? 'var(--accent-gold)' : 'var(--text-secondary)'} />
                                     {item.name}
                                 </>
                             )}

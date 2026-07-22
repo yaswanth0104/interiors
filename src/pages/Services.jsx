@@ -51,12 +51,12 @@ const Services = () => {
                             <div style={{
                                 position: 'absolute',
                                 inset: 0,
-                                background: 'linear-gradient(to bottom, rgba(5, 31, 32, 0.4) 0%, rgba(5, 31, 32, 0.85) 100%)',
+                                background: 'linear-gradient(to bottom, rgba(var(--accent-secondary-rgb), 0.3) 0%, rgba(var(--accent-secondary-rgb), 0.9) 100%)',
                                 zIndex: 1
                             }} />
 
                             <div style={{ position: 'relative', zIndex: 2, height: '100%', display: 'flex', flexDirection: 'column' }}>
-                                <cat.icon size={48} color="#DAF1DE" style={{ marginBottom: '1.5rem' }} />
+                                <cat.icon size={48} color="var(--accent-gold)" style={{ marginBottom: '1.5rem' }} />
                                 <h3 style={{
                                     fontSize: '1.8rem',
                                     marginBottom: '1rem',
@@ -65,7 +65,7 @@ const Services = () => {
                                     fontFamily: "'Playfair Display', serif"
                                 }}>{cat.title}</h3>
                                 <p style={{
-                                    color: '#DAF1DE',
+                                    color: 'rgba(255, 255, 255, 0.8)',
                                     lineHeight: '1.6',
                                     marginBottom: '2rem',
                                     opacity: 0.9

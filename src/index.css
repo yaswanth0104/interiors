@@ -1,29 +1,30 @@
 :root {
-  --bg-primary: #DAF1DE;
-  /* Light Mint (Clean Base) */
-  --bg-secondary: #8EB69B;
-  /* Sage Green (Section Backgrounds) */
-  --accent-primary: #163832;
-  /* Forest Green (Primary Buttons/Links) */
-  --accent-primary-rgb: 22, 56, 50;
-  --accent-secondary: #051F20;
-  /* Midnight Green (Deep Accents/Footers) */
-  --accent-secondary-rgb: 5, 31, 32;
-  --accent-gold: #235347;
-  /* Deep Teal Green (High-end highlights) */
-  --accent-gold-rgb: 35, 83, 71;
-  --accent-soft: #8EB69B;
-  /* Muted Sage (Subtle utility) */
-  --accent-soft-rgb: 142, 182, 155;
-  --text-primary: #051F20;
-  /* Rich Midnight Green (High Contrast Readability) */
-  --text-secondary: #163832;
-  /* Deep Forest Green (Subheadings/Details) */
-  --glass: rgba(218, 241, 222, 0.85);
-  /* Based on Light Mint */
-  --glass-border: rgba(5, 31, 32, 0.15);
-  --gold-gradient: linear-gradient(135deg, #235347 0%, #DAF1DE 50%, #163832 100%);
-  --royal-gradient: linear-gradient(135deg, #163832 0%, #051F20 100%);
+  --bg-primary: #0D0E12;
+  /* Deep Royal Obsidian (Ultra-Luxury Dark Base) */
+  --bg-secondary: #161820;
+  /* Rich Dark Graphite (Section Backgrounds) */
+  --accent-primary: #F8F5EE;
+  /* Cream White (Primary Text & Highlights) */
+  --accent-primary-rgb: 248, 245, 238;
+  --accent-secondary: #E2C9A1;
+  /* Soft Warm Champagne Gold */
+  --accent-secondary-rgb: 226, 201, 161;
+  --accent-gold: #D4AF37;
+  /* Royal Metallic Gold */
+  --accent-gold-rgb: 212, 175, 55;
+  --accent-soft: #8A795D;
+  /* Muted Brass Accent */
+  --accent-soft-rgb: 138, 121, 93;
+  --text-primary: #F3EFE9;
+  /* High Contrast Luminous Warm White */
+  --text-secondary: #B8B0A2;
+  /* Warm Champagne Taupe */
+  --glass: rgba(18, 20, 26, 0.85);
+  /* Dark Glassmorphism Base */
+  --glass-border: rgba(212, 175, 55, 0.25);
+  /* Glowing Gold Glass Border */
+  --gold-gradient: linear-gradient(135deg, #FFF0C2 0%, #D4AF37 50%, #997312 100%);
+  --royal-gradient: linear-gradient(135deg, #090A0D 0%, #161822 100%);
 }
 
 * {
@@ -41,29 +42,32 @@ body {
 }
 
 .aurora-gradient {
-  background: radial-gradient(circle at 10% 20%, rgba(var(--accent-primary-rgb), 0.02) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(var(--accent-gold-rgb), 0.04) 0%, transparent 40%);
+  background: 
+    radial-gradient(circle at 15% 15%, rgba(212, 175, 55, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 85% 75%, rgba(212, 175, 55, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(248, 245, 238, 0.02) 0%, transparent 60%);
   min-height: 100vh;
 }
 
 .glass-card {
-  background: white;
-  backdrop-filter: blur(10px);
+  background: rgba(22, 24, 32, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--glass-border);
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(var(--accent-primary-rgb), 0.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .glass-card:hover {
-  border-color: var(--accent-gold);
+  border-color: rgba(212, 175, 55, 0.6);
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(var(--accent-primary-rgb), 0.12);
+  box-shadow: 0 20px 45px rgba(212, 175, 55, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .gold-text {
   font-family: 'Playfair Display', serif;
-  background: linear-gradient(135deg, #163832 0%, #235347 50%, #8EB69B 100%);
+  background: linear-gradient(135deg, #FFF0C2 0%, #D4AF37 50%, #997312 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -98,13 +102,13 @@ button {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--bg-secondary);
+  background: #242733;
   border-radius: 5px;
   border: 2px solid var(--bg-primary);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-primary);
+  background: var(--accent-gold);
 }
 
 @keyframes fadeIn {
