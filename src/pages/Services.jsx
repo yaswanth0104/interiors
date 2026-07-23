@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import PageWrapper from '../components/PageWrapper';
 import SEO from '../components/SEO';
 import { servicesData } from '../data/servicesData';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight, Sparkles, Image as ImageIcon, X, Maximize2 } from 'lucide-react';
 
 const Services = () => {
+    const [selectedImg, setSelectedImg] = useState(null);
+
     const servicesSchema = {
         "@context": "https://schema.org",
         "@type": "ItemList",
@@ -97,7 +99,7 @@ const Services = () => {
                 {/* Elegant Service Cards Grid */}
                 <div style={{
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))',
                     gap: '2rem'
                 }}>
                     {servicesData.map((cat, i) => (
@@ -108,14 +110,12 @@ const Services = () => {
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.08 }}
                         >
-                            <Link
-                                to={`/services/${cat.id}`}
+                            <div
                                 className="glass-card"
                                 style={{
                                     display: 'flex',
                                     flexDirection: 'column',
                                     overflow: 'hidden',
-                                    textDecoration: 'none',
                                     height: '100%',
                                     borderRadius: '20px',
                                     border: '1px solid var(--glass-border)',
@@ -123,14 +123,15 @@ const Services = () => {
                                     transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
                                 }}
                             >
-                                {/* Single Crisp Featured Showcase Image */}
+                                {/* Main Featured Service Image */}
                                 <div style={{
-                                    height: '210px',
+                                    height: '220px',
                                     position: 'relative',
-                                    overflow: 'hidden'
-                                }}>
+                                    overflow: 'hidden',
+                                    cursor: 'pointer'
+                                }} onClick={() => setSelectedImg(cat.mainImage || cat.tileImage)}>
                                     <img
-                                        src={cat.tileImage || cat.mainImage}
+                                        src={encodeURI(cat.tileImage || cat.mainImage)}
                                         alt={cat.title}
                                         style={{
                                             width: '100%',
@@ -169,53 +170,174 @@ const Services = () => {
 
                                 {/* Service Content Details */}
                                 <div style={{ padding: '1.5rem 1.5rem 1.8rem', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
-                                    <h2 style={{
-                                        fontSize: '1.4rem',
-                                        marginBottom: '0.6rem',
-                                        color: 'var(--accent-primary)',
-                                        fontWeight: '800',
-                                        fontFamily: "'Playfair Display', serif"
-                                    }}>
-                                        {cat.title}
-                                    </h2>
+                                    <Link to={`/services/${cat.id}`} style={{ textDecoration: 'none' }}>
+                                        <h2 style={{
+                                            fontSize: '1.4rem',
+                                            marginBottom: '0.6rem',
+                                            color: 'var(--accent-primary)',
+                                            fontWeight: '800',
+                                            fontFamily: "'Playfair Display', serif"
+                                        }}>
+                                            {cat.title}
+                                        </h2>
+                                    </Link>
 
                                     <p style={{
                                         color: 'var(--text-secondary)',
                                         lineHeight: '1.65',
                                         fontSize: '0.95rem',
-                                        marginBottom: '1.5rem'
+                                        marginBottom: '1rem'
                                     }}>
                                         {cat.shortDesc}
                                     </p>
 
-                                    <div style={{
-                                        marginTop: 'auto',
-                                        display: 'inline-flex',
-                                        alignItems: 'center',
-                                        gap: '0.5rem',
-                                        color: 'var(--accent-gold)',
-                                        fontWeight: '800',
-                                        fontSize: '0.88rem',
-                                        letterSpacing: '0.08em',
-                                        transition: 'gap 0.3s ease'
-                                    }} className="explore-btn">
-                                        EXPLORE SERVICE DETAILS <ArrowRight size={16} />
-                                    </div>
-                                </div>
+                                    {/* 4 HD Interior Design Photos Grid Directly on Card */}
+                                    {cat.gallery && cat.gallery.length > 0 && (
+                                        <div style={{
+                                            marginTop: '0.5rem',
+                                            marginBottom: '1.2rem',
+                                            paddingTop: '0.8rem',
+                                            borderTop: '1px solid rgba(204, 158, 76, 0.25)'
+                                        }}>
+                                            <div style={{
+                                                fontSize: '0.78rem',
+                                                fontWeight: '800',
+                                                color: 'var(--accent-gold)',
+                                                marginBottom: '0.6rem',
+                                                letterSpacing: '0.06em',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                gap: '0.4rem'
+                                            }}>
+                                                <ImageIcon size={14} /> 4 DESIGN SAMPLES & INTERIOR DESIGNS
+                                            </div>
+                                            <div style={{
+                                                display: 'grid',
+                                                gridTemplateColumns: 'repeat(4, 1fr)',
+                                                gap: '0.5rem'
+                                            }}>
+                                                {cat.gallery.map((imgUrl, imgIdx) => (
+                                                    <div
+                                                        key={imgIdx}
+                                                        onClick={() => setSelectedImg(imgUrl)}
+                                                        style={{
+                                                            height: '64px',
+                                                            borderRadius: '8px',
+                                                            overflow: 'hidden',
+                                                            cursor: 'pointer',
+                                                            border: '1px solid rgba(204, 158, 76, 0.35)',
+                                                            position: 'relative'
+                                                        }}
+                                                        className="mini-thumb-container"
+                                                    >
+                                                        <img
+                                                            src={encodeURI(imgUrl)}
+                                                            alt={`${cat.title} sample ${imgIdx + 1}`}
+                                                            style={{
+                                                                width: '100%',
+                                                                height: '100%',
+                                                                objectFit: 'cover',
+                                                                transition: 'transform 0.4s ease'
+                                                            }}
+                                                            className="mini-thumb-img"
+                                                        />
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    )}
 
-                                <style>{`
-                                    .glass-card:hover .card-img {
-                                        transform: scale(1.08);
-                                    }
-                                    .glass-card:hover .explore-btn {
-                                        gap: 0.8rem;
-                                    }
-                                `}</style>
-                            </Link>
+                                    <Link
+                                        to={`/services/${cat.id}`}
+                                        style={{
+                                            marginTop: 'auto',
+                                            display: 'inline-flex',
+                                            alignItems: 'center',
+                                            gap: '0.5rem',
+                                            color: 'var(--accent-gold)',
+                                            fontWeight: '800',
+                                            fontSize: '0.88rem',
+                                            letterSpacing: '0.08em',
+                                            transition: 'gap 0.3s ease',
+                                            textDecoration: 'none'
+                                        }}
+                                        className="explore-btn"
+                                    >
+                                        EXPLORE FULL SERVICE DETAILS <ArrowRight size={16} />
+                                    </Link>
+                                </div>
+                            </div>
                         </motion.div>
                     ))}
                 </div>
             </div>
+
+            {/* Lightbox Image Preview Modal */}
+            <AnimatePresence>
+                {selectedImg && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={() => setSelectedImg(null)}
+                        style={{
+                            position: 'fixed',
+                            inset: 0,
+                            zIndex: 999,
+                            background: 'rgba(0, 0, 0, 0.88)',
+                            backdropFilter: 'blur(10px)',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            padding: '2rem'
+                        }}
+                    >
+                        <div style={{ position: 'relative', maxWidth: '1000px', width: '100%' }} onClick={(e) => e.stopPropagation()}>
+                            <button
+                                onClick={() => setSelectedImg(null)}
+                                style={{
+                                    position: 'absolute',
+                                    top: '-2.5rem',
+                                    right: 0,
+                                    background: 'rgba(255, 255, 255, 0.2)',
+                                    color: 'white',
+                                    borderRadius: '50%',
+                                    width: '36px',
+                                    height: '36px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center'
+                                }}
+                            >
+                                <X size={20} />
+                            </button>
+                            <img
+                                src={encodeURI(selectedImg)}
+                                alt="Full-screen Interior View"
+                                style={{
+                                    width: '100%',
+                                    maxHeight: '80vh',
+                                    objectFit: 'contain',
+                                    borderRadius: '16px',
+                                    boxShadow: '0 25px 60px rgba(0,0,0,0.5)'
+                                }}
+                            />
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
+            <style>{`
+                .glass-card:hover .card-img {
+                    transform: scale(1.08);
+                }
+                .glass-card:hover .explore-btn {
+                    gap: 0.8rem;
+                }
+                .mini-thumb-container:hover .mini-thumb-img {
+                    transform: scale(1.15);
+                }
+            `}</style>
         </PageWrapper>
     );
 };
