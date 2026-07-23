@@ -11,10 +11,10 @@ const PageWrapper = ({ children, title, heroImage }) => (
     >
         {heroImage && (
             <div style={{
-                height: '40vh',
+                height: 'clamp(220px, 35vh, 400px)',
                 width: '100%',
                 position: 'relative',
-                backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url("${heroImage}")`,
+                backgroundImage: `linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.7)), url("${heroImage}")`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 display: 'flex',
@@ -22,28 +22,34 @@ const PageWrapper = ({ children, title, heroImage }) => (
                 justifyContent: 'center',
                 alignItems: 'center',
                 textAlign: 'center',
-                padding: '0 2rem',
-                marginBottom: '4rem'
+                padding: '0 1rem',
+                marginBottom: 'clamp(2rem, 5vw, 4rem)'
             }}>
                 {title && <h1 style={{
-                    fontSize: '4rem',
+                    fontSize: 'clamp(2.2rem, 6vw, 3.8rem)',
                     fontWeight: '800',
                     color: 'white',
                     marginBottom: '0.5rem',
-                    textShadow: '0 2px 10px rgba(0,0,0,0.3)'
+                    textShadow: '0 2px 10px rgba(0,0,0,0.4)',
+                    fontFamily: "'Playfair Display', serif"
                 }}>{title}</h1>}
                 <div style={{ width: '60px', height: '4px', background: 'var(--accent-gold)', borderRadius: '2px' }} />
             </div>
         )}
 
-        <div style={{ padding: heroImage ? '0 2rem 4rem' : '4rem 2rem', maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{
+            padding: heroImage ? '0 clamp(1rem, 4vw, 2rem) 4rem' : 'clamp(2rem, 4vw, 4rem) clamp(1rem, 4vw, 2rem)',
+            maxWidth: '1200px',
+            margin: '0 auto'
+        }}>
             {!heroImage && title && <h1 style={{
-                fontSize: '3.5rem',
+                fontSize: 'clamp(2.2rem, 6vw, 3.5rem)',
                 fontWeight: '800',
-                marginBottom: '3rem',
+                marginBottom: '2.5rem',
                 background: 'linear-gradient(to right, var(--accent-primary), var(--accent-secondary))',
                 WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent'
+                WebkitTextFillColor: 'transparent',
+                fontFamily: "'Playfair Display', serif"
             }}>{title}</h1>}
             {children}
         </div>

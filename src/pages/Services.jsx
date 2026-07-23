@@ -37,9 +37,9 @@ const Services = () => {
                 path="/services"
                 schema={servicesSchema}
             />
-            <div style={{ maxWidth: '1240px', margin: '0 auto', padding: '1rem 1rem 4rem' }}>
+            <div style={{ maxWidth: '1240px', margin: '0 auto', padding: '0.5rem 0.5rem 3rem' }}>
                 {/* Page Title & Intro Section */}
-                <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+                <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
@@ -47,16 +47,16 @@ const Services = () => {
                         style={{
                             display: 'inline-flex',
                             alignItems: 'center',
-                            gap: '0.6rem',
-                            padding: '0.45rem 1.4rem',
+                            gap: '0.5rem',
+                            padding: '0.4rem 1.2rem',
                             borderRadius: '50px',
                             background: 'rgba(185, 155, 107, 0.12)',
                             border: '1px solid rgba(185, 155, 107, 0.35)',
                             color: 'var(--accent-gold)',
-                            fontSize: '0.85rem',
+                            fontSize: 'clamp(0.78rem, 2.5vw, 0.85rem)',
                             fontWeight: '700',
-                            letterSpacing: '0.12em',
-                            marginBottom: '1.4rem'
+                            letterSpacing: '0.1em',
+                            marginBottom: '1.2rem'
                         }}
                     >
                         <Sparkles size={16} /> BESPOKE INTERIOR ARCHITECTURE
@@ -67,10 +67,10 @@ const Services = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
                         style={{
-                            fontSize: 'clamp(2.4rem, 6vw, 3.8rem)',
+                            fontSize: 'clamp(2rem, 5vw, 3.8rem)',
                             fontWeight: '900',
                             color: 'var(--accent-primary)',
-                            marginBottom: '1.2rem',
+                            marginBottom: '1rem',
                             fontFamily: "'Playfair Display', serif",
                             letterSpacing: '-0.02em'
                         }}
@@ -83,11 +83,11 @@ const Services = () => {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.3 }}
                         style={{
-                            fontSize: '1.18rem',
+                            fontSize: 'clamp(0.95rem, 3vw, 1.15rem)',
                             color: 'var(--text-secondary)',
                             maxWidth: '700px',
                             margin: '0 auto',
-                            lineHeight: '1.8'
+                            lineHeight: '1.75'
                         }}
                     >
                         Explore our royal portfolio of custom interior solutions, engineered with precision, premium marine-grade materials, and timeless aesthetic excellence.
@@ -97,8 +97,8 @@ const Services = () => {
                 {/* Elegant Service Cards Grid */}
                 <div style={{
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))',
-                    gap: '2.5rem'
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
+                    gap: '2rem'
                 }}>
                     {servicesData.map((cat, i) => (
                         <motion.div
@@ -117,7 +117,7 @@ const Services = () => {
                                     overflow: 'hidden',
                                     textDecoration: 'none',
                                     height: '100%',
-                                    borderRadius: '24px',
+                                    borderRadius: '20px',
                                     border: '1px solid var(--glass-border)',
                                     background: '#FFFFFF',
                                     transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
@@ -125,7 +125,7 @@ const Services = () => {
                             >
                                 {/* Single Crisp Featured Showcase Image */}
                                 <div style={{
-                                    height: '240px',
+                                    height: '210px',
                                     position: 'relative',
                                     overflow: 'hidden'
                                 }}>
@@ -143,17 +143,17 @@ const Services = () => {
                                     <div style={{
                                         position: 'absolute',
                                         inset: 0,
-                                        background: 'linear-gradient(to top, rgba(31, 26, 23, 0.85) 0%, transparent 60%)'
+                                        background: 'linear-gradient(to top, rgba(68, 44, 27, 0.85) 0%, transparent 60%)'
                                     }} />
 
                                     {/* Floating Icon Badge */}
                                     <div style={{
                                         position: 'absolute',
-                                        top: '1.2rem',
-                                        right: '1.2rem',
-                                        width: '46px',
-                                        height: '46px',
-                                        borderRadius: '14px',
+                                        top: '1rem',
+                                        right: '1rem',
+                                        width: '42px',
+                                        height: '42px',
+                                        borderRadius: '12px',
                                         background: 'rgba(252, 250, 246, 0.92)',
                                         border: '1px solid rgba(185, 155, 107, 0.4)',
                                         display: 'flex',
@@ -163,15 +163,15 @@ const Services = () => {
                                         backdropFilter: 'blur(10px)',
                                         boxShadow: '0 6px 20px rgba(0,0,0,0.15)'
                                     }}>
-                                        <cat.icon size={24} />
+                                        <cat.icon size={22} />
                                     </div>
                                 </div>
 
                                 {/* Service Content Details */}
-                                <div style={{ padding: '2rem 2.2rem 2.2rem', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                                <div style={{ padding: '1.5rem 1.5rem 1.8rem', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                                     <h2 style={{
-                                        fontSize: '1.55rem',
-                                        marginBottom: '0.8rem',
+                                        fontSize: '1.4rem',
+                                        marginBottom: '0.6rem',
                                         color: 'var(--accent-primary)',
                                         fontWeight: '800',
                                         fontFamily: "'Playfair Display', serif"
@@ -181,9 +181,9 @@ const Services = () => {
 
                                     <p style={{
                                         color: 'var(--text-secondary)',
-                                        lineHeight: '1.7',
-                                        fontSize: '0.98rem',
-                                        marginBottom: '2rem'
+                                        lineHeight: '1.65',
+                                        fontSize: '0.95rem',
+                                        marginBottom: '1.5rem'
                                     }}>
                                         {cat.shortDesc}
                                     </p>
@@ -192,10 +192,10 @@ const Services = () => {
                                         marginTop: 'auto',
                                         display: 'inline-flex',
                                         alignItems: 'center',
-                                        gap: '0.6rem',
+                                        gap: '0.5rem',
                                         color: 'var(--accent-gold)',
                                         fontWeight: '800',
-                                        fontSize: '0.9rem',
+                                        fontSize: '0.88rem',
                                         letterSpacing: '0.08em',
                                         transition: 'gap 0.3s ease'
                                     }} className="explore-btn">
@@ -208,7 +208,7 @@ const Services = () => {
                                         transform: scale(1.08);
                                     }
                                     .glass-card:hover .explore-btn {
-                                        gap: 0.9rem;
+                                        gap: 0.8rem;
                                     }
                                 `}</style>
                             </Link>

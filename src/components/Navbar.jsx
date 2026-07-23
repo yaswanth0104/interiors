@@ -24,9 +24,10 @@ const Navbar = () => {
                 top: 0,
                 zIndex: 100,
                 background: 'var(--glass)',
-                backdropFilter: 'blur(10px)',
+                backdropFilter: 'blur(12px)',
+                WebkitBackdropFilter: 'blur(12px)',
                 borderBottom: '1px solid var(--glass-border)',
-                padding: '1rem 2rem',
+                padding: '0.8rem clamp(0.85rem, 3vw, 2rem)',
                 display: 'flex',
                 justifyContent: 'space-between',
                 alignItems: 'center'
@@ -37,7 +38,7 @@ const Navbar = () => {
                     style={{
                         display: 'flex',
                         alignItems: 'center',
-                        gap: '0.85rem',
+                        gap: '0.6rem',
                         textDecoration: 'none'
                     }}
                 >
@@ -45,7 +46,7 @@ const Navbar = () => {
                         src="/logo-icon-satin.png"
                         alt="Sree Annapoorna Interiors Logo"
                         style={{
-                            height: 'clamp(2.6rem, 5vw, 3.4rem)',
+                            height: 'clamp(2.4rem, 4.5vw, 3.2rem)',
                             width: 'auto',
                             objectFit: 'contain',
                             display: 'block',
@@ -54,33 +55,36 @@ const Navbar = () => {
                     />
                     <div style={{
                         display: 'flex',
+                        flexDirection: 'row',
                         alignItems: 'center',
-                        gap: '0.45rem',
-                        flexWrap: 'wrap'
+                        gap: '0.35rem',
+                        flexWrap: 'nowrap'
                     }}>
                         <span style={{
                             fontFamily: "'Playfair Display', serif",
                             fontWeight: '900',
-                            fontSize: 'clamp(1.3rem, 2.9vw, 1.8rem)',
+                            fontSize: 'clamp(1rem, 2.5vw, 1.7rem)',
                             letterSpacing: '-0.01em',
                             background: 'linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-gold) 60%, var(--accent-primary) 100%)',
                             WebkitBackgroundClip: 'text',
                             WebkitTextFillColor: 'transparent',
-                            lineHeight: '1'
+                            lineHeight: '1',
+                            whiteSpace: 'nowrap'
                         }}>SREE ANNAPOORNA</span>
                         <span style={{
                             fontFamily: "'Playfair Display', serif",
                             fontWeight: '900',
-                            fontSize: 'clamp(1.3rem, 2.9vw, 1.8rem)',
+                            fontSize: 'clamp(1rem, 2.5vw, 1.7rem)',
                             letterSpacing: '0.04em',
                             color: 'var(--accent-primary)',
-                            lineHeight: '1'
+                            lineHeight: '1',
+                            whiteSpace: 'nowrap'
                         }}>INTERIORS</span>
                     </div>
                 </NavLink>
 
                 {/* Desktop Menu */}
-                <div className="desktop-only" style={{ display: 'flex', gap: '2.2rem' }}>
+                <div className="desktop-only" style={{ display: 'flex', gap: '2rem' }}>
                     {navItems.map((item) => (
                         <NavLink
                             key={item.name}
@@ -90,7 +94,7 @@ const Navbar = () => {
                                 fontWeight: isActive ? '700' : '500',
                                 display: 'flex',
                                 alignItems: 'center',
-                                gap: '0.5rem',
+                                gap: '0.4rem',
                                 fontSize: '0.95rem'
                             })}
                         >
@@ -104,30 +108,32 @@ const Navbar = () => {
                     ))}
                 </div>
 
-                {/* Mobile Toggle */}
+                {/* Mobile Toggle Button */}
                 <div
                     className="mobile-only"
                     onClick={toggleMenu}
                     style={{
                         cursor: 'pointer',
                         display: 'none',
-                        padding: '0.5rem',
-                        background: 'rgba(var(--accent-primary-rgb), 0.05)',
-                        borderRadius: '10px'
+                        padding: '0.45rem',
+                        background: 'rgba(var(--accent-primary-rgb), 0.08)',
+                        borderRadius: '10px',
+                        marginLeft: '0.5rem'
                     }}
+                    aria-label="Toggle Navigation Menu"
                 >
-                    {isOpen ? <X color="var(--accent-primary)" /> : <Menu color="var(--accent-primary)" />}
+                    {isOpen ? <X size={24} color="var(--accent-primary)" /> : <Menu size={24} color="var(--accent-primary)" />}
                 </div>
             </nav>
 
-            {/* Mobile Menu Overlay */}
+            {/* Mobile Menu Drawer Overlay */}
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        initial={{ opacity: 0, x: '100%' }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: '100%' }}
-                        transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+                        initial={{ opacity: 0, y: '-10%' }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: '-10%' }}
+                        transition={{ duration: 0.3 }}
                         style={{
                             position: 'fixed',
                             top: 0,
@@ -136,32 +142,37 @@ const Navbar = () => {
                             left: 0,
                             zIndex: 99,
                             background: 'var(--bg-primary)',
-                            padding: '6rem 2rem 2rem',
+                            padding: '5.5rem 1.5rem 2rem',
                             display: 'flex',
                             flexDirection: 'column',
-                            gap: '2rem'
+                            gap: '1.5rem',
+                            overflowY: 'auto'
                         }}
                     >
                         {navItems.map((item, i) => (
                             <motion.div
                                 key={item.name}
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: i * 0.1 }}
+                                initial={{ opacity: 0, x: 20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ delay: i * 0.06 }}
                             >
                                 <NavLink
                                     to={item.path}
                                     onClick={closeMenu}
                                     style={({ isActive }) => ({
-                                        fontSize: '2rem',
+                                        fontSize: '1.5rem',
                                         fontWeight: '700',
                                         color: isActive ? 'var(--accent-gold)' : 'var(--accent-primary)',
                                         display: 'flex',
                                         alignItems: 'center',
-                                        gap: '1rem'
+                                        gap: '1rem',
+                                        padding: '0.8rem 1rem',
+                                        borderRadius: '14px',
+                                        background: isActive ? 'rgba(204, 158, 76, 0.12)' : 'transparent',
+                                        border: isActive ? '1px solid rgba(204, 158, 76, 0.3)' : '1px solid transparent'
                                     })}
                                 >
-                                    <item.icon size={28} />
+                                    <item.icon size={24} />
                                     {item.name}
                                 </NavLink>
                             </motion.div>

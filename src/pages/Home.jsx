@@ -28,14 +28,14 @@ const Home = () => {
             />
             {/* Hero Section with Vibrant, 100% Crisp Background Image */}
             <section style={{
-                minHeight: '92vh',
+                minHeight: '85vh',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
                 textAlign: 'center',
                 position: 'relative',
-                padding: '4rem 1.5rem 6rem'
+                padding: 'clamp(2.5rem, 6vw, 5rem) clamp(0.85rem, 3vw, 1.5rem) clamp(4rem, 8vw, 6rem)'
             }}>
                 {/* 100% Crisp & Vivid Full-Screen Hero Background Image */}
                 <motion.div
@@ -64,9 +64,10 @@ const Home = () => {
                     style={{
                         maxWidth: '960px',
                         background: 'transparent',
-                        padding: '2rem 1rem',
+                        padding: '1rem 0.5rem',
                         position: 'relative',
-                        zIndex: 1
+                        zIndex: 1,
+                        width: '100%'
                     }}
                 >
                     {/* Satin Gold Badge */}
@@ -77,16 +78,16 @@ const Home = () => {
                         style={{
                             display: 'inline-flex',
                             alignItems: 'center',
-                            gap: '0.6rem',
-                            padding: '0.55rem 1.6rem',
+                            gap: '0.5rem',
+                            padding: '0.45rem 1.2rem',
                             borderRadius: '50px',
                             background: 'rgba(68, 44, 27, 0.8)',
                             border: '1px solid rgba(204, 158, 76, 0.6)',
                             color: '#E0D0B6',
-                            fontSize: '0.9rem',
+                            fontSize: 'clamp(0.78rem, 2.5vw, 0.9rem)',
                             fontWeight: '800',
-                            letterSpacing: '0.12em',
-                            marginBottom: '2rem',
+                            letterSpacing: '0.1em',
+                            marginBottom: '1.5rem',
                             backdropFilter: 'blur(12px)',
                             boxShadow: '0 8px 25px rgba(68, 44, 27, 0.4)'
                         }}
@@ -96,10 +97,10 @@ const Home = () => {
 
                     {/* Headline */}
                     <h1 style={{
-                        fontSize: 'clamp(2.6rem, 7.5vw, 4.8rem)',
+                        fontSize: 'clamp(1.9rem, 5.5vw, 4.5rem)',
                         fontWeight: '900',
-                        marginBottom: '1.6rem',
-                        lineHeight: '1.15',
+                        marginBottom: '1.2rem',
+                        lineHeight: '1.2',
                         color: '#FFFFFF',
                         fontFamily: "'Playfair Display', serif",
                         letterSpacing: '-0.02em',
@@ -117,11 +118,11 @@ const Home = () => {
 
                     {/* Subtitle */}
                     <p style={{
-                        fontSize: '1.25rem',
+                        fontSize: 'clamp(0.98rem, 3vw, 1.2rem)',
                         color: '#E0D0B6',
                         maxWidth: '720px',
-                        margin: '0 auto 3rem',
-                        lineHeight: '1.85',
+                        margin: '0 auto 2.5rem',
+                        lineHeight: '1.75',
                         fontWeight: '500',
                         textShadow: '0 3px 20px rgba(68, 44, 27, 0.95), 0 1px 6px rgba(68, 44, 27, 0.9)'
                     }}>
@@ -131,39 +132,44 @@ const Home = () => {
                     {/* CTAs */}
                     <div style={{
                         display: 'flex',
-                        gap: '1.5rem',
+                        gap: '1rem',
                         flexDirection: 'row',
                         flexWrap: 'wrap',
-                        justifyContent: 'center'
+                        justifyContent: 'center',
+                        alignItems: 'center'
                     }}>
                         <Link to="/services" style={{
                             background: 'linear-gradient(135deg, #CC9E4C 0%, #E0D0B6 50%, #6B2717 100%)',
                             color: '#442C1B',
-                            padding: '1.2rem 2.8rem',
+                            padding: '0.95rem 2.2rem',
                             borderRadius: '50px',
-                            display: 'flex',
+                            display: 'inline-flex',
                             alignItems: 'center',
-                            gap: '0.6rem',
+                            justifyContent: 'center',
+                            gap: '0.5rem',
                             fontWeight: '800',
-                            fontSize: '1.02rem',
+                            fontSize: '0.98rem',
                             boxShadow: '0 12px 35px rgba(204, 158, 76, 0.45)',
-                            transition: 'all 0.3s ease'
+                            transition: 'all 0.3s ease',
+                            minWidth: '200px'
                         }}>
-                            Explore Services <ChevronRight size={20} />
+                            Explore Services <ChevronRight size={18} />
                         </Link>
                         <Link to="/contact" style={{
                             border: '1.5px solid rgba(204, 158, 76, 0.65)',
                             background: 'rgba(68, 44, 27, 0.75)',
                             backdropFilter: 'blur(14px)',
                             color: '#E0D0B6',
-                            padding: '1.2rem 2.8rem',
+                            padding: '0.95rem 2.2rem',
                             borderRadius: '50px',
-                            display: 'flex',
+                            display: 'inline-flex',
                             alignItems: 'center',
-                            gap: '0.6rem',
+                            justifyContent: 'center',
+                            gap: '0.5rem',
                             fontWeight: '700',
-                            fontSize: '1.02rem',
-                            boxShadow: '0 12px 35px rgba(68, 44, 27, 0.5)'
+                            fontSize: '0.98rem',
+                            boxShadow: '0 12px 35px rgba(68, 44, 27, 0.5)',
+                            minWidth: '200px'
                         }}>
                             Book Consultation
                         </Link>
@@ -174,19 +180,19 @@ const Home = () => {
             {/* Luxury Stats Bar */}
             <section style={{
                 maxWidth: '1150px',
-                margin: '-3rem auto 5rem',
+                margin: '-2.5rem auto 4rem',
                 position: 'relative',
                 zIndex: 2,
-                padding: '0 1.5rem'
+                padding: '0 clamp(0.85rem, 3vw, 1.5rem)'
             }}>
                 <div style={{
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))',
-                    gap: '1.5rem',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 210px), 1fr))',
+                    gap: '1.2rem',
                     background: '#FFFFFF',
                     border: '1px solid var(--glass-border)',
-                    borderRadius: '24px',
-                    padding: '2rem 2.5rem',
+                    borderRadius: '20px',
+                    padding: 'clamp(1.2rem, 4vw, 2rem) clamp(1.2rem, 4vw, 2.5rem)',
                     boxShadow: '0 15px 35px rgba(68, 44, 27, 0.06)'
                 }}>
                     {[
@@ -195,11 +201,11 @@ const Home = () => {
                         { icon: Users, number: '100%', label: 'Bespoke Customization' },
                         { icon: Star, number: '15+', label: 'Master Craftsmen' }
                     ].map((stat, idx) => (
-                        <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                        <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
                             <div style={{
-                                width: '48px',
-                                height: '48px',
-                                borderRadius: '14px',
+                                width: '42px',
+                                height: '42px',
+                                borderRadius: '12px',
                                 background: 'rgba(204, 158, 76, 0.15)',
                                 border: '1px solid rgba(204, 158, 76, 0.35)',
                                 display: 'flex',
@@ -208,11 +214,11 @@ const Home = () => {
                                 color: 'var(--accent-gold)',
                                 flexShrink: 0
                             }}>
-                                <stat.icon size={22} />
+                                <stat.icon size={20} />
                             </div>
                             <div>
-                                <div style={{ fontSize: '1.4rem', fontWeight: '900', color: 'var(--accent-primary)', fontFamily: "'Playfair Display', serif" }}>{stat.number}</div>
-                                <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>{stat.label}</div>
+                                <div style={{ fontSize: '1.25rem', fontWeight: '900', color: 'var(--accent-primary)', fontFamily: "'Playfair Display', serif" }}>{stat.number}</div>
+                                <div style={{ fontSize: '0.82rem', color: 'var(--text-secondary)' }}>{stat.label}</div>
                             </div>
                         </div>
                     ))}
@@ -223,27 +229,27 @@ const Home = () => {
             <section style={{
                 maxWidth: '1240px',
                 margin: '0 auto',
-                padding: '0 1.5rem 4rem'
+                padding: '0 clamp(0.85rem, 3vw, 1.5rem) 4rem'
             }}>
-                <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+                <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
                     <h2 style={{
-                        fontSize: 'clamp(2rem, 5vw, 3.2rem)',
+                        fontSize: 'clamp(1.8rem, 4.5vw, 3.2rem)',
                         color: 'var(--accent-primary)',
                         fontFamily: "'Playfair Display', serif",
                         fontWeight: '900',
-                        marginBottom: '1rem'
+                        marginBottom: '0.8rem'
                     }}>
                         Crafted Interior <span className="gold-text">Excellence.</span>
                     </h2>
-                    <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto' }}>
+                    <p style={{ color: 'var(--text-secondary)', fontSize: 'clamp(0.95rem, 3vw, 1.1rem)', maxWidth: '600px', margin: '0 auto' }}>
                         From modular kitchens to bespoke wood partitions and fine art, explore our signature services.
                     </p>
                 </div>
 
                 <div style={{
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))',
-                    gap: '2.5rem'
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
+                    gap: '2rem'
                 }}>
                     {[
                         {
@@ -272,7 +278,7 @@ const Home = () => {
                             style={{ overflow: 'hidden' }}
                         >
                             <div style={{
-                                height: '250px',
+                                height: '220px',
                                 position: 'relative',
                                 overflow: 'hidden'
                             }}>
@@ -289,10 +295,10 @@ const Home = () => {
                                 />
                                 <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(68, 44, 27, 0.85), transparent 60%)' }} />
                             </div>
-                            <div style={{ padding: '2.2rem 2.5rem' }}>
-                                <h3 style={{ fontSize: '1.5rem', marginBottom: '0.8rem', color: 'var(--accent-primary)', fontWeight: '800', fontFamily: "'Playfair Display', serif" }}>{feature.title}</h3>
-                                <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', lineHeight: '1.7', fontSize: '0.98rem' }}>{feature.desc}</p>
-                                <Link to="/services" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9rem', color: 'var(--accent-gold)', fontWeight: '800', letterSpacing: '0.1em' }}>
+                            <div style={{ padding: '1.5rem 1.5rem 1.8rem' }}>
+                                <h3 style={{ fontSize: '1.35rem', marginBottom: '0.6rem', color: 'var(--accent-primary)', fontWeight: '800', fontFamily: "'Playfair Display', serif" }}>{feature.title}</h3>
+                                <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', lineHeight: '1.6', fontSize: '0.95rem' }}>{feature.desc}</p>
+                                <Link to="/services" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.88rem', color: 'var(--accent-gold)', fontWeight: '800', letterSpacing: '0.08em' }}>
                                     EXPLORE DETAILS <ArrowRight size={16} />
                                 </Link>
                             </div>

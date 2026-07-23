@@ -56,22 +56,22 @@ const Gallery = () => {
             />
             <div style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 300px), 1fr))',
-                gap: 'clamp(1rem, 4vw, 2rem)',
+                gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 250px), 1fr))',
+                gap: 'clamp(1rem, 3vw, 1.8rem)',
             }}>
                 {images.map((img, i) => (
                     <motion.div
                         key={img.id}
-                        initial={{ opacity: 0, y: 30 }}
+                        initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ delay: i * 0.05 }}
-                        className="glass-card"
+                        transition={{ delay: (i % 6) * 0.05 }}
+                        className="glass-card gallery-item"
                         style={{
-                            height: '350px',
+                            height: 'clamp(260px, 35vh, 320px)',
                             position: 'relative',
                             overflow: 'hidden',
-                            cursor: 'pointer',
+                            borderRadius: '16px'
                         }}
                     >
                         <div style={{
@@ -80,33 +80,25 @@ const Gallery = () => {
                             backgroundImage: `url("${encodeURI(img.src)}")`,
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
                             transition: 'transform 0.5s ease'
-                        }} className="image-container">
-                        </div>
+                        }} className="image-container" />
 
                         <div style={{
                             position: 'absolute',
                             bottom: 0,
                             left: 0,
                             right: 0,
-                            padding: '1.5rem',
-                            background: 'linear-gradient(transparent, rgba(13, 14, 18, 0.95))',
-                            transform: 'translateY(100%)',
-                            transition: 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
+                            padding: '1rem 1.2rem',
+                            background: 'linear-gradient(to top, rgba(51, 61, 41, 0.95) 0%, rgba(51, 61, 41, 0.4) 70%, transparent 100%)',
+                            transition: 'all 0.3s ease'
                         }} className="overlay">
-                            <h4 style={{ color: '#F8F5EE', fontWeight: '700', fontFamily: "'Playfair Display', serif" }}>{img.title}</h4>
-                            <p style={{ color: 'var(--accent-gold)', fontSize: '0.8rem', fontWeight: '600', letterSpacing: '0.1em' }}>{img.category}</p>
+                            <h4 style={{ color: '#FFFFFF', fontWeight: '700', fontSize: '1rem', fontFamily: "'Playfair Display', serif" }}>{img.title}</h4>
+                            <p style={{ color: '#E0D0B6', fontSize: '0.8rem', fontWeight: '600', letterSpacing: '0.08em' }}>{img.category}</p>
                         </div>
 
                         <style>{`
-                          .glass-card:hover .overlay {
-                            transform: translateY(0);
-                          }
-                          .glass-card:hover .image-container {
-                            transform: scale(1.08);
+                          .gallery-item:hover .image-container {
+                              transform: scale(1.08);
                           }
                         `}</style>
                     </motion.div>
