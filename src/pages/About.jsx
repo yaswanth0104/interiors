@@ -1,10 +1,25 @@
 import React from 'react';
 import PageWrapper from '../components/PageWrapper';
+import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
 
 const About = () => {
+    const aboutSchema = {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "About Sree Annapoorna Interiors",
+        "url": "https://sreeannapoornainteriors.com/about",
+        "description": "Learn about Sree Annapoorna Interiors in Ongole - 10+ years of interior architectural excellence and over 500+ completed luxury home projects."
+    };
+
     return (
         <PageWrapper title="About Us" heroImage="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000">
+            <SEO
+                title="About Us | Master Interior Architects in Ongole"
+                description="Discover Sree Annapoorna Interiors. Over 10 years of expertise and 500+ completed interior design projects in Ongole, Andhra Pradesh."
+                path="/about"
+                schema={aboutSchema}
+            />
             <div style={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))',

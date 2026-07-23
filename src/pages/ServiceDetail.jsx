@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ChevronLeft, CheckCircle2, ArrowRight, ShieldCheck, Sparkles, Award } from 'lucide-react';
 import PageWrapper from '../components/PageWrapper';
+import SEO from '../components/SEO';
 import { servicesData } from '../data/servicesData';
 
 const ServiceDetail = () => {
@@ -22,8 +23,52 @@ const ServiceDetail = () => {
 
     const serviceImage = service.mainImage || service.tileImage;
 
+    const detailSchema = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": `${service.title} Services in Ongole`,
+        "description": service.description,
+        "provider": {
+            "@type": "InteriorDesigner",
+            "name": "Sree Annapoorna Interiors",
+            "telephone": "+917013006137",
+            "email": "sreeannapoornainteriors@gmail.com",
+            "url": "https://sreeannapoornainteriors.com",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "North Bypass Road, Mangamuru Junction, near Big Hanuman Statue",
+                "addressLocality": "Ongole",
+                "addressRegion": "Andhra Pradesh",
+                "postalCode": "523002",
+                "addressCountry": "IN"
+            }
+        },
+        "areaServed": {
+            "@type": "AdministrativeArea",
+            "name": "Ongole, Andhra Pradesh"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": service.title,
+            "itemListElement": service.features ? service.features.map(f => ({
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": f
+                }
+            })) : []
+        }
+    };
+
     return (
         <PageWrapper>
+            <SEO
+                title={`${service.title} Services in Ongole`}
+                description={`Premium ${service.title} design & installation by Sree Annapoorna Interiors in Ongole. ${service.shortDesc}`}
+                path={`/services/${service.id}`}
+                image={serviceImage}
+                schema={detailSchema}
+            />
             <div style={{ maxWidth: '1150px', margin: '0 auto', padding: '1rem 1rem 5rem' }}>
                 {/* Back to All Services Navigation Link */}
                 <Link

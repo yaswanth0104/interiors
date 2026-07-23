@@ -1,5 +1,6 @@
 import React from 'react';
 import PageWrapper from '../components/PageWrapper';
+import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
@@ -12,8 +13,35 @@ const Contact = () => {
         setTimeout(() => setStatus('Message sent successfully!'), 1500);
     };
 
+    const contactSchema = {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact Sree Annapoorna Interiors",
+        "url": "https://sreeannapoornainteriors.com/contact",
+        "mainEntity": {
+            "@type": "InteriorDesigner",
+            "name": "Sree Annapoorna Interiors",
+            "telephone": "+917013006137",
+            "email": "sreeannapoornainteriors@gmail.com",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "North Bypass Road, Mangamuru Junction, near Big Hanuman Statue",
+                "addressLocality": "Ongole",
+                "addressRegion": "Andhra Pradesh",
+                "postalCode": "523002",
+                "addressCountry": "IN"
+            }
+        }
+    };
+
     return (
         <PageWrapper title="Get in Touch" heroImage="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=2000">
+            <SEO
+                title="Contact Us | Book Free Interior Design Consultation in Ongole"
+                description="Get in touch with Sree Annapoorna Interiors in Ongole. Call +91 70130 06137 or email sreeannapoornainteriors@gmail.com for a free 3D design consultation."
+                path="/contact"
+                schema={contactSchema}
+            />
             <div style={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))',

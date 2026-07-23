@@ -1,12 +1,31 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import PageWrapper from '../components/PageWrapper';
+import SEO from '../components/SEO';
 import { ChevronRight, ArrowRight, Sparkles, ShieldCheck, Award, Users, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
+    const homeSchema = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Sree Annapoorna Interiors",
+        "url": "https://sreeannapoornainteriors.com",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://sreeannapoornainteriors.com/services?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    };
+
     return (
         <PageWrapper>
+            <SEO
+                title="Luxury Interior Designers in Ongole | Royal Modular Kitchens & Home Decors"
+                description="Sree Annapoorna Interiors is the premier interior design firm in Ongole, offering bespoke modular kitchens, custom wardrobes, TV units, wood partitions, wallpapers & arts."
+                path="/"
+                schema={homeSchema}
+            />
             {/* Hero Section with Vibrant, 100% Crisp Background Image */}
             <section style={{
                 minHeight: '92vh',

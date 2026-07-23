@@ -1,5 +1,6 @@
 import React from 'react';
 import PageWrapper from '../components/PageWrapper';
+import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
 
 const Gallery = () => {
@@ -37,8 +38,22 @@ const Gallery = () => {
         { id: 31, src: '/photos/WhatsApp Image 2026-02-24 at 15.35.42.jpeg', title: 'Elegant Space', category: 'Living Room' },
     ];
 
+    const gallerySchema = {
+        "@context": "https://schema.org",
+        "@type": "ImageGallery",
+        "name": "Sree Annapoorna Interiors Project Portfolio Gallery",
+        "url": "https://sreeannapoornainteriors.com/gallery",
+        "description": "Explore real project photos of luxury modular kitchens, wardrobes, living rooms, and custom wood interiors completed in Ongole."
+    };
+
     return (
         <PageWrapper title="Design Showcase" heroImage="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=2000">
+            <SEO
+                title="Interior Design Gallery & Project Portfolio | Ongole"
+                description="View our photo gallery of completed interior design projects in Ongole. Modular kitchens, luxury wardrobes, TV units, wallpapers & custom wood art."
+                path="/gallery"
+                schema={gallerySchema}
+            />
             <div style={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 300px), 1fr))',

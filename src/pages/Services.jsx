@@ -2,12 +2,41 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import PageWrapper from '../components/PageWrapper';
+import SEO from '../components/SEO';
 import { servicesData } from '../data/servicesData';
 import { ArrowRight, Sparkles } from 'lucide-react';
 
 const Services = () => {
+    const servicesSchema = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Interior Design Services offered by Sree Annapoorna Interiors",
+        "itemListElement": servicesData.map((svc, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "item": {
+                "@type": "Service",
+                "name": svc.title,
+                "description": svc.description,
+                "url": `https://sreeannapoornainteriors.com/services/${svc.id}`,
+                "provider": {
+                    "@type": "InteriorDesigner",
+                    "name": "Sree Annapoorna Interiors",
+                    "telephone": "+917013006137",
+                    "email": "sreeannapoornainteriors@gmail.com"
+                }
+            }
+        }))
+    };
+
     return (
         <PageWrapper>
+            <SEO
+                title="Bespoke Interior Design Services | Modular Kitchens, Wardrobes, TV Units"
+                description="Explore custom interior design services in Ongole: BWP Modular Kitchens, Bespoke Wardrobes, TV Units, CNC Wood Partitions, Wallpapers & Fine Arts."
+                path="/services"
+                schema={servicesSchema}
+            />
             <div style={{ maxWidth: '1240px', margin: '0 auto', padding: '1rem 1rem 4rem' }}>
                 {/* Page Title & Intro Section */}
                 <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
