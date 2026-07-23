@@ -17,9 +17,10 @@ export const servicesData = [
             'Integrated Chimney, Hob & Countertop Quartz Fitting'
         ],
         gallery: [
-            '/photos/WhatsApp Image 2026-02-24 at 15.31.17 (1).jpeg',
-            '/photos/WhatsApp Image 2026-02-24 at 15.31.19 (2).jpeg',
-            '/photos/WhatsApp Image 2026-02-24 at 15.32.23.jpeg'
+            'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=1000',
+            'https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&q=80&w=1000',
+            'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1000',
+            'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1000'
         ]
     },
     {
@@ -38,9 +39,10 @@ export const servicesData = [
             'High-Grade Veneer, PU & Mirror Panel Outers'
         ],
         gallery: [
-            '/photos/WhatsApp Image 2026-02-24 at 15.31.18 (2).jpeg',
-            '/photos/WhatsApp Image 2026-02-24 at 15.32.25 (3).jpeg',
-            '/photos/WhatsApp Image 2026-02-24 at 15.31.21 (1).jpeg'
+            'https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&q=80&w=1000',
+            'https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&q=80&w=1000',
+            'https://images.unsplash.com/photo-1558882224-dda166733046?auto=format&fit=crop&q=80&w=1000',
+            'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1000'
         ]
     },
     {
@@ -59,9 +61,10 @@ export const servicesData = [
             'Custom Storage Drawers for Soundbars & Gaming Gear'
         ],
         gallery: [
-            '/photos/WhatsApp Image 2026-02-24 at 15.31.17.jpeg',
-            '/photos/WhatsApp Image 2026-02-24 at 15.31.21 (2).jpeg',
-            '/photos/WhatsApp Image 2026-02-24 at 15.31.20 (1).jpeg'
+            'https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&q=80&w=1000',
+            'https://images.unsplash.com/photo-1600121848594-d8644e57abab?auto=format&fit=crop&q=80&w=1000',
+            'https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&q=80&w=1000',
+            'https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&q=80&w=1000'
         ]
     },
     {
@@ -80,9 +83,10 @@ export const servicesData = [
             'Custom Stains & Durable Polyurethane Coatings'
         ],
         gallery: [
-            '/photos/WhatsApp Image 2026-02-24 at 15.31.21 (3).jpeg',
-            '/photos/WhatsApp Image 2026-02-24 at 15.32.23 (2).jpeg',
-            '/photos/WhatsApp Image 2026-02-24 at 15.31.20.jpeg'
+            'https://images.unsplash.com/photo-1510137600163-2729bc6959a6?auto=format&fit=crop&q=80&w=1000',
+            'https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&q=80&w=1000',
+            'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=1000',
+            'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=1000'
         ]
     },
     {
@@ -101,9 +105,10 @@ export const servicesData = [
             'Space-Saving Wall-Mounted & Corner Unit Options'
         ],
         gallery: [
-            '/photos/WhatsApp Image 2026-02-24 at 15.31.16.jpeg',
-            '/photos/WhatsApp Image 2026-02-24 at 15.35.40.jpeg',
-            '/photos/WhatsApp Image 2026-02-24 at 15.35.42.jpeg'
+            'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=1000',
+            'https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&q=80&w=1000',
+            'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&q=80&w=1000',
+            'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&q=80&w=1000'
         ]
     },
     {
@@ -122,9 +127,10 @@ export const servicesData = [
             'Professional Seamless Fitting with Anti-Fungal Adhesive'
         ],
         gallery: [
-            '/photos/WhatsApp Image 2026-02-24 at 15.31.18.jpeg',
-            '/photos/WhatsApp Image 2026-02-24 at 15.31.22.jpeg',
-            '/photos/WhatsApp Image 2026-02-24 at 15.31.20.jpeg'
+            'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=1000',
+            'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&q=80&w=1000',
+            'https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&q=80&w=1000',
+            'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=1000'
         ]
     },
     {
@@ -143,9 +149,10 @@ export const servicesData = [
             'Museum-Quality Frame Profiles & Lighting Accents'
         ],
         gallery: [
-            '/photos/WhatsApp Image 2026-02-24 at 15.31.18.jpeg',
-            '/photos/WhatsApp Image 2026-02-24 at 15.31.22.jpeg',
-            '/photos/WhatsApp Image 2026-02-24 at 15.32.22.jpeg'
+            'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&q=80&w=1000',
+            'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&q=80&w=1000',
+            'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&q=80&w=1000',
+            'https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&q=80&w=1000'
         ]
     }
 ];
