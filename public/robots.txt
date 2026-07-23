@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yaswanth0104.github.io/interiors/sitemap.xml
+Sitemap: https://sreeannapoornainteriors.com/sitemap.xml
