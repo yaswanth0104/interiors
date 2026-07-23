@@ -85,8 +85,8 @@ export const servicesData = [
         gallery: [
             'https://images.unsplash.com/photo-1510137600163-2729bc6959a6?auto=format&fit=crop&q=80&w=1000',
             'https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&q=80&w=1000',
-            'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=1000',
-            'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=1000'
+            'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=1000',
+            'https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&q=80&w=1000'
         ]
     },
     {
@@ -94,10 +94,10 @@ export const servicesData = [
         title: 'Dressing Table',
         icon: User,
         color: 'var(--accent-gold)',
-        tileImage: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=800',
+        tileImage: 'https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&q=80&w=800',
         shortDesc: 'Elegant dressing units with smart storage and premium lighting.',
         description: 'Our dressing units are designed to be personal sanctuaries. Featuring smart storage for cosmetics, distortion-free full-length or arch mirrors, and flattering integrated LED halo lighting.',
-        mainImage: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=2000',
+        mainImage: 'https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&q=80&w=2000',
         features: [
             'Touch-Sensor Dimmable LED Mirror Backlighting',
             'Velvet-Lined Drawers for Jewelry & Makeup',
@@ -105,10 +105,10 @@ export const servicesData = [
             'Space-Saving Wall-Mounted & Corner Unit Options'
         ],
         gallery: [
-            'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=1000',
             'https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&q=80&w=1000',
             'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&q=80&w=1000',
-            'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&q=80&w=1000'
+            'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&q=80&w=1000',
+            'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=1000'
         ]
     },
     {
@@ -130,7 +130,7 @@ export const servicesData = [
             'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=1000',
             'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&q=80&w=1000',
             'https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&q=80&w=1000',
-            'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=1000'
+            'https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?auto=format&fit=crop&q=80&w=1000'
         ]
     },
     {
@@ -138,10 +138,10 @@ export const servicesData = [
         title: 'Arts & Paintings',
         icon: Palette,
         color: 'var(--accent-gold)',
-        tileImage: 'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&q=80&w=800',
+        tileImage: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&q=80&w=800',
         shortDesc: 'Handcrafted wood paintings and artistic finishes to add character to your home.',
         description: 'Our in-house artists create unique wood relief paintings, textured wall art, and custom canvas pieces that add a layer of soul to your interiors. Each piece is handcrafted to match your space\'s aesthetic.',
-        mainImage: 'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&q=80&w=2000',
+        mainImage: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&q=80&w=2000',
         features: [
             'Hand-Carved Teak & Wood Relief Wall Art',
             'Custom Color-Matched Canvas Paintings',
@@ -149,8 +149,8 @@ export const servicesData = [
             'Museum-Quality Frame Profiles & Lighting Accents'
         ],
         gallery: [
-            'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&q=80&w=1000',
             'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&q=80&w=1000',
+            'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&q=80&w=1000',
             'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&q=80&w=1000',
             'https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&q=80&w=1000'
         ]
